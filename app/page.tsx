@@ -2,6 +2,7 @@ import WaitlistForm from "@/components/WaitlistForm";
 import ImageGallery from "@/components/ImageGallery";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 const activities = [
   {
@@ -57,7 +58,7 @@ const faqs = [
   },
   {
     q: "Når er det?",
-    a: "Høsten 2026, Oslo. Ventelisten varsles med dato og detaljer så snart det er klart.",
+    a: "Høsten 2026. Ventelisten varsles med dato og detaljer så snart det er klart.",
   },
   {
     q: "Er det Wi-Fi?",
@@ -65,11 +66,15 @@ const faqs = [
   },
   {
     q: "Hva trenger jeg å ta med?",
-    a: "Deg selv og klær til ett skift ekstra. Vi sender en praktisk pakkeliste til alle på ventelisten.",
+    a: "Yogamatte er fint å ha med. Har du meditasjonspute eller krakk kan du gjerne ta det med, ellers låner du. Ta med noen lag varme klær til meditasjon, det er lett å bli kald når man sitter stille. En full pakkeliste sendes til alle på ventelisten.",
   },
   {
     q: "Hva om jeg ikke er i form?",
     a: "Treningen tilpasses. Det er ingen krav til fysisk nivå, og ingenting er obligatorisk. Du setter tempoet selv.",
+  },
+  {
+    q: "Leier dere hele Son Spa?",
+    a: "Nei. Son Spa er et åpent hotell, og det kan godt hende andre gjester er der samme helg. Hvis nabobordet har fest lørdag kveld er det en fin anledning til å øve på det vi holder på med.",
   },
 ];
 
@@ -98,13 +103,13 @@ const shorts = [
 ];
 
 const natureImages = [
-  { src: "/naeromra-det_maridalsvannet25-4.webp", alt: "Maridalsvannet med bjørk og furu" },
-  { src: "/naeromra-det_maridalsvannet25-6.webp", alt: "Skogsvei i Nordmarka" },
+  { src: "/naeromra-det_maridalsvannet25-4.webp", alt: "Natur ved Son Spa nær Oslo — rolige omgivelser for retreat" },
+  { src: "/naeromra-det_maridalsvannet25-6.webp", alt: "Stille naturomgivelser nær retreatstedet Son Spa" },
 ];
 
 const indoorImages = [
-  { src: "/00-felles_mg_7953-2.webp", alt: "Deltakere i samtale i felleslokalet" },
-  { src: "/rom_internat25-13.webp", alt: "Rom på Oslo folkehøgskole med utsikt" },
+  { src: "/00-felles_mg_7953-2.webp", alt: "Deltakere i samtale under meditasjonsretreater nær Oslo" },
+  { src: "/rom_internat25-13.webp", alt: "Overnatting på Son Spa under Klarlinje retreat" },
 ];
 
 function VideoEmbed({ id, title }: { id: string; title: string }) {
@@ -130,9 +135,74 @@ function VideoEmbed({ id, title }: { id: string; title: string }) {
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Event",
+      "name": "Klarlinje Retreat — Son Spa",
+      "description": "Sekulært, evidensbasert meditasjonsretreat for høytfungerende voksne. Meditasjon, trening, badstue og felles måltider på Son Spa, 40 minutter sør for Oslo.",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-04",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Son Spa",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Verven 1",
+          "addressLocality": "Son",
+          "postalCode": "1555",
+          "addressCountry": "NO"
+        }
+      },
+      "organizer": {
+        "@type": "Person",
+        "name": "Jens",
+        "url": "https://klarlinje.no/om"
+      },
+      "url": "https://klarlinje.no",
+      "inLanguage": "nb-NO"
+    },
+    {
+      "@type": "Person",
+      "name": "Jens",
+      "url": "https://klarlinje.no/om",
+      "jobTitle": "Retreat-leder og meditasjonslærer",
+      "description": "Jens har meditert i over ti år og undervist i meditasjon på Oslo folkehøgskole i fire år. Grunnlegger av Klarlinje.",
+      "knowsAbout": ["meditasjon", "mindfulness", "evidensbasert meditasjon", "retreater", "stressreduksjon"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(({ q, a }) => ({
+        "@type": "Question",
+        "name": q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": a
+        }
+      }))
+    },
+    {
+      "@type": "Organization",
+      "name": "Klarlinje",
+      "url": "https://klarlinje.no",
+      "description": "Sekulært, evidensbasert retreat nær Oslo. For høytfungerende voksne som vil ha ro som faktisk virker.",
+      "founder": { "@type": "Person", "name": "Jens" },
+      "areaServed": "Oslo og Viken"
+    }
+  ]
+};
+
 export default function HomePage() {
   return (
     <main className="bg-sand">
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* ─── Nav ─── */}
       <header className="px-8 py-6 flex justify-between items-center max-w-6xl mx-auto">
@@ -218,9 +288,8 @@ export default function HomePage() {
               Hva skjer på retreaten?
             </h2>
             <p className="text-charcoal/55 leading-relaxed mb-12 font-light">
-              Vi holder til på Oslo folkehøgskole Rønningen. Romstandard på
-              hotellnivå, god mat, og omgivelser jeg kjenner godt etter fire år
-              der.
+              Vi holder til på Son Spa, et 4-stjerners spa-hotell 40 minutter
+              sør for Oslo. Overnatting, mat og spa er inkludert.
             </p>
             <div className="space-y-4">
               {activities.map(({ title, desc, icon }) => (
@@ -330,8 +399,8 @@ export default function HomePage() {
             Nærmiljøet
           </h2>
           <p className="text-charcoal/55 max-w-sm font-light leading-relaxed">
-            Folkehøgskolen ligger på kanten av Nordmarka. Maridalsvannet og
-            skogsstier er fem minutters gange unna.
+            Son Spa ligger ved fjorden i Son, ca. 40 minutter sør for Oslo.
+            Rolig natur, sjøluft og god avstand fra hverdagen.
           </p>
         </div>
         <ImageGallery images={natureImages} aspectRatio="aspect-[4/3]" />
@@ -351,29 +420,29 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             <div className="rounded-3xl overflow-hidden shadow-md border border-bark/10 aspect-[4/3]">
               <iframe
-                src="https://maps.google.com/maps?q=Myrerskogveien+54,+0495+Oslo&output=embed&z=15"
+                src="https://maps.google.com/maps?q=Son+Spa,+Verven+1,+1555+Son&output=embed&z=13"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Oslo folkehøgskole Rønningen på kart"
+                title="Son Spa på kart"
               />
             </div>
 
             <div className="space-y-4">
               {[
                 {
-                  label: "T-bane",
-                  text: "Linje 5 til Storo, deretter buss 37 mot Grefsen. Ca. 25 min fra Nationaltheatret.",
-                },
-                {
-                  label: "Buss",
-                  text: "Buss 37 stopper rett utenfor. Enkelt fra Majorstua eller Storo.",
-                },
-                {
                   label: "Bil",
-                  text: "Gratis parkering på stedet. Ca. 15 min fra Oslo sentrum.",
+                  text: "Ca. 40 minutter sør for Oslo sentrum via E6. Gratis parkering på stedet.",
+                },
+                {
+                  label: "Tog",
+                  text: "Vy tog fra Oslo S til Son stasjon, ca. 55 minutter. Taxi eller shuttle derfra.",
+                },
+                {
+                  label: "Samkjøring",
+                  text: "Vi kobler deltakere som ønsker samkjøring. Oppgi gjerne om du trenger skyss når du melder deg på.",
                 },
               ].map(({ label, text }) => (
                 <div key={label} className="flex gap-5 p-5 bg-sand rounded-2xl border border-bark/15">
@@ -386,8 +455,8 @@ export default function HomePage() {
               ))}
               <div className="p-5 rounded-2xl border border-terra/20 bg-terra/5">
                 <p className="text-xs text-terra font-semibold tracking-widest uppercase mb-1">Adresse</p>
-                <p className="font-heading font-bold text-forest text-lg">Myrerskogveien 54</p>
-                <p className="text-charcoal/55 text-sm">0495 Oslo · Oslo folkehøgskole Rønningen</p>
+                <p className="font-heading font-bold text-forest text-lg">Verven 1, 1555 Son</p>
+                <p className="text-charcoal/55 text-sm">Son Spa · 40 min sør for Oslo</p>
               </div>
             </div>
           </div>

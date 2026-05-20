@@ -21,15 +21,36 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Klarlinje — Retreat som funker",
+  title: "Klarlinje — Meditasjonsretreat nær Oslo | Son Spa, Høsten 2026",
   description:
-    "Sekulær, evidensbasert retreat for høytfungerende voksne. Bli med på ventelisten.",
+    "Sekulært, evidensbasert retreat på Son Spa, 40 min sør for Oslo. For høytfungerende voksne som vil ha ro som faktisk virker. Meld deg på ventelisten.",
+  keywords: [
+    "retreat Oslo",
+    "meditasjonsretreater Norge",
+    "retreat nær Oslo",
+    "mindfulness retreat Oslo",
+    "Son Spa retreat",
+    "sekulær meditasjon",
+    "helgeretreater Oslo",
+    "evidensbasert retreat",
+    "retreat 2026",
+    "meditasjon Oslo",
+  ],
   openGraph: {
-    title: "Klarlinje — Retreat som funker",
+    title: "Klarlinje — Meditasjonsretreat nær Oslo",
     description:
-      "Sekulær, evidensbasert retreat for høytfungerende voksne. Bli med på ventelisten.",
+      "Sekulært, evidensbasert retreat på Son Spa, 40 min sør for Oslo. For høytfungerende voksne. Venteliste åpen.",
     type: "website",
     locale: "nb_NO",
+    url: "https://klarlinje.no",
+    siteName: "Klarlinje",
+  },
+  alternates: {
+    canonical: "https://klarlinje.no",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

@@ -1,15 +1,39 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Om Klarlinje — Jens",
-  description: "Jens har meditert i over ti år og undervist i meditasjon på folkehøgskole. Klarlinje er hans svar på det han savnet.",
+  title: "Om Jens — Grunnlegger av Klarlinje | Retreat nær Oslo",
+  description: "Jens har meditert i over ti år og undervist i meditasjon. Klarlinje er et sekulært, evidensbasert retreat på Son Spa, 40 min sør for Oslo.",
+  keywords: ["retreat Oslo", "meditasjonslærer Norge", "sekulær meditasjon", "Son Spa retreat", "Klarlinje"],
+  alternates: { canonical: "https://klarlinje.no/om" },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jens",
+  "url": "https://klarlinje.no/om",
+  "image": "https://klarlinje.no/Jens.jpg",
+  "jobTitle": "Retreat-leder og meditasjonslærer",
+  "description": "Jens har meditert i over ti år og undervist i meditasjon. Grunnlegger av Klarlinje, et sekulært evidensbasert retreat på Son Spa nær Oslo.",
+  "knowsAbout": ["meditasjon", "mindfulness", "MBSR", "stressreduksjon", "retreat", "evidensbasert meditasjon"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Klarlinje",
+    "url": "https://klarlinje.no"
+  }
 };
 
 export default function OmPage() {
   return (
     <main className="min-h-screen bg-sand">
+      <Script
+        id="person-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* Nav */}
       <header className="px-6 py-5 max-w-3xl mx-auto">
         <Link href="/" className="text-sm text-muted hover:text-forest transition-colors">
@@ -80,8 +104,8 @@ export default function OmPage() {
           <h2 className="font-heading text-2xl text-forest">Hva er Klarlinje?</h2>
           <p>
             Et helgeretreater for folk som har full jobb og barn. Vi holder til
-            på Oslo folkehøgskole Rønningen, ti minutters buss fra Storo.
-            Romstandard på hotellnivå. Mat som er faktisk god.
+            på Son Spa, et 4-stjerners spa-hotell 40 minutter sør for Oslo.
+            Overnatting, mat og spa er inkludert i prisen.
           </p>
           <p>
             Programmet er sekulært og evidensbasert. Ingenting her krever tro.
