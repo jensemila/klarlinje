@@ -69,6 +69,10 @@ const faqs = [
     a: "Yogamatte er fint å ha med. Har du meditasjonspute eller krakk kan du gjerne ta det med, ellers låner du. Ta med noen lag varme klær til meditasjon, det er lett å bli kald når man sitter stille. En full pakkeliste sendes til alle på ventelisten.",
   },
   {
+    q: "Må jeg sitte i en bestemt stilling når vi mediterer?",
+    a: "Nei. Du kan velge mellom å knele, sitte på stol eller sitte i lotusstilling på pute eller gulv. Vi går gjennom fordeler og ulemper med de forskjellige stillingene, så du finner det som fungerer best for deg.",
+  },
+  {
     q: "Hva om jeg ikke er i form?",
     a: "Treningen tilpasses. Det er ingen krav til fysisk nivå, og ingenting er obligatorisk. Du setter tempoet selv.",
   },
@@ -229,7 +233,7 @@ export default function HomePage() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="font-heading font-bold text-5xl md:text-6xl xl:text-7xl leading-[1.0] tracking-tight text-forest mb-8">
-              Retreat som funker når du har full jobb og barn.
+              Klar for å bli helt uthvilt?
             </h1>
             <p className="text-lg text-charcoal/60 leading-relaxed mb-10 max-w-md font-light">
               Sekulær. Evidensbasert. Du finner ikke ditt tredje øye. En helg
@@ -271,6 +275,33 @@ export default function HomePage() {
             >
               <p className="font-heading font-bold text-6xl text-sand/10 mb-6 leading-none">{num}</p>
               <p className="text-sand/80 text-lg leading-relaxed font-light">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── Hva er inkludert ─── */}
+      <section className="px-8 py-20 max-w-6xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-px w-8 bg-terra" />
+          <p className="text-terra text-xs font-semibold tracking-[0.2em] uppercase">Alt inkludert</p>
+        </div>
+        <h2 className="font-heading font-bold text-4xl md:text-5xl text-forest mb-14 tracking-tight leading-tight">
+          Hva får du?
+        </h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { icon: "🛏", title: "2 netter på Son Spa", desc: "Deluxe-rom på 4-stjerners spa-hotell inkludert i prisen." },
+            { icon: "🍽", title: "Alle måltider", desc: "Frokost, lunsj og middag fredag kveld til søndag lunsj." },
+            { icon: "♨️", title: "Spa og badstue", desc: "Full tilgang til Son Spas spa-anlegg gjennom hele oppholdet." },
+            { icon: "◎", title: "Guidede meditasjonsøkter", desc: "Evidensbasert program tilpasset alle erfaringsnivåer." },
+            { icon: "◈", title: "Trening og bevegelse", desc: "Tilpasset fysisk aktivitet som passer ved siden av meditasjon." },
+            { icon: "◻", title: "Materiell og program", desc: "Alt du trenger er klart. Du trenger bare å møte opp." },
+          ].map(({ icon, title, desc }) => (
+            <div key={title} className="p-6 bg-cream rounded-2xl border border-bark/15">
+              <span className="text-2xl mb-4 block">{icon}</span>
+              <h3 className="font-heading font-semibold text-forest mb-2">{title}</h3>
+              <p className="text-charcoal/55 text-sm leading-relaxed font-light">{desc}</p>
             </div>
           ))}
         </div>
@@ -463,6 +494,53 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── Passer dette for deg? ─── */}
+      <section className="px-8 py-20 max-w-6xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-px w-8 bg-terra" />
+          <p className="text-terra text-xs font-semibold tracking-[0.2em] uppercase">For hvem?</p>
+        </div>
+        <h2 className="font-heading font-bold text-4xl md:text-5xl text-forest mb-14 tracking-tight leading-tight">
+          Passer dette for deg?
+        </h2>
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="p-8 bg-cream rounded-2xl border border-bark/15">
+            <p className="font-heading font-semibold text-forest text-lg mb-6">Dette passer for deg som</p>
+            <ul className="space-y-4">
+              {[
+                "Har full jobb, kanskje barn, og for lite tid til deg selv",
+                "Har prøvd meditasjon via app, men ikke funnet noe som varer",
+                "Er skeptisk til det åndelige, men nysgjerrig på det evidensbaserte",
+                "Vil møte andre i samme situasjon uten tvungen prating",
+                "Trenger en helg der du faktisk lader opp, ikke bare slapper av",
+              ].map((point) => (
+                <li key={point} className="flex gap-3 items-start">
+                  <span className="text-forest mt-0.5 flex-shrink-0 font-bold">✓</span>
+                  <p className="text-charcoal/65 leading-relaxed font-light">{point}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="p-8 bg-sand rounded-2xl border border-bark/15">
+            <p className="font-heading font-semibold text-forest text-lg mb-6">Dette passer ikke for deg som</p>
+            <ul className="space-y-4">
+              {[
+                "Leter etter en åndelig eller religiøs opplevelse",
+                "Forventer et spa-opphold uten struktur eller program",
+                "Ikke er åpen for å sitte stille i korte perioder",
+                "Ønsker full luksus uten fellesskap med andre",
+                "Vil ha alkohol som en del av helgen",
+              ].map((point) => (
+                <li key={point} className="flex gap-3 items-start">
+                  <span className="text-charcoal/30 mt-0.5 flex-shrink-0 font-bold">✗</span>
+                  <p className="text-charcoal/45 leading-relaxed font-light">{point}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* ─── FAQ ─── */}
       <section className="px-8 py-28 max-w-3xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
@@ -529,7 +607,7 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-bark/60 text-xs font-semibold tracking-[0.2em] uppercase mb-6">Høsten 2026 · Oslo</p>
           <h2 className="font-heading font-bold text-5xl md:text-6xl text-sand mb-6 tracking-tight leading-tight">
-            Klar for å melde deg på?
+            Klar for 3 dager med ro?
           </h2>
           <p className="text-sand/55 mb-12 text-lg font-light">
             Ventelisten er gratis. Du forplikter deg ikke til noe.

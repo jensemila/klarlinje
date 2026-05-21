@@ -4,7 +4,7 @@ import Script from "next/script";
 import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
 
-const GA_ID = "G-P29044GT94";
+const GA_ID = "G-H027E3MZYE";
 
 const syne = Syne({
   variable: "--font-syne",
