@@ -66,11 +66,11 @@ const faqs = [
   },
   {
     q: "Hva trenger jeg å ta med?",
-    a: "Yogamatte er fint å ha med. Har du meditasjonspute eller krakk kan du gjerne ta det med, ellers låner du. Ta med noen lag varme klær til meditasjon, det er lett å bli kald når man sitter stille. En full pakkeliste sendes til alle på ventelisten.",
+    a: "Ta gjerne med en treningsmatte eller yogamatte. Har du meditasjonspute eller krakk kan du ta det med, ellers låner du. Ta med noen lag varme klær til meditasjon — det er lett å bli kald når man sitter stille. En full pakkeliste sendes til alle på ventelisten.",
   },
   {
     q: "Må jeg sitte i en bestemt stilling når vi mediterer?",
-    a: "Nei. Du kan velge mellom å knele, sitte på stol eller sitte i lotusstilling på pute eller gulv. Vi går gjennom fordeler og ulemper med de forskjellige stillingene, så du finner det som fungerer best for deg.",
+    a: "Nei. Du kan sitte på stol, knele, stå eller sitte i lotusstilling på pute eller gulv — alle vanlige stillinger fungerer. Vi bruker tid på å gå gjennom hva de ulike stillingene gjør med kropp og oppmerksomhet, slik at du kan velge bevisst og ikke bare av vane.",
   },
   {
     q: "Hva om jeg ikke er i form?",
