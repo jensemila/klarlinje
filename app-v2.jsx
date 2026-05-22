@@ -183,7 +183,7 @@ const TWEAK_DEFAULTS_V2 = /*EDITMODE-BEGIN*/{
   "showQuotes": true,
   "showAufguss": true,
   "showMarquee": true,
-  "datoLabel": "Våren 2027"
+  "datoLabel": "Høsten 2026"
 }/*EDITMODE-END*/;
 
 /* ─── Nav ─── */
@@ -387,10 +387,10 @@ function Jens() {
             </h2>
             <div className="jens-prose">
               <p>
-                <strong>Daglig meditasjon i over ti år.</strong> Han tror verken på det tredje øyet eller på at meditasjon må læres av en munk med tjue års sølibat.
+                Jens har meditert daglig i over ti år. Han tror verken på det tredje øyet eller på at meditasjon må læres av en munk med tjue års sølibat.
               </p>
               <p>
-                Fire år som lærer ved Rønningen folkehøgskole, med ansvar for daglige morgensamlinger og meditasjonsundervisning for 180 elever. Pedagogisk utdannet, bachelor i religion. Til daglig markedssjef i NRF.
+                Tidlig i karrieren jobbet Jens i fire år som lærer ved Oslo folkehøgskole, med ansvar for daglige morgensamlinger og meditasjonsundervisning for 180 elever. Nå jobber han som markedssjef i en av Norges største pasientorganisasjoner.
               </p>
             </div>
             <div className="jens-facts">
@@ -404,7 +404,7 @@ function Jens() {
               </div>
               <div className="jens-fact">
                 <div className="jens-fact-num">04</div>
-                <div className="jens-fact-label">år på folkehøgskole</div>
+                <div className="jens-fact-label">år som toppleder</div>
               </div>
             </div>
           </div>
@@ -429,7 +429,7 @@ function Program() {
         <div className="program-head">
           <span className="label">02 / Programmet</span>
           <div></div>
-          <h2><em className="editorial">En enkel oppskrift</em><br/>med 3,5 timer meditasjon.</h2>
+          <h2><em className="editorial">Slik er helgen</em><br/>bygget opp.</h2>
         </div>
 
         <div className="program-days">
@@ -645,7 +645,7 @@ const FAQ_DATA = [
   { q: "Er dette religiøst eller alternativt?", a: "Nei. Klarlinje er sekulært og evidensbasert." },
   { q: "Hva skjer på retreaten?", a: "Meditasjon, bevegelse, måltider, badstue og stille perioder. Full timesplan sendes ut til påmeldte i god tid før helgen." },
   { q: "Hvem deltar?", a: "Voksne mellom 28 og 55 år som presterer mye og vil ha mer ro. Mange jobber innen tech, helse, ledelse eller akademia. De fleste kommer alene, men noen drar som team eller med kolleger." },
-  { q: "Kan vi booke for et team eller arbeidsgruppe?", a: "Ja. Retreaten egner seg like godt for en gruppe kolleger eller et helt arbeidsfellesskap som vil dele opplevelsen — ikke bare for ledergrupper. Ta kontakt på e-post så finner vi en løsning: hei@klarlinje.no" },
+  { q: "Kan vi booke for et team eller arbeidsgruppe?", a: "Ja. Retreaten egner seg like godt for en gruppe kolleger eller et helt arbeidsfellesskap som vil dele opplevelsen, ikke bare for ledergrupper. Ta kontakt på e-post så finner vi en løsning: jens@klarlinje.no" },
   { q: "Hva med trening?", a: "Rolig morgenbevegelse er en del av programmet. I tillegg arrangerer vi en felles joggetur eller gåtur for de som har lyst. Hotellets fasiliteter står også åpne for egen bruk." },
   { q: "Kan jeg komme alene?", a: "De fleste kommer alene. Du får enkeltrom og bestemmer selv hvor mye du vil snakke med andre." },
   { q: "Hva er anbefalingen for mobilbruk?", a: "Du får mest ut av helgen om mobilen blir liggende på rommet i flymodus. Ønsker du å forplikte deg helt, kan du levere inn telefonen i resepsjonen. Du bestemmer selv." },
@@ -664,7 +664,7 @@ function FAQ() {
         <div className="faq-head">
           <span className="label">12 / Spørsmål</span>
           <div></div>
-          <h2><em className="editorial">De vanlige</em><br/>spørsmålene.</h2>
+          <h2><em className="editorial">De vanligste</em><br/>spørsmålene.</h2>
         </div>
         <div className="faq-list">
           {FAQ_DATA.map((item, i) => (
@@ -941,7 +941,7 @@ function Stillinger() {
     },
     {
       label: "Stående",
-      sub: "Hender ved hjertet",
+      sub: "med øynene ut over horisonten",
       svg: (
         <g>
           {/* Head */}
@@ -1072,7 +1072,7 @@ function FinalCTA({ onSignup }) {
           Bli med på ventelisten <span className="btn-arrow">→</span>
         </button>
         <p style={{ marginTop: "1.5rem", fontSize: "0.85rem", color: "var(--ink-soft)", letterSpacing: "0.04em" }}>
-          Spørsmål? Skriv til <a href="mailto:[email protected]" style={{ color: "var(--accent)", textDecoration: "none" }}>[email protected]</a>
+          Spørsmål? Skriv til <a href="mailto:jens@klarlinje.no" style={{ color: "var(--accent)", textDecoration: "none" }}>jens@klarlinje.no</a>
         </p>
       </div>
     </section>
@@ -1088,7 +1088,7 @@ function Footer() {
           <div className="footer-col">
             <h5><em className="editorial">Klarlinje</em></h5>
             <p style={{ fontSize: 12, lineHeight: 1.6, letterSpacing: 0, textTransform: "none", color: "var(--ink-mute)" }}>
-              Et sekulært, evidensbasert retreat for høytfungerende voksne. Våren 2027 på Son Spa.
+              Et sekulært, evidensbasert retreat for høytfungerende voksne. Høsten 2026 på Son Spa.
             </p>
           </div>
           <div className="footer-col">
@@ -1098,12 +1098,13 @@ function Footer() {
               <li><a href="#sted">Stedet</a></li>
               <li><a href="#aufguss">Aufguss</a></li>
               <li><a href="#meldpaa">Meld deg på</a></li>
+              <li><a href="ledergruppe.html">For ledergrupper</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h5><em className="editorial">Kontakt</em></h5>
             <ul>
-              <li><a href="mailto:[email protected]">[email protected]</a></li>
+              <li><a href="mailto:jens@klarlinje.no">jens@klarlinje.no</a></li>
               <li><a href="#">Personvern</a></li>
               <li><a href="#">Vilkår</a></li>
             </ul>
@@ -1182,7 +1183,7 @@ function SignupModal({ open, onClose }) {
         <button className="modal-close" onClick={onClose} aria-label="Lukk">×</button>
         {step !== "success" ? (
           <form onSubmit={submit}>
-            <span className="label modal-eyebrow">Venteliste · Våren 2027</span>
+            <span className="label modal-eyebrow">Venteliste · Høsten 2026</span>
             <h3><em>Bli med</em> på ventelisten.</h3>
             <p>
               Du får én e-post når datoene er satt, og igjen når påmeldingen åpner. Det er alt.
