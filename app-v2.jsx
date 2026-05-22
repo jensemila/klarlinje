@@ -310,13 +310,13 @@ function Intro() {
           </div>
           <div className="intro-prose">
             <p>
-              Du presterer. Du forsøker å ta vare på deg selv. <span className="soft">Likevel opplever du stress.</span>
+              Livet kan være krevende til tider. <span className="soft">Noen perioder er hodet sjelden stille.</span>
             </p>
             <p>
-              Du har prøvd meditasjon. <span className="soft">Roen forsvinner like fort som den kom.</span>
+              Du har kanskje opplevd at meditasjon hjelper, men at det er vanskelig å finne tid til det i en travel hverdag.
             </p>
             <p>
-              Har du prøvd å komme deg vekk for <em>en helg med fokus på meditasjon og ro?</em>
+              Noen ganger er alt du trenger <em>en helg ved fjorden fylt med meditasjon og ro.</em> Hvis alt går etter planen kommer du hjem 100% uthvilt.
             </p>
           </div>
         </div>
@@ -785,7 +785,7 @@ function Overgang() {
             <em className="editorial">Før, etter.</em>
           </h2>
           <p className="overgang-sub">
-            Du trenger ikke endre deg. Du trenger bare et rom der kroppen og hodet får komme tilbake til det samme sted.
+            Du trenger ikke endre deg. Du trenger en helg der kroppen og hodet får komme tilbake til en mer stressfri tilstand.
           </p>
         </div>
 
