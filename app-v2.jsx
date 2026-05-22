@@ -158,7 +158,7 @@ function Research() {
               Studien randomiserte 95 friske deltakere i alderen 18 til 67 år til enten et tre-dagers mindfulness-retreat eller en aktiv kontrollgruppe i lignende sosial setting. Blodprøver og selvrapportering før og etter.
             </p>
             <p>
-              Kronisk betennelse er koblet til depresjon, hjertesykdom og aldring. Et helgeretreat <em>er ikke alternativmedisin, det er fysiologi.</em>
+              Kronisk betennelse er koblet til depresjon, hjertesykdom og aldring. <em>En storbyferie med venner er én ting. En helg med aktiv meditasjon er noe helt annet.</em>
             </p>
           </div>
           <div className="research-cite">
@@ -248,7 +248,7 @@ function Hero({ headlineKey, datoLabel, onSignup }) {
           <div className="hero-bottom">
             <div>
               <p className="hero-sub">
-                Et sekulært, evidensbasert retreat for høytfungerende voksne. Tre dager med meditasjon, bevegelse og badstue på fjorden.
+                Velkommen til et helgeretreat for deg som vil ha en effektiv pause med meditasjon, slik at du kan komme tilbake til familie, hverdag og jobb med overskudd.
               </p>
               <div className="hero-cta-row">
                 <button className="btn btn-fill btn-lg" onClick={onSignup}>
