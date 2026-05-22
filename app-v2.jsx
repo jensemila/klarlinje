@@ -653,7 +653,7 @@ const FAQ_DATA = [
   { q: "Kan jeg lese en bok for å forberede meg?", a: "Ja. Wherever You Go, There You Are av Jon Kabat-Zinn er en god, kort introduksjon. Det er ikke et krav å lese den, men de som har lyst på litt kontekst, får mye igjen for den." },
   { q: "Hva er avbestillingsvilkårene?", a: "Fri avbestilling fram til 30 dager før retreaten. Mellom 30 og 14 dager før refunderes 50 %. Etter 14 dager før refunderes ingenting." },
   { q: "Er Son Spa stengt for andre gjester under retreaten?", a: "Nei. Son Spa er åpent for andre gjester i de samme dagene. Våre egne økter foregår i privat konferansesal og på rommene. Du vil møte andre i resepsjonen, ved frokostbufféen og i spa-avdelingen, men programmet vårt er uforstyrret." },
-  { q: "Hva bør jeg pakke?", a: "Behagelige klær til bevegelse og innendørs, badetøy, og noe varmt for kveldsturer. Ta gjerne med en treningsmatte eller yogamatte hvis du har. Mer praktisk info kommer i påmeldingen." },
+  { q: "Hva bør jeg pakke?", a: "Behagelige klær til bevegelse og innendørs, badetøy, og noe varmt for kveldsturer. Ta gjerne med en treningsmatte eller yogamatte hvis du har. Har du en meditasjonskrakk eller meditasjonspute, er du velkommen til å ta den med — hvis ikke har vi til låns. Mer praktisk info kommer i påmeldingen." },
 ];
 
 function FAQ() {
@@ -728,17 +728,17 @@ function Inkludert() {
 function Passer() {
   const ja = [
     "Du presterer mye, men kjenner at det koster.",
-    "Du har prøvd meditasjon før, men ikke fått det til å feste seg.",
+    "Du er nysgjerig på hva meditasjon kan gjøre.",
     "Du vil ha tre dager helt for deg selv, uten å måtte ta beslutninger.",
     "Du foretrekker et sekulært og evidensbasert format framfor det åndelige.",
-    "Du tåler stillhet i lengre perioder.",
+    "Du er åpen for korte perioder med stillhet.",
   ];
   const nei = [
     "Du er ute etter en partyhelg eller sosial getaway.",
     "Du leter etter et åndelig eller religiøst retreat.",
     "Du forventer guruopplevelser, energiarbeid eller healing.",
     "Du er midt i en akutt livskrise som krever profesjonell oppfølging.",
-    "Du har problemer med å være borte fra jobb og mobil i 60 timer.",
+    "Du vil absolutt ikke være utilgjengelig i flere timer i strekk.",
   ];
   return (
     <section className="passer" id="passer">
