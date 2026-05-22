@@ -493,7 +493,7 @@ function Program() {
           <div className="program-foot-cell">
             <span className="label">Plasser</span>
             <div className="program-foot-val">15</div>
-            <div className="program-foot-note">Inntaket gjøres via kort søknad etter venteliste.</div>
+            <div className="program-foot-note">Plass tildeles fra ventelisten.</div>
           </div>
         </div>
       </div>
@@ -644,15 +644,16 @@ const FAQ_DATA = [
   { q: "Er massasje inkludert?", a: "Nei. Massasje og andre spa-behandlinger er ikke en del av pakken, men kan bestilles direkte hos Son Spa når du er på plass. Vi sender ut menyen i god tid før retreaten." },
   { q: "Er dette religiøst eller alternativt?", a: "Nei. Klarlinje er sekulært og evidensbasert." },
   { q: "Hva skjer på retreaten?", a: "Meditasjon, bevegelse, måltider, badstue og stille perioder. Full timesplan sendes ut til påmeldte i god tid før helgen." },
-  { q: "Hvem deltar?", a: "Voksne mellom 28 og 55 år som presterer mye og vil ha mer ro. Mange jobber innen tech, helse, ledelse eller akademia." },
+  { q: "Hvem deltar?", a: "Voksne mellom 28 og 55 år som presterer mye og vil ha mer ro. Mange jobber innen tech, helse, ledelse eller akademia. De fleste kommer alene, men noen drar som team eller med kolleger." },
+  { q: "Kan vi booke for et team eller arbeidsgruppe?", a: "Ja. Retreaten egner seg like godt for en gruppe kolleger eller et helt arbeidsfellesskap som vil dele opplevelsen — ikke bare for ledergrupper. Ta kontakt på e-post så finner vi en løsning: hei@klarlinje.no" },
   { q: "Hva med trening?", a: "Rolig morgenbevegelse er en del av programmet. I tillegg arrangerer vi en felles joggetur eller gåtur for de som har lyst. Hotellets fasiliteter står også åpne for egen bruk." },
   { q: "Kan jeg komme alene?", a: "De fleste kommer alene. Du får enkeltrom og bestemmer selv hvor mye du vil snakke med andre." },
-  { q: "Hvordan er det med mobil og alkohol?", a: "Du får mest ut av helgen om mobilen blir liggende på rommet i flymodus og du holder deg unna alkohol. Ønsker du å forplikte deg helt, kan du levere inn telefonen i resepsjonen. Du bestemmer selv." },
+  { q: "Hva er anbefalingen for mobilbruk?", a: "Du får mest ut av helgen om mobilen blir liggende på rommet i flymodus. Ønsker du å forplikte deg helt, kan du levere inn telefonen i resepsjonen. Du bestemmer selv." },
+  { q: "Hva er anbefalingen for alkohol?", a: "Du får mest ut av helgen om du holder deg unna alkohol disse dagene. Son Spa er ikke alkoholfritt, men vi anbefaler å la det ligge. Du bestemmer selv." },
   { q: "Kan jeg lese en bok for å forberede meg?", a: "Ja. Wherever You Go, There You Are av Jon Kabat-Zinn er en god, kort introduksjon. Det er ikke et krav å lese den, men de som har lyst på litt kontekst, får mye igjen for den." },
   { q: "Hva er avbestillingsvilkårene?", a: "Fri avbestilling fram til 30 dager før retreaten. Mellom 30 og 14 dager før refunderes 50 %. Etter 14 dager før refunderes ingenting." },
-  { q: "Er Son Spa stengt for andre gæster under retreaten?", a: "Nei. Son Spa er åpent for andre gæster i de samme dagene. Våre egne økter foregår i privat konferansesal og på rommene. Du vil møte andre i resepsjonen, ved frokostbufféen og i spa-avdelingen, men programmet vårt er uforstyrret." },
+  { q: "Er Son Spa stengt for andre gjester under retreaten?", a: "Nei. Son Spa er åpent for andre gjester i de samme dagene. Våre egne økter foregår i privat konferansesal og på rommene. Du vil møte andre i resepsjonen, ved frokostbufféen og i spa-avdelingen, men programmet vårt er uforstyrret." },
   { q: "Hva bør jeg pakke?", a: "Behagelige klær til bevegelse og innendørs, badetøy, og noe varmt for kveldsturer. Ta gjerne med en treningsmatte eller yogamatte hvis du har. Mer praktisk info kommer i påmeldingen." },
-  { q: "Hvordan er søknadsprosessen?", a: "Du melder deg på ventelisten først. Når datoene er satt, sender vi et kort søknadsskjema." },
 ];
 
 function FAQ() {
@@ -1064,12 +1065,15 @@ function FinalCTA({ onSignup }) {
           Klar for <em>3 dager</em><br/>med ro?
         </h2>
         <p>
-          Ventelisten er gratis. Ingen forpliktelse. Vi sender deg dato og mer informasjon, så velger du selv om du vil søke om en plass.
+          Ventelisten er gratis. Ingen forpliktelse. Vi sender deg dato og mer informasjon, og du bestemmer selv om du vil reservere en plass.
         </p>
         <div className="final-line"></div>
         <button className="btn btn-fill btn-lg" onClick={onSignup}>
           Bli med på ventelisten <span className="btn-arrow">→</span>
         </button>
+        <p style={{ marginTop: "1.5rem", fontSize: "0.85rem", color: "var(--ink-soft)", letterSpacing: "0.04em" }}>
+          Spørsmål? Skriv til <a href="mailto:[email protected]" style={{ color: "var(--accent)", textDecoration: "none" }}>[email protected]</a>
+        </p>
       </div>
     </section>
   );
