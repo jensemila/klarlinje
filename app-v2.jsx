@@ -564,7 +564,7 @@ function Aufguss() {
             </div>
             <div className="aufguss-side">
               <p>
-                En flytende badstue på fjorden, 90 grader, plass til femten. Vi har med en dedikert badstuemester som leder hele seansen — han heller vann tilsatt eteriske oljer på steinene og fordeler den varme dampen rundt i rommet med et stort håndkle.
+                En flytende badstue på fjorden, 90 grader, plass til femten. Vi har med en dedikert badstuemester som leder hele seansen. Han heller vann tilsatt eteriske oljer på steinene og fordeler den varme dampen rundt i rommet med et stort håndkle.
               </p>
               <div className="aufguss-steps">
                 <div className="aufguss-step">
@@ -649,7 +649,7 @@ const FAQ_DATA = [
   { q: "Er dette religiøst eller alternativt?", a: "Nei. Klarlinje er sekulært og evidensbasert." },
   { q: "Hva skjer på retreaten?", a: "Meditasjon, bevegelse, måltider, badstue og stille perioder. Full timesplan sendes ut til påmeldte i god tid før helgen." },
   { q: "Hvem deltar?", a: "Voksne mellom 28 og 55 år som presterer mye og vil ha mer ro. Mange jobber innen tech, helse, ledelse eller akademia. De fleste kommer alene, men noen drar som team eller med kolleger." },
-  { q: "Kan vi booke for et team eller arbeidsgruppe?", a: "Ja. Retreaten egner seg like godt for en gruppe kolleger eller et helt arbeidsfellesskap som vil dele opplevelsen, ikke bare for ledergrupper. Ta kontakt på e-post så finner vi en løsning: jens@klarlinje.no" },
+  { q: "Kan vi booke for et team eller arbeidsgruppe?", a: "Ja. Retreaten egner seg like godt for en gruppe kolleger eller et helt arbeidsfellesskap som vil dele opplevelsen, ikke bare for ledergrupper. Ta kontakt på e-post: jens@klarlinje.no", link: { href: "arbeidsgruppe.html", text: "Les mer om retreat for arbeidsgrupper →" } },
   { q: "Hva med trening?", a: "Rolig morgenbevegelse er en del av programmet. I tillegg arrangerer vi en felles joggetur eller gåtur for de som har lyst. Hotellets fasiliteter står også åpne for egen bruk." },
   { q: "Kan jeg komme alene?", a: "De fleste kommer alene. Du får enkeltrom og bestemmer selv hvor mye du vil snakke med andre." },
   { q: "Hva er anbefalingen for mobilbruk?", a: "Du får mest ut av helgen om mobilen blir liggende på rommet i flymodus. Ønsker du å forplikte deg helt, kan du levere inn telefonen i resepsjonen. Du bestemmer selv." },
@@ -685,6 +685,11 @@ function FAQ() {
               <div className="faq-a">
                 <div className="faq-a-inner">
                   <p className="faq-a-text">{item.a}</p>
+                  {item.link && (
+                    <a href={item.link.href} className="research-cite-link" style={{ display: "inline-block", marginTop: "0.75rem" }}>
+                      {item.link.text}
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -1102,6 +1107,7 @@ function Footer() {
               <li><a href="#sted">Stedet</a></li>
               <li><a href="#aufguss">Aufguss</a></li>
               <li><a href="#meldpaa">Meld deg på</a></li>
+              <li><a href="arbeidsgruppe.html">For arbeidsgrupper</a></li>
               <li><a href="ledergruppe.html">For ledergrupper</a></li>
             </ul>
           </div>
