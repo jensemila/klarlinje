@@ -248,7 +248,7 @@ function Hero({ headlineKey, datoLabel, onSignup }) {
           <div className="hero-bottom">
             <div>
               <p className="hero-sub">
-                Velkommen til et helgeretreat for deg som vil ha en effektiv pause med meditasjon, slik at du kan komme tilbake til familie, hverdag og jobb med overskudd.
+                Velkommen til et helgeretreat for deg som vil ha en effektiv pause med meditasjon, slik at du kan komme tilbake til hverdag og jobb med overskudd.
               </p>
               <div className="hero-cta-row">
                 <button className="btn btn-fill btn-lg" onClick={onSignup}>
@@ -316,7 +316,7 @@ function Intro() {
               Du har kanskje opplevd at meditasjon hjelper, men at det er vanskelig å finne tid til det i en travel hverdag.
             </p>
             <p>
-              Noen ganger er alt du trenger <em>en helg ved fjorden fylt med meditasjon og ro.</em> Hvis alt går etter planen kommer du hjem 100% uthvilt.
+              Noen ganger er alt du trenger <em>en helg ved fjorden fylt med meditasjon og ro.</em>
             </p>
           </div>
         </div>
@@ -417,11 +417,15 @@ function Jens() {
 /* ─── Program ─── */
 function Program() {
   const sessions = [
-    { num: "i",   when: "Fredag kveld",        place: "Konferansesal",      duration: "30 min",            body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
-    { num: "ii",  when: "Lørdag morgen",       place: "På rommet",          duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon på rommet før frokost. Stille i eget tempo." },
-    { num: "iii", when: "Lørdag, midt på dagen", place: "Konferansesal",    duration: "1 t",               body: "Lengre, dyptgående fellesøkt midt på dagen." },
-    { num: "iv",  when: "Lørdag kveld",        place: "Konferansesal",      duration: "30 min",            body: "Kveldsmeditasjon før middag." },
-    { num: "v",   when: "Søndag formiddag",    place: "Konferansesal",      duration: "1 t",               body: "Avsluttende økt før felles lunsj og avreise." },
+    { num: "i",   when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",            body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
+    { num: "ii",  when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "—",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
+    { num: "iii", when: "Lørdag morgen",          place: "På rommet",      duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon på rommet. Stille i eget tempo." },
+    { num: "iv",  when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",               body: "Lengre, dyptgående fellesøkt midt på dagen." },
+    { num: "v",   when: "Lørdag 13:00",           place: "Restauranten",   duration: "—",                 body: "Lunsj." },
+    { num: "vi",  when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",            body: "Kveldsmeditasjon." },
+    { num: "vii", when: "Lørdag 18:00",           place: "Restauranten",   duration: "—",                 body: "Middag." },
+    { num: "viii",when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",               body: "Avsluttende økt." },
+    { num: "ix",  when: "Søndag 13:00",           place: "Restauranten",   duration: "—",                 body: "Lunsj og avreise." },
   ];
   return (
     <section id="programmet">
@@ -560,7 +564,7 @@ function Aufguss() {
             </div>
             <div className="aufguss-side">
               <p>
-                En flytende badstue på fjorden, 90 grader, plass til femten. En aufguss-mester heller vann tilsatt eteriske oljer på steinene og fordeler dampen med håndkle.
+                En flytende badstue på fjorden, 90 grader, plass til femten. Vi har med en dedikert badstuemester som leder hele seansen — han heller vann tilsatt eteriske oljer på steinene og fordeler den varme dampen rundt i rommet med et stort håndkle.
               </p>
               <div className="aufguss-steps">
                 <div className="aufguss-step">
@@ -738,7 +742,7 @@ function Passer() {
     "Du leter etter et åndelig eller religiøst retreat.",
     "Du forventer guruopplevelser, energiarbeid eller healing.",
     "Du er midt i en akutt livskrise som krever profesjonell oppfølging.",
-    "Du vil absolutt ikke være utilgjengelig i flere timer i strekk.",
+    "Du må være tilgjengelig 24/7.",
   ];
   return (
     <section className="passer" id="passer">
