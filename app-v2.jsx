@@ -60,9 +60,9 @@ function ResearchChart() {
       </text>
 
       {/* IL-10 (ascending) — primary accent, drawn first */}
-      <polyline
+      <path
         className="chart-line line-il10"
-        points="60,225 270,140 480,55"
+        d="M60,225 L270,140 L480,55"
         stroke="var(--accent)"
         strokeWidth="2"
         pathLength="1"
@@ -73,9 +73,9 @@ function ResearchChart() {
       <text x="490" y="59" className="chart-line-label chart-line-label-accent">IL-10</text>
 
       {/* IL-6 & IL-8 (descending) — secondary brass */}
-      <polyline
+      <path
         className="chart-line line-il6"
-        points="60,70 270,135 480,210"
+        d="M60,70 L270,135 L480,210"
         stroke="var(--accent-2)"
         strokeWidth="1.6"
         pathLength="1"
@@ -86,9 +86,9 @@ function ResearchChart() {
       <text x="490" y="214" className="chart-line-label">IL-6 & IL-8</text>
 
       {/* Stress & angst (descending) — muted ink, dashed */}
-      <polyline
+      <path
         className="chart-line line-stress"
-        points="60,95 270,160 480,235"
+        d="M60,95 L270,160 L480,235"
         stroke="var(--ink-soft)"
         strokeWidth="1.3"
         strokeDasharray="4 4"

@@ -42,17 +42,17 @@ function ResearchChart() {
       <text x="480" y="284" textAnchor="middle" className="chart-axis-label">Dag 3</text>
       <text x="60" y="22" textAnchor="start" className="chart-title">Endring over 3 dager</text>
       <text x="480" y="22" textAnchor="end" className="chart-title chart-title-muted">Rosenkranz et al. (2021)</text>
-      <polyline className="chart-line line-il10" points="60,225 270,140 480,55" stroke="var(--accent)" strokeWidth="2" pathLength="1" />
+      <path className="chart-line line-il10" d="M60,225 L270,140 L480,55" stroke="var(--accent)" strokeWidth="2" pathLength="1" />
       <circle cx="60"  cy="225" r="4" fill="var(--accent)" className="chart-dot dot-il10" />
       <circle cx="270" cy="140" r="3" fill="var(--accent)" className="chart-dot dot-il10" />
       <circle cx="480" cy="55"  r="5" fill="var(--accent)" className="chart-dot dot-il10" />
       <text x="490" y="59" className="chart-line-label chart-line-label-accent">IL-10</text>
-      <polyline className="chart-line line-il6" points="60,70 270,135 480,210" stroke="var(--accent-2)" strokeWidth="1.6" pathLength="1" />
+      <path className="chart-line line-il6" d="M60,70 L270,135 L480,210" stroke="var(--accent-2)" strokeWidth="1.6" pathLength="1" />
       <circle cx="60"  cy="70"  r="3.5" fill="var(--accent-2)" className="chart-dot dot-il6" />
       <circle cx="270" cy="135" r="3"   fill="var(--accent-2)" className="chart-dot dot-il6" />
       <circle cx="480" cy="210" r="3.5" fill="var(--accent-2)" className="chart-dot dot-il6" />
       <text x="490" y="214" className="chart-line-label">IL-6 &amp; IL-8</text>
-      <polyline className="chart-line line-stress" points="60,95 270,160 480,235" stroke="var(--ink-soft)" strokeWidth="1.3" strokeDasharray="4 4" pathLength="1" />
+      <path className="chart-line line-stress" d="M60,95 L270,160 L480,235" stroke="var(--ink-soft)" strokeWidth="1.3" strokeDasharray="4 4" pathLength="1" />
       <circle cx="60"  cy="95"  r="3"   fill="var(--ink-soft)" className="chart-dot dot-stress" />
       <circle cx="270" cy="160" r="2.5" fill="var(--ink-soft)" className="chart-dot dot-stress" />
       <circle cx="480" cy="235" r="3"   fill="var(--ink-soft)" className="chart-dot dot-stress" />
@@ -566,7 +566,7 @@ function Practical() {
 
 /* ─── Research ─── */
 function Research() {
-  const [chartRef, chartInView] = useInView(0.25);
+  const [chartRef, chartInView] = useInView(0);
   return (
     <section id="forskning" style={{ padding: "100px 0", background: "var(--bg-soft)" }}>
       <div className="shell">
