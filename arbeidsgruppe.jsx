@@ -578,7 +578,7 @@ function Research() {
         <div className="research-grid">
           <div></div>
           <p className="research-lead">
-            En randomisert studie viser at <em>tre dager</em> med meditasjon gir målbare biologiske endringer i immunsystemet — ikke bare psykologiske effekter.
+            En randomisert studie viser at <em>tre dager</em> med meditasjon gir målbare biologiske endringer i immunsystemet.
           </p>
           <div className="research-chart-wrap">
             <div ref={chartRef} className={`research-chart ${chartInView ? "in" : ""}`}>
