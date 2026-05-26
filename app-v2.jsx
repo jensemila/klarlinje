@@ -518,7 +518,7 @@ function Sted() {
             <div className="sted-bleed-title"><em className="editorial">Son Spa.</em></div>
           </div>
           <div className="sted-bleed-pull">
-            <em className="editorial">«Stedet skaper gode følelser av seg selv.»</em>
+            <em className="editorial">«Det vakreste spa-hotellet i nærheten av Oslo.»</em>
           </div>
         </div>
       </div>
