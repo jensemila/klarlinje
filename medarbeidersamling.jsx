@@ -108,7 +108,7 @@ function Hero() {
         </div>
         <div>
           <h1 className="hero-headline">
-            En medarbeidersamling<br/><em>som faktisk gjør noe.</em>
+            Tre dager<br/><em>dere ikke glemmer.</em>
           </h1>
           <div className="hero-bottom">
             <div>
@@ -152,7 +152,7 @@ function PullQuote() {
               lineHeight: 1.35,
               margin: "0 0 1.5rem"
             }}>
-              «En workshophelg med kolleger er vel og bra. Men en helg med aktiv tilstedeværelse kan gjøre noe helt annet med et team.»
+              «En medarbeidersamling med kolleger er vel og bra. Men en helg med aktiv tilstedeværelse kan gjøre noe helt annet med et team.»
             </p>
             <footer style={{ fontSize: "0.78rem", letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--accent)" }}>
               Jens Asp, retreatleder
