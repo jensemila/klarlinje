@@ -1,4 +1,4 @@
-/* ledergruppe.jsx — Klarlinje for HR og ledergrupper */
+/* medarbeidersamling.jsx — Klarlinje medarbeidersamling */
 const { useState, useEffect, useRef } = React;
 
 /* ─── useInView hook ─── */
@@ -93,14 +93,14 @@ function Nav() {
 function Hero() {
   return (
     <section className="hero" id="top">
-      <img className="hero-image" src="images/meditation-rocks.jpg" alt="Tre personer på klipper ved Oslofjorden" />
+      <img className="hero-image" src="images/meditation-sunset.jpg" alt="Gruppe som mediterer på klipper ved Oslofjorden i solnedgang" />
       <div className="hero-tint"></div>
       <div className="hero-grain"></div>
       <div className="hero-content">
         <div className="hero-top">
           <div></div>
           <div className="hero-meta-block">
-            <span className="label">For HR og ledergrupper</span>
+            <span className="label">Medarbeidersamling</span>
             <div className="meta-val" style={{ marginTop: 12 }}>Son Spa, Vestby</div>
             <span className="label" style={{ marginTop: 18 }}>Gruppestørrelse</span>
             <div className="meta-val">Opptil 15 deltakere</div>
@@ -108,12 +108,12 @@ function Hero() {
         </div>
         <div>
           <h1 className="hero-headline">
-            Meditasjon<br/><em>er lederutvikling.</em>
+            En medarbeidersamling<br/><em>som faktisk gjør noe.</em>
           </h1>
           <div className="hero-bottom">
             <div>
               <p className="hero-sub">
-                Et evidensbasert mindfulness-retreat for ledergrupper. Tre dager med meditasjon, undervisning og hvile ved Oslofjorden som gir lederne dine verktøy de bruker resten av karrieren.
+                Et evidensbasert mindfulness-retreat som medarbeidersamling. Tre dager med meditasjon, undervisning og hvile ved Oslofjorden som gir kollegene dine verktøy de tar med hjem.
               </p>
               <div className="hero-cta-row">
                 <a href="mailto:jens@klarlinje.no" className="btn btn-fill btn-lg">
@@ -152,7 +152,7 @@ function PullQuote() {
               lineHeight: 1.35,
               margin: "0 0 1.5rem"
             }}>
-              «De fleste lederutviklingsprogrammer gir mer input til et alt for sprengt hode. En retreat gjør det motsatte.»
+              «En workshophelg med kolleger er vel og bra. Men en helg med aktiv tilstedeværelse kan gjøre noe helt annet med et team.»
             </p>
             <footer style={{ fontSize: "0.78rem", letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--accent)" }}>
               Jens Asp, retreatleder
@@ -168,23 +168,23 @@ function PullQuote() {
 const WHY_ITEMS = [
   {
     num: "01",
-    title: "Redusert stressnivå",
-    body: "Forskning viser målbare biologiske endringer etter bare tre dager med meditasjon. Lavere kortisol, lavere betennelse og bedre søvn.",
+    title: "Ekte hvile",
+    body: "Tre dager uten agendaer, møter eller beslutninger. Kollegene dine kommer hjem med overskudd de ikke visste de manglet.",
   },
   {
     num: "02",
-    title: "Bedre beslutninger",
-    body: "Mindfulness reduserer reaktivitet og kognitiv bias. Ledere som mediterer tar mer gjennomtenkte beslutninger under press.",
+    title: "Felles opplevelse",
+    body: "Å meditere sammen gjør noe med et team som kafétur og kickoff ikke gjør. Dere deler noe få andre har gjort sammen.",
   },
   {
     num: "03",
-    title: "Sterkere ledergruppe",
-    body: "Å samles i retreatform gjør noe unikt med en ledergruppe. Son Spa er kanskje kjent for de fleste, men å meditere i 3,5 timer er ikke det. Dette kan styrke tillit og åpenhet i gruppen på en måte andre møter ikke gjør.",
+    title: "Bedre fokus og ro",
+    body: "Mindfulness reduserer reaktivitet og stress. Forskning viser målbare biologiske endringer etter bare tre dager.",
   },
   {
     num: "04",
-    title: "Verktøy de faktisk bruker",
-    body: "Tre dager er nok til å etablere en meditasjonspraksis som holder etter at helgen er over.",
+    title: "Verktøy som holder",
+    body: "Tre dager er nok til å etablere en meditasjonspraksis. Kollegene dine tar noe konkret med hjem.",
   },
 ];
 
@@ -196,14 +196,14 @@ function Why() {
           <span className="label">Hvorfor dette virker</span>
           <div></div>
           <h2>
-            <em className="editorial">Det lederne dine trenger</em><br/>er ikke mer informasjon.
+            <em className="editorial">En annen type</em><br/>medarbeidersamling.
           </h2>
         </div>
         <div className="program-days" style={{ marginTop: "1rem" }}>
           <div></div>
           <div>
             <p style={{ color: "var(--ink-soft)", marginTop: 0, marginBottom: "3rem", maxWidth: "60ch" }}>
-              Tre dager uten støy gir lederne kapasitet til å tenke klarere, reagere roligere og lede bedre når de er tilbake.
+              De fleste teamturer gir mer input til et allerede travelt hode. Klarlinje gjør det motsatte.
             </p>
             <div style={{
               display: "grid",
@@ -231,11 +231,11 @@ function Program() {
     { num: "i",    when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",             body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
     { num: "ii",   when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "—",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
     { num: "iii",  when: "Lørdag morgen",          place: "Konferansesal",  duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon. Stille i eget tempo." },
-    { num: "iv",   when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",                body: "Lengre fellesøkt med meditasjon og undervisning i stressmestring." },
+    { num: "iv",   when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",                body: "Lengre, dyptgående fellesøkt midt på dagen." },
     { num: "v",    when: "Lørdag 13:00",           place: "Restauranten",   duration: "—",                  body: "Lunsj." },
     { num: "vi",   when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",             body: "Kveldsmeditasjon." },
     { num: "vii",  when: "Lørdag 18:00",           place: "Restauranten",   duration: "—",                  body: "Middag." },
-    { num: "viii", when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",                body: "Avsluttende økt. Deltakerne får med seg konkrete verktøy." },
+    { num: "viii", when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",                body: "Avsluttende økt. Alle får med seg konkrete verktøy." },
     { num: "ix",   when: "Søndag 13:00",           place: "Restauranten",   duration: "—",                  body: "Lunsj og avreise." },
   ];
   return (
@@ -244,7 +244,7 @@ function Program() {
         <div className="program-head">
           <span className="label">Programmet</span>
           <div></div>
-          <h2><em className="editorial">Hva som skjer.</em></h2>
+          <h2><em className="editorial">Slik er helgen</em><br/>bygget opp.</h2>
         </div>
         <div className="program-days">
           <div></div>
@@ -307,7 +307,7 @@ function Overgang() {
             <em className="editorial">Før, etter.</em>
           </h2>
           <p className="overgang-sub">
-            Ledere trenger ikke mer informasjon. De trenger en helg der kroppen og hodet får komme tilbake til en mer stressfri tilstand.
+            De fleste teamturer gir mer input. Klarlinje gjør det motsatte. En helg der kroppen og hodet får komme tilbake til en mer stressfri tilstand.
           </p>
         </div>
 
@@ -534,15 +534,14 @@ function Practical() {
                 <div className="program-summary-key">fra Oslo</div>
               </div>
             </div>
-
             <div className="sted-meta-rows">
               <div className="sted-meta-row">
                 <span className="k">Inkludert</span>
-                <span className="v">Enkeltrom, alle måltider fra fredag middag til søndag lunsj, spa og hele programmet</span>
+                <span className="v">Enkeltrom, alle måltider, spa og hele programmet</span>
               </div>
               <div className="sted-meta-row">
                 <span className="k">Stedet</span>
-                <span className="v">Son Spa, Vestby — 40 min bil · 50 min tog til Son stasjon</span>
+                <span className="v">Son Spa, Vestby — 40 min bil · 50 min tog</span>
               </div>
               <div className="sted-meta-row">
                 <span className="k">Tidspunkt</span>
@@ -573,7 +572,7 @@ function Research() {
         <div className="research-head">
           <span className="label">Forskning</span>
           <div></div>
-          <h2><em className="editorial">Svogerforskning?</em><br/>Nei.</h2>
+          <h2><em className="editorial">Ikke alternativt.</em><br/>Fysiologi.</h2>
         </div>
 
         <div className="research-grid">
@@ -621,7 +620,7 @@ function Research() {
               Klarlinje er basert på MBSR (Mindfulness-Based Stress Reduction), utviklet av Jon Kabat-Zinn ved University of Massachusetts i 1979. Det er det mest studerte mindfulness-programmet i verden, med hundrevis av randomiserte kontrollerte studier.
             </p>
             <p>
-              Kronisk betennelse er koblet til depresjon, utbrenthet og hjertesykdom. De fleste lederutviklingsprogrammer gir mer informasjon til et allerede overbelastet system. Klarlinje gjør det motsatte.
+              En storbyferie med venner er én ting. En helg med aktiv meditasjon er noe helt annet. Kronisk betennelse er koblet til depresjon, utbrenthet og redusert kognitiv funksjon.
             </p>
           </div>
           <div className="research-cite">
@@ -690,7 +689,7 @@ function Jens() {
 /* ─── FAQ ─── */
 const FAQ_DATA = [
   {
-    q: "Kan vi booke Klarlinje kun for vår ledergruppe?",
+    q: "Kan vi booke Klarlinje kun for vår gruppe?",
     a: "Ja. Klarlinje kan bookes som et dedikert opplegg for kun din gruppe — ingen andre deltakere på retreaten. Ta kontakt på e-post, så setter vi opp en prat om hva som passer for dere.",
   },
   {
@@ -714,16 +713,12 @@ const FAQ_DATA = [
     a: "Den som passer best for den enkelte. Sittende på stol, knelende, stående eller i lotusstilling på gulvet. Hensikten er ikke positur, men å finne en stilling der kroppen er rolig og våken samtidig. Vi gir veiledning underveis.",
   },
   {
-    q: "Hva skiller dette fra andre lederutviklingsprogrammer?",
-    a: "De fleste programmer legger mer informasjon inn i et allerede sprengt hode. Klarlinje gjør det motsatte: vi skaper rom for stillhet og refleksjon. Lederne går ikke hjem med et bøttekort av innsikter — de går hjem med en fungerende praksis.",
+    q: "Kan vi kombinere retreaten med faglig innhold eller møter?",
+    a: "Nei. Det er nøyaktig det vi ikke gjør. Ingen møter, ingen agendaer og ingen beslutningstaking under helgen. Det er det som gjør det til et retreat.",
   },
   {
-    q: "Hva er ROI for bedriften?",
-    a: "Forskning viser redusert stressnivå, bedre kognitiv funksjon og lavere turnover blant ledere som mediterer. Det er vanskelig å tallfeste, men kostnaden av utbrenthet i toppledergruppa er veldig lett å tallfeste.",
-  },
-  {
-    q: "Kan vi kombinere retreaten med en strategisamling?",
-    a: "Nei. Det er nøyaktig det vi ikke gjør. Ingen møter, ingen agendaer og ingen beslutningstaking under helgen. Det er det som gjør det til et retreat — og det er det som gjør det effektivt.",
+    q: "Hva skjer på retreaten?",
+    a: "Meditasjon, bevegelse, måltider, badstue og stille perioder. Full timesplan sendes ut til påmeldte i god tid før helgen.",
   },
   {
     q: "Hva med trening?",
@@ -738,8 +733,16 @@ const FAQ_DATA = [
     a: "Deltakerne får mest ut av helgen om de holder seg unna alkohol disse dagene. Son Spa er ikke alkoholfritt, men vi anbefaler å la det ligge. Alle bestemmer selv.",
   },
   {
+    q: "Hva koster det, og hva er inkludert?",
+    a: "15 000 kr per person, inkl. enkeltrom, alle måltider, spa, badstue og hele programmet. Ikke inkludert: reise, alkohol og massasje.",
+  },
+  {
+    q: "Er massasje inkludert?",
+    a: "Nei. Massasje og andre spa-behandlinger er ikke en del av pakken, men kan bestilles direkte hos Son Spa. Vi sender ut menyen i god tid før retreaten.",
+  },
+  {
     q: "Er Son Spa stengt for andre gjester under retreaten?",
-    a: "Nei. Son Spa er åpent for andre gjester i de samme dagene. Ledergruppens økter foregår i privat konferansesal. Deltakerne vil møte andre i resepsjonen og frokostbufféen, men programmet er uforstyrret.",
+    a: "Nei. Son Spa er åpent for andre gjester i de samme dagene. Gruppens økter foregår i privat konferansesal. Deltakerne vil møte andre i resepsjonen og frokostbufféen, men programmet er uforstyrret.",
   },
   {
     q: "Hva bør deltakerne pakke?",
@@ -763,7 +766,7 @@ function FAQ() {
         <div className="faq-head">
           <span className="label">Spørsmål</span>
           <div></div>
-          <h2><em className="editorial">Spørsmål som</em><br/>kommer igjen og igjen.</h2>
+          <h2><em className="editorial">De vanligste</em><br/>spørsmålene.</h2>
         </div>
         <div className="faq-list">
           {FAQ_DATA.map((item, i) => (
@@ -797,7 +800,7 @@ function FinalCTA() {
       <div className="final-inner">
         <span className="final-deco-num"><em className="editorial">→</em></span>
         <h2>
-          Klar for å gjøre<br/><em>ledergruppen uthvilt?</em>
+          Klar for en annerledes<br/><em>medarbeidersamling?</em>
         </h2>
         <p>
           Send en e-post, så tar Jens kontakt for en kort prat om hva som passer for akkurat deres gruppe.
@@ -823,7 +826,7 @@ function Footer() {
           <div className="footer-col">
             <h5><em className="editorial">Klarlinje</em></h5>
             <p style={{ fontSize: 12, lineHeight: 1.6, letterSpacing: 0, textTransform: "none", color: "var(--ink-mute)" }}>
-              Et sekulært, evidensbasert retreat for høytfungerende voksne og ledergrupper. Son Spa, Vestby.
+              Et sekulært, evidensbasert retreat for høytfungerende voksne, arbeidsgrupper og ledergrupper.
             </p>
           </div>
           <div className="footer-col">

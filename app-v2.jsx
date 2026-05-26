@@ -226,7 +226,7 @@ function Hero({ headlineKey, datoLabel, onSignup }) {
   const h = HERO_OPTIONS[headlineKey] || HERO_OPTIONS["uthvilt-q"];
   return (
     <section className="hero" id="top">
-      <img className="hero-image" src="images/hero-linen.webp" alt="Tre personer i linkapper ved fjorden" />
+      <img className="hero-image" src="images/meditation-sunset.jpg" alt="Gruppe som mediterer på klipper ved fjorden i solnedgang" />
       <div className="hero-tint"></div>
       <div className="hero-grain"></div>
       <div className="hero-content">
@@ -510,7 +510,7 @@ function Sted() {
   return (
     <section className="sted" id="sted">
       <div className="sted-bleed">
-        <img src="images/son-spa-pool.jpg" alt="Son Spa basseng med utsikt mot fjord og seilbåter" />
+        <img src="images/spa-pool-group.jpg" alt="Gruppe ved Son Spa basseng med utsikt mot Oslofjorden" />
         <div className="sted-bleed-overlay"></div>
         <div className="sted-bleed-caption">
           <div>
@@ -550,7 +550,7 @@ function Aufguss() {
   return (
     <section className="aufguss" id="aufguss">
       <div className="aufguss-bleed">
-        <img src="images/aufguss-plunge.webp" alt="Etter aufguss ved fjorden" />
+        <img src="images/sauna-meditation.jpg" alt="Folk som mediterer i badstue med utsikt mot marina" />
         <div className="aufguss-bleed-overlay"></div>
         <div className="aufguss-content">
           <div className="aufguss-grid">
@@ -649,7 +649,7 @@ const FAQ_DATA = [
   { q: "Er dette religiøst eller alternativt?", a: "Nei. Klarlinje er sekulært og evidensbasert." },
   { q: "Hva skjer på retreaten?", a: "Meditasjon, bevegelse, måltider, badstue og stille perioder. Full timesplan sendes ut til påmeldte i god tid før helgen." },
   { q: "Hvem deltar?", a: "Voksne mellom 28 og 55 år som presterer mye og vil ha mer ro. Mange jobber innen tech, helse, ledelse eller akademia. De fleste kommer alene, men noen drar som team eller med kolleger." },
-  { q: "Kan vi booke for et team eller arbeidsgruppe?", a: "Ja. Retreaten egner seg like godt for en gruppe kolleger eller et helt arbeidsfellesskap som vil dele opplevelsen, ikke bare for ledergrupper. Ta kontakt på e-post: jens@klarlinje.no", link: { href: "arbeidsgruppe.html", text: "Les mer om retreat for arbeidsgrupper →" } },
+  { q: "Kan vi booke for et team eller arbeidsgruppe?", a: "Ja. Retreaten egner seg like godt for en gruppe kolleger eller et helt arbeidsfellesskap som vil dele opplevelsen, ikke bare for ledergrupper. Ta kontakt på e-post: jens@klarlinje.no", link: { href: "medarbeidersamling.html", text: "Les mer om Klarlinje som medarbeidersamling →" } },
   { q: "Hva med trening?", a: "Rolig morgenbevegelse er en del av programmet. I tillegg arrangerer vi en felles joggetur eller gåtur for de som har lyst. Hotellets fasiliteter står også åpne for egen bruk." },
   { q: "Kan jeg komme alene?", a: "De fleste kommer alene. Du får enkeltrom og bestemmer selv hvor mye du vil snakke med andre." },
   { q: "Hva er anbefalingen for mobilbruk?", a: "Du får mest ut av helgen om mobilen blir liggende på rommet i flymodus. Ønsker du å forplikte deg helt, kan du levere inn telefonen i resepsjonen. Du bestemmer selv." },
@@ -716,7 +716,7 @@ function Inkludert() {
         <div className="chapters-head">
           <span className="label">10 / Inkludert</span>
           <div></div>
-          <h2><em className="editorial">Alt er med.</em><br/>Ingenting på toppen.</h2>
+          <h2><em className="editorial">Alt er med.</em><br/>Ingen ekstra kostnader.</h2>
         </div>
 
         <div className="incl-grid">
@@ -736,7 +736,7 @@ function Inkludert() {
 /* ─── Passer dette for deg? ─── */
 function Passer() {
   const ja = [
-    "Du presterer mye, men kjenner at det koster.",
+    "Du lever et hektisk liv og trenger en pause.",
     "Du er nysgjerig på hva meditasjon kan gjøre.",
     "Du vil ha tre dager helt for deg selv, uten å måtte ta beslutninger.",
     "Du foretrekker et sekulært og evidensbasert format framfor det åndelige.",
@@ -1107,7 +1107,7 @@ function Footer() {
               <li><a href="#sted">Stedet</a></li>
               <li><a href="#aufguss">Aufguss</a></li>
               <li><a href="#meldpaa">Meld deg på</a></li>
-              <li><a href="arbeidsgruppe.html">For arbeidsgrupper</a></li>
+              <li><a href="medarbeidersamling.html">Medarbeidersamling</a></li>
               <li><a href="ledergruppe.html">For ledergrupper</a></li>
             </ul>
           </div>
