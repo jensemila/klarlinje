@@ -329,17 +329,17 @@ function Intro() {
 function Chapters() {
   const items = [
     {
-      n: "01",
+      n: "1",
       title: "Meditasjon",
       body: "Guidede økter bygget på forskning. Korte og lange, sittende og gående. Praktisk, lavterskel, lett å ta med hjem.",
     },
     {
-      n: "02",
+      n: "2",
       title: "Bevegelse",
       body: "Rolig morgentrening som forbereder kroppen på stillhet. En felles joggetur eller gåtur er valgfri for de som ønsker det.",
     },
     {
-      n: "03",
+      n: "3",
       title: "Restitusjon",
       body: "Badstue, søvn og måltider på Son Spa. Plass til at hodet får roe seg ned mellom øktene.",
     },
@@ -403,7 +403,7 @@ function Jens() {
                 <div className="jens-fact-label">elever undervist</div>
               </div>
               <div className="jens-fact">
-                <div className="jens-fact-num">04</div>
+                <div className="jens-fact-num">4</div>
                 <div className="jens-fact-label">år som toppleder</div>
               </div>
             </div>
@@ -417,15 +417,15 @@ function Jens() {
 /* ─── Program ─── */
 function Program() {
   const sessions = [
-    { num: "i",   when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",            body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
-    { num: "ii",  when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "·",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
-    { num: "iii", when: "Lørdag morgen",          place: "På rommet",      duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon på rommet. Stille i eget tempo." },
-    { num: "iv",  when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",               body: "Lengre, dyptgående fellesøkt midt på dagen." },
-    { num: "v",   when: "Lørdag 13:00",           place: "Restauranten",   duration: "·",                 body: "Lunsj." },
-    { num: "vi",  when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",            body: "Kveldsmeditasjon." },
-    { num: "vii", when: "Lørdag 18:00",           place: "Restauranten",   duration: "·",                 body: "Middag." },
-    { num: "viii",when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",               body: "Avsluttende økt." },
-    { num: "ix",  when: "Søndag 13:00",           place: "Restauranten",   duration: "·",                 body: "Lunsj og avreise." },
+    { num: "1",   when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",            body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
+    { num: "2",  when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "·",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
+    { num: "3", when: "Lørdag morgen",          place: "På rommet",      duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon på rommet. Stille i eget tempo." },
+    { num: "4",  when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",               body: "Lengre, dyptgående fellesøkt midt på dagen." },
+    { num: "5",   when: "Lørdag 13:00",           place: "Restauranten",   duration: "·",                 body: "Lunsj." },
+    { num: "6",  when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",            body: "Kveldsmeditasjon." },
+    { num: "7", when: "Lørdag 18:00",           place: "Restauranten",   duration: "·",                 body: "Middag." },
+    { num: "8",when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",               body: "Avsluttende økt." },
+    { num: "9",  when: "Søndag 13:00",           place: "Restauranten",   duration: "·",                 body: "Lunsj og avreise." },
   ];
   return (
     <section id="programmet">
@@ -568,21 +568,21 @@ function Aufguss() {
               </p>
               <div className="aufguss-steps">
                 <div className="aufguss-step">
-                  <span className="aufguss-step-num">i.</span>
+                  <span className="aufguss-step-num">1.</span>
                   <div>
                     <h4>Tre runder, syv minutter hver</h4>
                     <p>Hver runde har sin egen olje. Furu, einer, bergamott.</p>
                   </div>
                 </div>
                 <div className="aufguss-step">
-                  <span className="aufguss-step-num">ii.</span>
+                  <span className="aufguss-step-num">2.</span>
                   <div>
                     <h4>Stup i fjorden mellom rundene</h4>
                     <p>Stige rett ned i saltvann. Belyst hele veien ned.</p>
                   </div>
                 </div>
                 <div className="aufguss-step">
-                  <span className="aufguss-step-num">iii.</span>
+                  <span className="aufguss-step-num">3.</span>
                   <div>
                     <h4>Stille hvilerom etterpå</h4>
                   </div>
@@ -703,12 +703,12 @@ function FAQ() {
 /* ─── Inkludert ─── */
 function Inkludert() {
   const items = [
-    { num: "01", title: "Overnatting",  body: "Enkeltrom på Son Spa, alle netter. Egen dør, eget vindu, ingen romkamerat." },
-    { num: "02", title: "Mat",          body: "Frokost, lunsj og middag alle dager. Variert kjøkken, vegetar tilgjengelig." },
-    { num: "03", title: "Spa",          body: "Full tilgang til basseng, badstue, dampbad og hvilerom hele helgen." },
-    { num: "04", title: "Meditasjon",   body: "Fem guidede økter av Jens. Veiledning underveis, ingen forkunnskaper kreves." },
-    { num: "05", title: "Bevegelse",    body: "Rolig morgenbevegelse, samt felles joggetur eller gåtur i naturen rundt." },
-    { num: "06", title: "Materiell",    body: "Velkomstmappe med program, bok-tips og oppfølgings-ressurser å ta med hjem." },
+    { num: "1", title: "Overnatting",  body: "Enkeltrom på Son Spa, alle netter. Egen dør, eget vindu, ingen romkamerat." },
+    { num: "2", title: "Mat",          body: "Frokost, lunsj og middag alle dager. Variert kjøkken, vegetar tilgjengelig." },
+    { num: "3", title: "Spa",          body: "Full tilgang til basseng, badstue, dampbad og hvilerom hele helgen." },
+    { num: "4", title: "Meditasjon",   body: "Fem guidede økter av Jens. Veiledning underveis, ingen forkunnskaper kreves." },
+    { num: "5", title: "Bevegelse",    body: "Rolig morgenbevegelse, samt felles joggetur eller gåtur i naturen rundt." },
+    { num: "6", title: "Materiell",    body: "Velkomstmappe med program, bok-tips og oppfølgings-ressurser å ta med hjem." },
   ];
   return (
     <section className="inkludert" id="inkludert">

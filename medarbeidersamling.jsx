@@ -167,22 +167,22 @@ function PullQuote() {
 /* ─── Why ─── */
 const WHY_ITEMS = [
   {
-    num: "01",
+    num: "1",
     title: "Ekte hvile",
     body: "Tre dager uten agendaer, møter eller beslutninger. Kollegene dine kommer hjem med overskudd de ikke visste de manglet.",
   },
   {
-    num: "02",
+    num: "2",
     title: "Felles opplevelse",
     body: "Å meditere sammen gjør noe med et team som kafétur og kickoff ikke gjør. Dere deler noe få andre har gjort sammen.",
   },
   {
-    num: "03",
+    num: "3",
     title: "Bedre fokus og ro",
     body: "Mindfulness reduserer reaktivitet og stress. Forskning viser målbare biologiske endringer etter bare tre dager.",
   },
   {
-    num: "04",
+    num: "4",
     title: "Et nytt verktøy",
     body: "Tre dager er nok til å etablere en meditasjonspraksis. Kollegene dine tar noe konkret med hjem.",
   },
@@ -228,15 +228,15 @@ function Why() {
 /* ─── Program ─── */
 function Program() {
   const sessions = [
-    { num: "i",    when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",             body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
-    { num: "ii",   when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "·",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
-    { num: "iii",  when: "Lørdag morgen",          place: "Konferansesal",  duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon. Stille i eget tempo." },
-    { num: "iv",   when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",                body: "Lengre, dyptgående fellesøkt midt på dagen." },
-    { num: "v",    when: "Lørdag 13:00",           place: "Restauranten",   duration: "·",                  body: "Lunsj." },
-    { num: "vi",   when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",             body: "Kveldsmeditasjon." },
-    { num: "vii",  when: "Lørdag 18:00",           place: "Restauranten",   duration: "·",                  body: "Middag." },
-    { num: "viii", when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",                body: "Avsluttende økt. Alle får med seg konkrete verktøy." },
-    { num: "ix",   when: "Søndag 13:00",           place: "Restauranten",   duration: "·",                  body: "Lunsj og avreise." },
+    { num: "1",    when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",             body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
+    { num: "2",   when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "·",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
+    { num: "3",  when: "Lørdag morgen",          place: "Konferansesal",  duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon. Stille i eget tempo." },
+    { num: "4",   when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",                body: "Lengre, dyptgående fellesøkt midt på dagen." },
+    { num: "5",    when: "Lørdag 13:00",           place: "Restauranten",   duration: "·",                  body: "Lunsj." },
+    { num: "6",   when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",             body: "Kveldsmeditasjon." },
+    { num: "7",  when: "Lørdag 18:00",           place: "Restauranten",   duration: "·",                  body: "Middag." },
+    { num: "8", when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",                body: "Avsluttende økt. Alle får med seg konkrete verktøy." },
+    { num: "9",   when: "Søndag 13:00",           place: "Restauranten",   duration: "·",                  body: "Lunsj og avreise." },
   ];
   return (
     <section id="program" style={{ padding: "100px 0", background: "var(--bg-soft)" }}>
