@@ -183,7 +183,7 @@ const WHY_ITEMS = [
   },
   {
     num: "04",
-    title: "Verktøy som holder",
+    title: "Et nytt verktøy",
     body: "Tre dager er nok til å etablere en meditasjonspraksis. Kollegene dine tar noe konkret med hjem.",
   },
 ];
@@ -229,14 +229,14 @@ function Why() {
 function Program() {
   const sessions = [
     { num: "i",    when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",             body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
-    { num: "ii",   when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "—",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
+    { num: "ii",   when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "·",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
     { num: "iii",  when: "Lørdag morgen",          place: "Konferansesal",  duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon. Stille i eget tempo." },
     { num: "iv",   when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",                body: "Lengre, dyptgående fellesøkt midt på dagen." },
-    { num: "v",    when: "Lørdag 13:00",           place: "Restauranten",   duration: "—",                  body: "Lunsj." },
+    { num: "v",    when: "Lørdag 13:00",           place: "Restauranten",   duration: "·",                  body: "Lunsj." },
     { num: "vi",   when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",             body: "Kveldsmeditasjon." },
-    { num: "vii",  when: "Lørdag 18:00",           place: "Restauranten",   duration: "—",                  body: "Middag." },
+    { num: "vii",  when: "Lørdag 18:00",           place: "Restauranten",   duration: "·",                  body: "Middag." },
     { num: "viii", when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",                body: "Avsluttende økt. Alle får med seg konkrete verktøy." },
-    { num: "ix",   when: "Søndag 13:00",           place: "Restauranten",   duration: "—",                  body: "Lunsj og avreise." },
+    { num: "ix",   when: "Søndag 13:00",           place: "Restauranten",   duration: "·",                  body: "Lunsj og avreise." },
   ];
   return (
     <section id="program" style={{ padding: "100px 0", background: "var(--bg-soft)" }}>
@@ -541,7 +541,7 @@ function Practical() {
               </div>
               <div className="sted-meta-row">
                 <span className="k">Stedet</span>
-                <span className="v">Son Spa, Vestby — 40 min bil · 50 min tog</span>
+                <span className="v">Son Spa, Vestby. 40 min bil, 50 min tog</span>
               </div>
               <div className="sted-meta-row">
                 <span className="k">Tidspunkt</span>
@@ -549,7 +549,7 @@ function Practical() {
               </div>
               <div className="sted-meta-row">
                 <span className="k">Privat booking</span>
-                <span className="v">Kun din gruppe — ingen andre deltakere på retreaten</span>
+                <span className="v">Kun din gruppe, ingen andre deltakere på retreaten</span>
               </div>
               <div className="sted-meta-row">
                 <span className="k">Faktura</span>
@@ -690,7 +690,7 @@ function Jens() {
 const FAQ_DATA = [
   {
     q: "Kan vi booke Klarlinje kun for vår gruppe?",
-    a: "Ja. Klarlinje kan bookes som et dedikert opplegg for kun din gruppe — ingen andre deltakere på retreaten. Ta kontakt på e-post, så setter vi opp en prat om hva som passer for dere.",
+    a: "Ja. Klarlinje kan bookes som et dedikert opplegg for kun din gruppe, ingen andre deltakere på retreaten. Ta kontakt på e-post, så setter vi opp en prat om hva som passer for dere.",
   },
   {
     q: "Hva er minimumsantall deltakere?",
@@ -746,7 +746,7 @@ const FAQ_DATA = [
   },
   {
     q: "Hva bør deltakerne pakke?",
-    a: "Behagelige klær til bevegelse og innendørs, badetøy, og noe varmt for kveldsturer. Ta gjerne med en treningsmatte eller yogamatte. Har noen en meditasjonskrakk eller meditasjonspute, er de velkommen til å ta den med — hvis ikke har vi til låns.",
+    a: "Behagelige klær til bevegelse og innendørs, badetøy, og noe varmt for kveldsturer. Ta gjerne med en treningsmatte eller yogamatte. Har noen en meditasjonskrakk eller meditasjonspute, er de velkommen til å ta den med. Hvis ikke har vi til låns.",
   },
   {
     q: "Kan vi få faktura til selskapet?",

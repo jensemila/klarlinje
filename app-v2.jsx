@@ -418,14 +418,14 @@ function Jens() {
 function Program() {
   const sessions = [
     { num: "i",   when: "Fredag kveld",          place: "Konferansesal",  duration: "30 min",            body: "Ankomst til Son Spa, velkomst og felles åpningsøkt." },
-    { num: "ii",  when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "—",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
+    { num: "ii",  when: "Lørdag 08:00–10:00",    place: "Restauranten",   duration: "·",    optional: true, body: "Frokost. Spis i ditt eget tempo." },
     { num: "iii", when: "Lørdag morgen",          place: "På rommet",      duration: "30 min", optional: true, body: "Valgfri morgenmeditasjon på rommet. Stille i eget tempo." },
     { num: "iv",  when: "Lørdag, midt på dagen",  place: "Konferansesal",  duration: "1 t",               body: "Lengre, dyptgående fellesøkt midt på dagen." },
-    { num: "v",   when: "Lørdag 13:00",           place: "Restauranten",   duration: "—",                 body: "Lunsj." },
+    { num: "v",   when: "Lørdag 13:00",           place: "Restauranten",   duration: "·",                 body: "Lunsj." },
     { num: "vi",  when: "Lørdag kveld",           place: "Konferansesal",  duration: "30 min",            body: "Kveldsmeditasjon." },
-    { num: "vii", when: "Lørdag 18:00",           place: "Restauranten",   duration: "—",                 body: "Middag." },
+    { num: "vii", when: "Lørdag 18:00",           place: "Restauranten",   duration: "·",                 body: "Middag." },
     { num: "viii",when: "Søndag formiddag",       place: "Konferansesal",  duration: "1 t",               body: "Avsluttende økt." },
-    { num: "ix",  when: "Søndag 13:00",           place: "Restauranten",   duration: "—",                 body: "Lunsj og avreise." },
+    { num: "ix",  when: "Søndag 13:00",           place: "Restauranten",   duration: "·",                 body: "Lunsj og avreise." },
   ];
   return (
     <section id="programmet">
@@ -657,7 +657,7 @@ const FAQ_DATA = [
   { q: "Kan jeg lese en bok for å forberede meg?", a: "Ja. Wherever You Go, There You Are av Jon Kabat-Zinn er en god, kort introduksjon. Det er ikke et krav å lese den, men de som har lyst på litt kontekst, får mye igjen for den." },
   { q: "Hva er avbestillingsvilkårene?", a: "Fri avbestilling fram til 30 dager før retreaten. Mellom 30 og 14 dager før refunderes 50 %. Etter 14 dager før refunderes ingenting." },
   { q: "Er Son Spa stengt for andre gjester under retreaten?", a: "Nei. Son Spa er åpent for andre gjester i de samme dagene. Våre egne økter foregår i privat konferansesal og på rommene. Du vil møte andre i resepsjonen, ved frokostbufféen og i spa-avdelingen, men programmet vårt er uforstyrret." },
-  { q: "Hva bør jeg pakke?", a: "Behagelige klær til bevegelse og innendørs, badetøy, og noe varmt for kveldsturer. Ta gjerne med en treningsmatte eller yogamatte hvis du har. Har du en meditasjonskrakk eller meditasjonspute, er du velkommen til å ta den med — hvis ikke har vi til låns. Mer praktisk info kommer i påmeldingen." },
+  { q: "Hva bør jeg pakke?", a: "Behagelige klær til bevegelse og innendørs, badetøy, og noe varmt for kveldsturer. Ta gjerne med en treningsmatte eller yogamatte hvis du har. Har du en meditasjonskrakk eller meditasjonspute, er du velkommen til å ta den med. Hvis ikke har vi til låns. Mer praktisk info kommer i påmeldingen." },
 ];
 
 function FAQ() {
