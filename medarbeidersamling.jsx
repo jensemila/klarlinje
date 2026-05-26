@@ -276,7 +276,7 @@ function Program() {
               {sessions.map((s, i) => (
                 <li className={`program-sess ${s.optional ? "is-optional" : ""}`} key={i}>
                   <div className="program-sess-rule" aria-hidden="true"></div>
-                  <span className="program-sess-num">{s.num}.</span>
+
                   <div className="program-sess-when">
                     <span className="program-sess-when-name"><em className="editorial">{s.when}</em></span>
                     <span className="program-sess-when-place">{s.place}</span>
