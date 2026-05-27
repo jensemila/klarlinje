@@ -395,7 +395,7 @@ function Jens() {
             </div>
             <div className="jens-facts">
               <div className="jens-fact">
-                <div className="jens-fact-num">10+</div>
+                <div className="jens-fact-num">15</div>
                 <div className="jens-fact-label">år daglig meditasjon</div>
               </div>
               <div className="jens-fact">
