@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="nb" data-theme="natt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personvern · Klarlinje</title>
+  <meta name="description" content="Personvernerklæring for Klarlinje. Hvilke data vi samler, hvorfor, og dine rettigheter." />
+  <link rel="canonical" href="https://klarlinje.no/personvern.html" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H027E3MZYE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H027E3MZYE');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg:         #0f1311;
+      --bg-soft:    #151a17;
+      --paper:      #1b211d;
+      --ink:        #ece3d2;
+      --ink-soft:   #c8c0ad;
+      --ink-mute:   #847d6e;
+      --line:       rgba(236, 227, 210, 0.10);
+      --accent:     #c89149;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Outfit", system-ui, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.55;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    em.editorial {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    h1, h2, h3 {
+      font-family: "Newsreader", serif;
+      font-weight: 300;
+      color: var(--ink);
+      margin: 0;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+    }
+
+    p { margin: 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .label {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      font-weight: 400;
+    }
+
+    .nav {
+      padding: 22px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: saturate(140%) blur(18px);
+      -webkit-backdrop-filter: saturate(140%) blur(18px);
+      z-index: 10;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: 21px;
+    }
+
+    .nav-brand-mark {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .nav-back {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent); text-decoration: none; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 100px 44px 80px;
+    }
+
+    .doc-header {
+      margin-bottom: 64px;
+    }
+
+    .doc-header .label {
+      display: block;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 88px);
+      letter-spacing: -0.03em;
+      font-variation-settings: "opsz" 96;
+      margin-bottom: 28px;
+    }
+
+    .doc-meta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11.5px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+
+    h2 {
+      font-size: clamp(26px, 3vw, 32px);
+      margin: 56px 0 20px;
+      font-variation-settings: "opsz" 36;
+    }
+
+    h2 em { color: var(--accent); }
+
+    section p {
+      color: var(--ink-soft);
+      font-size: 16.5px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    ul {
+      color: var(--ink-soft);
+      padding-left: 22px;
+      margin: 0 0 16px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    ul li strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .intro-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 2px solid var(--accent);
+      padding: 28px 32px;
+      border-radius: 4px;
+      margin-bottom: 56px;
+    }
+
+    .intro-card p {
+      font-family: "Newsreader", serif;
+      font-size: 18px;
+      line-height: 1.55;
+      color: var(--ink);
+      font-style: italic;
+      margin: 0;
+    }
+
+    footer {
+      padding: 40px 44px;
+      border-top: 1px solid var(--line);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer a { color: inherit; }
+    footer a:hover { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 540px) {
+      .nav { padding: 18px 20px; }
+      .nav-brand { font-size: 18px; }
+      main { padding: 64px 20px 60px; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-mark"></span>
+      <span><em>Klarlinje</em></span>
+    </a>
+    <a href="index.html" class="nav-back">← Tilbake</a>
+  </nav>
+
+  <main>
+    <div class="doc-header">
+      <span class="label">Juridisk</span>
+      <h1>Personvern.</h1>
+      <p class="doc-meta">Sist oppdatert 30. mai 2026</p>
+    </div>
+
+    <div class="intro-card">
+      <p>Klarlinje samler så lite personopplysninger som mulig. Vi selger ikke data, vi sender ikke nyhetsbrev til andre lister, og vi sporer deg ikke på tvers av nettsteder.</p>
+    </div>
+
+    <section>
+      <h2>Hvem er <em class="editorial">behandlingsansvarlig.</em></h2>
+      <p>
+        Jens Asp er behandlingsansvarlig for personopplysninger som samles inn via klarlinje.no. Kontakt: <a href="mailto:jens@klarlinje.no">jens@klarlinje.no</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hvilke <em class="editorial">opplysninger</em> vi samler.</h2>
+
+      <ul>
+        <li><strong>E-postadresse</strong> som du selv skriver inn på ventelisten eller i påmeldingsskjema. Brukes til å sende deg informasjon om Klarlinje-retreatene.</li>
+        <li><strong>Fornavn</strong> som du eventuelt oppgir. Brukes for å adressere deg i e-poster. Helt frivillig.</li>
+        <li><strong>Anonymisert besøksstatistikk</strong> via Google Analytics (sidevisninger, kilde, omtrentlig geografi). Ingen profilering, ingen koblinger til e-postadressen din.</li>
+      </ul>
+
+      <p>
+        Vi samler ikke inn helseopplysninger, betalingsinformasjon eller andre sensitive data via nettsiden.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hvorfor vi <em class="editorial">samler det.</em></h2>
+      <p>
+        E-postadressen din lagres for å gi deg beskjed når datoer og påmelding åpner. Anonymisert statistikk hjelper oss å forstå hvordan nettsiden brukes, slik at vi kan gjøre den bedre.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hvor det <em class="editorial">lagres.</em></h2>
+
+      <ul>
+        <li><strong>Kit (ConvertKit)</strong> håndterer e-postlisten og sender e-postene. Data lagres på servere i USA, beskyttet av EUs standard kontraktsvilkår.</li>
+        <li><strong>Google Analytics</strong> håndterer anonymisert besøksstatistikk. IP-anonymisering er aktivert.</li>
+        <li><strong>Vercel</strong> drifter selve nettsiden. Loggdata slettes automatisk etter kort tid.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Hvor lenge <em class="editorial">vi lagrer det.</em></h2>
+      <p>
+        E-postadressen din lagres så lenge du står på listen. Du kan melde deg av når som helst gjennom lenken i bunnen av hver e-post, eller ved å skrive til <a href="mailto:jens@klarlinje.no">jens@klarlinje.no</a>. Da slettes adressen din.
+      </p>
+      <p>
+        Anonymisert besøksstatistikk lagres i 14 måneder, deretter slettes den automatisk.
+      </p>
+    </section>
+
+    <section>
+      <h2>Dine <em class="editorial">rettigheter.</em></h2>
+      <p>Etter personvernforordningen (GDPR) har du rett til å:</p>
+      <ul>
+        <li>Få innsyn i hvilke opplysninger vi har om deg</li>
+        <li>Få rettet feilaktige opplysninger</li>
+        <li>Få opplysningene dine slettet</li>
+        <li>Trekke tilbake samtykket ditt når som helst</li>
+        <li>Klage til Datatilsynet hvis du mener vi behandler data på en ulovlig måte</li>
+      </ul>
+      <p>
+        Send en e-post til <a href="mailto:jens@klarlinje.no">jens@klarlinje.no</a>, så svarer Jens innen rimelig tid.
+      </p>
+    </section>
+
+    <section>
+      <h2>Informasjonskapsler <em class="editorial">(cookies).</em></h2>
+      <p>
+        Klarlinje.no bruker informasjonskapsler kun for anonym besøksstatistikk gjennom Google Analytics. Ingen markedsføringscookies, ingen tredjepartssporing.
+      </p>
+    </section>
+
+    <section>
+      <h2>Endringer i <em class="editorial">denne erklæringen.</em></h2>
+      <p>
+        Hvis vi gjør vesentlige endringer, oppdaterer vi datoen øverst på siden. Større endringer varsles på e-post.
+      </p>
+    </section>
+
+    <section>
+      <h2>Kontakt.</h2>
+      <p>
+        Spørsmål om personvern? Skriv til <a href="mailto:jens@klarlinje.no">jens@klarlinje.no</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 Klarlinje · Oslo / Son</div>
+    <div>
+      <a href="index.html">← Tilbake til Klarlinje</a>
+    </div>
+  </footer>
+
+</body>
+</html>

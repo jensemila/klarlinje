@@ -305,7 +305,7 @@ function Intro() {
         <div className="intro-grid">
           <div className="intro-index">01</div>
           <div className="intro-eyebrow">
-            <span className="label">Anrop</span>
+            <span className="label">Hvem er dette for</span>
             <span className="ttl"><em className="editorial">For deg som presterer.</em></span>
           </div>
           <div className="intro-prose">
@@ -642,6 +642,7 @@ function Quotes() {
 /* ─── FAQ ─── */
 const FAQ_DATA = [
   { q: "Må jeg ha meditert før?",  a: "Nei. De fleste deltakerne har prøvd via app eller kurs, men det er ikke et krav. Du får alt du trenger på plass." },
+  { q: "Hva hvis jeg ikke har tid til en hel helg?", a: "Da kan dagsretreatet i Oslo være et bedre alternativ. Én dag, fra 10:00 til 17:00, ledet av Jens. Påmelding åpner våren 2027.", link: { href: "dagretreat.html", text: "Les mer om dagsretreatet →" } },
   { q: "Hva slags meditasjon er dette?", a: "Mindfulness, evidensbasert. Inspirert av MBSR (Mindfulness-Based Stress Reduction), utviklet av Jon Kabat-Zinn ved University of Massachusetts i 1979. Det er det mest studerte mindfulness-programmet i verden, med over 40 år og hundrevis av randomiserte kontrollerte studier bak seg." },
   { q: "Hvilken stilling sitter man i når man mediterer?", a: "Den som passer best for deg. Sittende på stol, knelende, stående eller i lotusstilling på gulvet. Hensikten er ikke positur, men å finne en stilling der kroppen er rolig og våken samtidig. Vi gir veiledning hvis du ønsker det." },
   { q: "Hva koster det, og hva er inkludert?", a: "15 000 kr inkl. enkeltrom, alle måltider, spa, badstue og hele programmet. Ikke inkludert: reise, alkohol og massasje." },
@@ -686,7 +687,7 @@ function FAQ() {
                 <div className="faq-a-inner">
                   <p className="faq-a-text">{item.a}</p>
                   {item.link && (
-                    <a href={item.link.href} className="research-cite-link" style={{ display: "inline-block", marginTop: "0.75rem" }}>
+                    <a href={item.link.href} className="research-cite-link" style={{ display: "inline-block", marginTop: "0.75rem", gridColumn: "2", justifySelf: "start" }}>
                       {item.link.text}
                     </a>
                   )}
@@ -1109,14 +1110,14 @@ function Footer() {
               <li><a href="#meldpaa">Meld deg på</a></li>
               <li><a href="medarbeidersamling.html">Medarbeidersamling</a></li>
               <li><a href="ledergruppe.html">For ledergrupper</a></li>
+              <li><a href="dagretreat.html">Dagsretreat i Oslo</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h5><em className="editorial">Kontakt</em></h5>
             <ul>
               <li><a href="mailto:jens@klarlinje.no">jens@klarlinje.no</a></li>
-              <li><a href="#">Personvern</a></li>
-              <li><a href="#">Vilkår</a></li>
+              <li><a href="personvern.html">Personvern</a></li>
             </ul>
           </div>
         </div>

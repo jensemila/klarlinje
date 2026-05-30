@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# AI-crawlere
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Hold velkomstsider og bekreftelsessider unna søk
+Disallow: /velkommen.html
+Disallow: /dagretreat-velkommen.html
+
+Sitemap: https://klarlinje.no/sitemap.xml
