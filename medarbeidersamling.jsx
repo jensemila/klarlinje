@@ -659,7 +659,7 @@ function Jens() {
             </h2>
             <div className="jens-prose">
               <p>
-                Jens har meditert daglig i over femten år. Han tror verken på det tredje øyet eller på at meditasjon må læres av en munk med tjue års sølibat.
+                Jens har meditert i over femten år. Han tror verken på det tredje øyet eller på at meditasjon må læres av en munk med tjue års sølibat.
               </p>
               <p>
                 Tidlig i karrieren jobbet Jens i fire år som lærer ved Oslo folkehøgskole, med ansvar for daglige morgensamlinger og meditasjonsundervisning for 180 elever. Nå jobber han som markedssjef i en av Norges største pasientorganisasjoner.
@@ -668,7 +668,7 @@ function Jens() {
             <div className="jens-facts">
               <div className="jens-fact">
                 <div className="jens-fact-num">15</div>
-                <div className="jens-fact-label">år daglig meditasjon</div>
+                <div className="jens-fact-label">år meditasjon</div>
               </div>
               <div className="jens-fact">
                 <div className="jens-fact-num">180</div>
