@@ -183,7 +183,7 @@ const TWEAK_DEFAULTS_V2 = /*EDITMODE-BEGIN*/{
   "showQuotes": true,
   "showAufguss": true,
   "showMarquee": true,
-  "datoLabel": "Høsten 2026"
+  "datoLabel": "Våren 2027"
 }/*EDITMODE-END*/;
 
 /* ─── Nav ─── */
@@ -1098,7 +1098,7 @@ function Footer() {
           <div className="footer-col">
             <h5><em className="editorial">Klarlinje</em></h5>
             <p style={{ fontSize: 12, lineHeight: 1.6, letterSpacing: 0, textTransform: "none", color: "var(--ink-mute)" }}>
-              Et sekulært, evidensbasert retreat for høytfungerende voksne. Høsten 2026 på Son Spa.
+              Et sekulært, evidensbasert retreat for høytfungerende voksne. Våren 2027 på Son Spa.
             </p>
           </div>
           <div className="footer-col">
@@ -1194,7 +1194,7 @@ function SignupModal({ open, onClose }) {
         <button className="modal-close" onClick={onClose} aria-label="Lukk">×</button>
         {step !== "success" ? (
           <form onSubmit={submit}>
-            <span className="label modal-eyebrow">Venteliste · Høsten 2026</span>
+            <span className="label modal-eyebrow">Venteliste · Våren 2027</span>
             <h3><em>Bli med</em> på ventelisten.</h3>
             <p>
               Du får én e-post når datoene er satt, og igjen når påmeldingen åpner. Det er alt.
