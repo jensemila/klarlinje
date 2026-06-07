@@ -64,17 +64,19 @@
     "citation": [
       {
         "@type": "ScholarlyArticle",
-        "name": "Comparison of rest-break interventions and meditation on recovery",
-        "author": "Blasche G, et al.",
-        "datePublished": "2021",
-        "isPartOf": { "@type": "Periodical", "name": "PLOS One" }
-      },
-      {
-        "@type": "ScholarlyArticle",
         "name": "A Wandering Mind Is an Unhappy Mind",
         "author": "Killingsworth MA, Gilbert DT",
         "datePublished": "2010",
-        "isPartOf": { "@type": "Periodical", "name": "Science" }
+        "isPartOf": { "@type": "Periodical", "name": "Science" },
+        "url": "https://doi.org/10.1126/science.1192439"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Is a meditation retreat the better vacation? Effect of retreats and vacations on fatigue, emotional well-being, and acting with awareness",
+        "author": "Blasche G, et al.",
+        "datePublished": "2021",
+        "isPartOf": { "@type": "Periodical", "name": "PLOS One" },
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246038"
       }
     ]
   }
@@ -456,6 +458,27 @@
       font-style: italic;
     }
 
+    .article-sources a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line-strong);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .article-sources a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .article-sources a .src-arrow {
+      font-size: 0.9em;
+      color: var(--ink-faint);
+      margin-left: 4px;
+      border: none;
+    }
+
+    .article-sources a:hover .src-arrow { color: var(--accent); }
+
     /* CTA */
     .cta-section {
       background: var(--bg-soft);
@@ -587,7 +610,7 @@
       <span class="label article-kicker">Kunnskap · Tilstedeværelse</span>
       <h1 class="article-title">Hvorfor meditere<br/><em class="editorial">på ferie?</em></h1>
       <p class="article-dek">
-        Forskning viser at en vanlig ferie er borte etter ti uker. En ferie med meditasjon varer mye lenger.
+        Forskning viser at effekten av en vanlig ferie er borte etter ti uker. En ferie med meditasjon varer mye lenger.
       </p>
       <div class="article-meta">
         <span>Jens Asp</span>
@@ -598,14 +621,14 @@
 
     <div class="article-body">
       <p class="lead">
-        Du har spart opp til ferien i et helt år. Du har pakket, reist, kommet frem. Du ligger på stranden, eller på hytta, eller på et hotell med utsikt til en solnedgang folk betaler tusenvis for.
+        Du har spart opp til ferien i et helt år. Du har pakket, reist, kommet frem. Du ligger på stranden, eller på hytta, eller på et hotell med utsikt til en solnedgang du har betalt tusenvis for.
       </p>
 
       <p>Og hvor er hodet ditt?</p>
 
       <p>For de fleste er svaret alle andre steder. På e-poster som venter. På noe som ble sagt rett før avreise. På bekymringen som pakket seg selv ned i kofferten og ble med. Vi tar ferie fra jobben, men nesten aldri fra hodet.</p>
 
-      <p>Denne artikkelen handler om hvorfor det skjer, hva det koster deg, og hvorfor meditasjon kanskje er det viktigste du kan pakke i kofferten i sommer.</p>
+      <p>Denne artikkelen handler om hvorfor det skjer, hva det koster deg, og <strong>hvorfor meditasjon kanskje er det viktigste du kan pakke i kofferten i sommer.</strong></p>
 
       <figure class="figure">
         <img src="bilder/jens_ferie_italia.jpg" alt="Jens på ferie ved Gardasjøen i Italia, med utsikt over vann og fjell i solnedgang" />
@@ -622,11 +645,9 @@
 
       <p>Men det aller viktigste funnet var dette: <strong>hvor til stede du er, betyr mer enn dobbelt så mye for lykken din som hva du faktisk gjør.</strong> I studien forklarte selve aktiviteten bare 4,6 prosent av svingningene i hvor lykkelige folk var fra øyeblikk til øyeblikk. Hvor til stede de var, forklarte 10,8 prosent. Altså mer enn dobbelt så mye.</p>
 
-      <p>Det betyr noe ubehagelig konkret. En ferie der hodet er et annet sted, er i praksis bortkastet. Kroppen var på stranden. Resten av deg var et helt annet sted.</p>
+      <p>Det er så utrolig fundamentalt for selve livet og alt vi opplever. En ferie der hodet er et annet sted, er i praksis bortkastet. Kroppen var på stranden. Resten av deg var et helt annet sted.</p>
 
       <h2>Det viktigste er ikke hva du gjør. Det er at du er til stede.</h2>
-
-      <p>Dette er kjernen i alt jeg lærer bort, og ferie er det aller tydeligste eksempelet jeg vet om.</p>
 
       <p>Du kan ikke kjøpe deg til tilstedeværelse. <strong>Du kan ikke reise langt nok til å rømme fra et fraværende sinn, for hodet ditt blir med uansett hvor du drar.</strong> Den eneste måten å faktisk være på ferie på, er å trene opp evnen til å være til stede.</p>
 
@@ -721,11 +742,11 @@
     <section class="article-sources">
       <h3>Kilder</h3>
       <ol>
-        <li id="kilde-1">Killingsworth MA, Gilbert DT (2010). A Wandering Mind Is an Unhappy Mind. <em>Science</em>, 330(6006). Aktivitet forklarte 4,6 % av variasjonen i øyeblikkelig lykke, tankevandring 10,8 %.</li>
-        <li id="kilde-2">Blasche G, et al. (2021). Comparison of rest-break interventions and meditation on recovery. <em>PLOS One</em>.</li>
-        <li id="kilde-3">Taren AA, et al. (2015). Mindfulness meditation training alters stress-related amygdala connectivity. <em>SCAN</em>.</li>
-        <li id="kilde-4">Park BJ, et al. (2010). The physiological effects of Shinrin-yoku (forest bathing). <em>Environ Health Prev Med</em>.</li>
-        <li id="kilde-5">Percival G, et al. (2025). 7-day intensive meditation retreat impacts on brain and body. <em>Communications Biology</em>.</li>
+        <li id="kilde-1"><a href="https://doi.org/10.1126/science.1192439" target="_blank" rel="noopener">Killingsworth MA, Gilbert DT (2010). A Wandering Mind Is an Unhappy Mind. <em>Science</em>, 330(6006)<span class="src-arrow">↗</span></a>. Aktivitet forklarte 4,6 % av variasjonen i øyeblikkelig lykke, tankevandring 10,8 %.</li>
+        <li id="kilde-2"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0246038" target="_blank" rel="noopener">Blasche G, et al. (2021). Is a meditation retreat the better vacation? Effect of retreats and vacations on fatigue, emotional well-being, and acting with awareness. <em>PLOS One</em>, 16(2): e0246038<span class="src-arrow">↗</span></a>.</li>
+        <li id="kilde-3"><a href="https://academic.oup.com/scan/article/10/12/1758/2502572" target="_blank" rel="noopener">Taren AA, et al. (2015). Mindfulness meditation training alters stress-related amygdala resting state functional connectivity. <em>Social Cognitive and Affective Neuroscience</em>, 10(12)<span class="src-arrow">↗</span></a>.</li>
+        <li id="kilde-4"><a href="https://link.springer.com/article/10.1007/s12199-009-0086-9" target="_blank" rel="noopener">Park BJ, et al. (2010). The physiological effects of Shinrin-yoku (taking in the forest atmosphere or forest bathing). <em>Environmental Health and Preventive Medicine</em>, 15(1)<span class="src-arrow">↗</span></a>.</li>
+        <li id="kilde-5"><a href="https://www.nature.com/articles/s42003-025-09088-3" target="_blank" rel="noopener">Jinich-Diamant A, et al. (2025). Neural and molecular changes during a mind-body reconceptualization, meditation, and open label placebo healing intervention. <em>Communications Biology</em><span class="src-arrow">↗</span></a>.</li>
       </ol>
     </section>
   </article>
