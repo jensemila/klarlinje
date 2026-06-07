@@ -1111,6 +1111,7 @@ function Footer() {
               <li><a href="medarbeidersamling.html">Medarbeidersamling</a></li>
               <li><a href="ledergruppe.html">For ledergrupper</a></li>
               <li><a href="dagretreat.html">Dagsretreat i Oslo</a></li>
+              <li><a href="kunnskap/">Kunnskap</a></li>
             </ul>
           </div>
           <div className="footer-col">

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="nb" data-theme="natt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kunnskap · Klarlinje</title>
+  <meta name="description" content="Artikler om meditasjon, tilstedeværelse og forskningen bak. Av Jens Asp, Klarlinje." />
+  <link rel="canonical" href="https://klarlinje.no/kunnskap/" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H027E3MZYE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H027E3MZYE');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg:         #0f1311;
+      --bg-soft:    #151a17;
+      --paper:      #1b211d;
+      --ink:        #ece3d2;
+      --ink-soft:   #c8c0ad;
+      --ink-mute:   #847d6e;
+      --line:       rgba(236, 227, 210, 0.10);
+      --accent:     #c89149;
+      --accent-2:   #d9a86a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Outfit", system-ui, sans-serif;
+      font-size: 16.5px;
+      line-height: 1.55;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    em.editorial { font-family: "Newsreader", serif; font-style: italic; font-weight: 300; }
+    a { color: inherit; text-decoration: none; }
+
+    .label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+
+    /* Nav */
+    .nav {
+      padding: 22px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: 21px;
+    }
+
+    .nav-brand-mark {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .nav-back {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent); }
+
+    /* Header */
+    .archive-header {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 120px 44px 80px;
+      text-align: center;
+    }
+
+    .archive-header .label {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    .archive-header h1 {
+      font-family: "Newsreader", serif;
+      font-weight: 300;
+      font-size: clamp(56px, 8vw, 110px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      font-variation-settings: "opsz" 144;
+      margin: 0 0 32px;
+      color: var(--ink);
+    }
+
+    .archive-header p {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      color: var(--ink-soft);
+      max-width: 50ch;
+      margin: 0 auto;
+    }
+
+    /* Article list */
+    .archive-list {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 44px 120px;
+    }
+
+    .article-card {
+      display: grid;
+      grid-template-columns: 80px 1fr 120px;
+      gap: 32px;
+      align-items: baseline;
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+      transition: opacity 0.2s;
+    }
+
+    .article-card:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .article-card:hover {
+      opacity: 0.7;
+    }
+
+    .article-card-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--ink-mute);
+    }
+
+    .article-card-title {
+      font-family: "Newsreader", serif;
+      font-weight: 300;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin: 0 0 12px;
+    }
+
+    .article-card-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .article-card-dek {
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 56ch;
+      margin: 0;
+    }
+
+    .article-card-date {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      text-align: right;
+      align-self: start;
+    }
+
+    @media (max-width: 720px) {
+      .nav { padding: 16px 20px; }
+      .nav-brand { font-size: 18px; }
+      .archive-header { padding: 80px 20px 60px; }
+      .archive-list { padding: 0 20px 80px; }
+      .article-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 32px 0;
+      }
+      .article-card-date { text-align: left; }
+    }
+
+    /* Footer */
+    footer.site-footer {
+      padding: 40px 44px;
+      border-top: 1px solid var(--line);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer.site-footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-brand">
+      <span class="nav-brand-mark"></span>
+      <span><em class="editorial">Klarlinje</em></span>
+    </a>
+    <a href="../index.html" class="nav-back">← Tilbake</a>
+  </nav>
+
+  <header class="archive-header">
+    <span class="label">Kunnskap</span>
+    <h1>Notater fra<br/><em class="editorial">en meditasjonslærer.</em></h1>
+    <p>
+      Korte og lengre tekster om meditasjon, tilstedeværelse og hva forskningen faktisk sier. Skrevet av Jens Asp.
+    </p>
+  </header>
+
+  <main class="archive-list">
+
+    <a class="article-card" href="hvorfor-meditere-paa-ferie.html">
+      <div class="article-card-num">01</div>
+      <div>
+        <h2 class="article-card-title">Hvorfor meditere <em>på ferie?</em></h2>
+        <p class="article-card-dek">
+          Forskning viser at en vanlig ferie er borte etter ti uker. En ferie med meditasjon varer mye lenger.
+        </p>
+      </div>
+      <div class="article-card-date">7. juni 2026</div>
+    </a>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2026 Klarlinje · Oslo / Son</div>
+    <div>
+      <a href="../index.html">← Tilbake til Klarlinje</a>
+    </div>
+  </footer>
+
+</body>
+</html>
