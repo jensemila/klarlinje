@@ -311,6 +311,23 @@
       font-style: italic;
     }
 
+    /* Inline citation references */
+    a.ref {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: 0.62em;
+      vertical-align: super;
+      line-height: 0;
+      color: var(--accent);
+      text-decoration: none;
+      margin-left: 2px;
+      transition: opacity 0.2s;
+    }
+
+    a.ref::before { content: "["; }
+    a.ref::after { content: "]"; }
+    a.ref:hover { opacity: 0.6; text-decoration: none; }
+
     /* Inline figures */
     .figure {
       margin: 56px -60px;
@@ -417,6 +434,22 @@
       line-height: 1.65;
       color: var(--ink-mute);
       margin-bottom: 10px;
+      scroll-margin-top: 90px;
+      transition: color 0.4s;
+    }
+
+    .article-sources li::marker {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      color: var(--ink-faint);
+    }
+
+    .article-sources li:target {
+      color: var(--ink-soft);
+    }
+
+    .article-sources li:target::marker {
+      color: var(--accent);
     }
 
     .article-sources em {
@@ -583,13 +616,13 @@
 
       <p>Mennesker har en lei tendens til å tro at en pause fra jobben er automatisk den ultimate pausen for hjernen. Det er ikke sant.</p>
 
-      <p>Matthew Killingsworth ved Harvard samlet inn rundt 250 000 målinger fra folk midt i hverdagen, via en app som pinget dem på tilfeldige tidspunkt og spurte hva de gjorde, og hvor tankene deres var.</p>
+      <p>Matthew Killingsworth ved Harvard<a href="#kilde-1" class="ref">1</a> samlet inn rundt 250 000 målinger fra folk midt i hverdagen, via en app som pinget dem på tilfeldige tidspunkt og spurte hva de gjorde, og hvor tankene deres var.</p>
 
-      <p>Han fant at folk tenkte på noe annet enn det de gjorde i 46,9 prosent av tiden. Nesten halve livet, vekk fra øyeblikket de faktisk lever i.</p>
+      <p>Han fant at folk tenkte på noe annet enn det de gjorde i 46,9 prosent av tiden. Med andre ord lever vi store deler av livet med hodet et helt annet sted enn kroppen.</p>
 
       <p>Men det aller viktigste funnet var dette: <strong>hvor til stede du er, betyr mer enn dobbelt så mye for lykken din som hva du faktisk gjør.</strong> I studien forklarte selve aktiviteten bare 4,6 prosent av svingningene i hvor lykkelige folk var fra øyeblikk til øyeblikk. Hvor til stede de var, forklarte 10,8 prosent. Altså mer enn dobbelt så mye.</p>
 
-      <p>Det betyr noe ubehagelig konkret. En ferie der hodet er et annet sted, er i praksis bortkastet. Du betalte for stranden, men du var aldri der.</p>
+      <p>Det betyr noe ubehagelig konkret. En ferie der hodet er et annet sted, er i praksis bortkastet. Kroppen var på stranden. Resten av deg var et helt annet sted.</p>
 
       <h2>Det viktigste er ikke hva du gjør. Det er at du er til stede.</h2>
 
@@ -603,13 +636,13 @@
 
       <p>Her kommer det mest overbevisende funnet jeg vet om for akkurat dette.</p>
 
-      <p>Georg Blasche og kolleger ved Universitetet i Groningen sammenlignet i 2021 meditasjon med vanlig ferie. 120 deltakere ble delt i grupper og fulgt i 20 uker.</p>
+      <p>Georg Blasche og kolleger ved Universitetet i Groningen<a href="#kilde-2" class="ref">2</a> sammenlignet i 2021 meditasjon med vanlig ferie. 120 deltakere ble delt i grupper og fulgt i 20 uker.</p>
 
       <p>Etter ti dager hadde alle det bedre. Det er ikke rart, hvile virker for absolutt alle.</p>
 
       <p>Men så ventet forskerne i ti <em>uker</em>. Og da hadde noe interessant skjedd. <strong>Bare de som hadde meditert, satt fortsatt igjen med gevinsten. De som bare hadde tatt en vanlig ferie, var tilbake til akkurat slik de hadde det før.</strong> Som om ferien aldri hadde funnet sted.</p>
 
-      <p>Samme antall fridager. Samme fine sted. Den eneste forskjellen var meditasjon.</p>
+      <p>De hadde like lang ferie og samme vakre sted. Det eneste som skilte gruppene, var meditasjon.</p>
 
       <p>Tenk på en vanlig ferie som godteri. Det smaker fantastisk der og da, og så er det borte. En ferie med meditasjon er noe kroppen din faktisk lærer og husker, lenge etter at du har låst opp ytterdøra hjemme igjen.</p>
 
@@ -619,13 +652,13 @@
 
       <p>En vanlig ferie gir kroppen en sjanse til å bremse. Men idet du kommer hjem og hverdagen treffer deg i full fart, tråkker du rett på gassen igjen. Du trente aldri bremsen. Du tok bare foten av gassen en liten stund.</p>
 
-      <p><strong>Meditasjon trener selve bremsen, og den ferdigheten blir med deg hjem.</strong> Det er hele grunnen til at gevinsten varer.</p>
+      <p><strong>Meditasjon trener selve bremsen, og den ferdigheten blir med deg hjem.</strong> Det er derfor roen blir værende lenge etter at du er hjemme igjen.</p>
 
       <h2>Ferie er det perfekte tidspunktet å begynne</h2>
 
       <p>De fleste sier de ikke har tid til å meditere. <strong>På ferie forsvinner den unnskyldningen fullstendig.</strong></p>
 
-      <p>Du har færre forpliktelser, roligere morgener og mer tid alene enn ellers i året. Det er det ideelle vinduet for å bygge en vane som varer. Forskning viser at åtte uker med daglig praksis gir strukturelle endringer i hjernen, og ferien er en gyllen måte å få de første ukene til å sitte.</p>
+      <p>Du har færre forpliktelser, roligere morgener og mer tid alene enn ellers i året. Det er det ideelle vinduet for å bygge en vane som varer. Forskning viser at åtte uker med jevn praksis endrer hvordan hjernen håndterer stress,<a href="#kilde-3" class="ref">3</a> og ferien er en gyllen måte å få de første ukene til å sitte.</p>
 
       <p>Slik gjør du det:</p>
 
@@ -638,8 +671,8 @@
 
       <div class="guided-block">
         <span class="label">Guidet meditasjon · 5 min</span>
-        <h3>Hvis fem minutter er nok til å starte, kan jeg lede deg.</h3>
-        <p>En kort, guidet meditasjon jeg har spilt inn. Den er bygget akkurat slik øktene mine er. Sett deg ned, trykk play, og se hva som skjer.</p>
+        <h3>Vil du prøve med en gang? Her er fem minutter.</h3>
+        <p>En kort, guidet meditasjon jeg har spilt inn. Sett deg ned, trykk play, og se hva som skjer.</p>
         <div class="video-wrap">
           <iframe src="https://www.youtube.com/embed/tJlfPR9WcZs?rel=0&modestbranding=1" title="5 minutters guidet meditasjon med Jens" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -653,13 +686,13 @@
 
       <p><strong>Legg vekk mobilen.</strong> Dette er det enkleste og mektigste grepet du har. Mobilen er den fremste tyven av tilstedeværelse vi mennesker har funnet opp. Hver eneste gang du sjekker den, river du deg selv ut av øyeblikket du nettopp var i.</p>
 
-      <p>Selv bruker jeg en Apple Watch med simkort. Da kan jeg la mobilen ligge igjen på hytta og gå tur helt uten den, samtidig som min kone når meg hvis det skulle være noe. Jeg er utilgjengelig for hele verden, men tilgjengelig for de viktigste. Det har forandret hvordan feriene mine kjennes.</p>
+      <p>Selv bruker jeg en Apple Watch med simkort. Da kan jeg la mobilen ligge igjen på hotellrommet og gå tur helt uten den, samtidig som min kone når meg hvis det skulle være noe. Jeg er utilgjengelig for hele verden, men tilgjengelig for de viktigste. Det har forandret hvordan feriene mine kjennes.</p>
 
-      <p><strong>Naturopplevelser uten skjerm</strong> er rene magien. Forskning på «skogsbading» (det japanske <em>shinrin-yoku</em>) viser at en tur i naturen uten avbrytelser senker både kortisol og blodtrykk målbart. En fjelltur eller en strandtur uten mobil er en meditasjon i seg selv.</p>
+      <p><strong>Naturopplevelser uten skjerm</strong> er rene magien. Forskning på «skogsbading» (det japanske <em>shinrin-yoku</em>) viser at en tur i naturen uten avbrytelser senker både kortisol og blodtrykk målbart.<a href="#kilde-4" class="ref">4</a> En fjelltur eller en strandtur uten mobil er en meditasjon i seg selv.</p>
 
-      <p><strong>Spis ett måltid i full stillhet.</strong> Bare kjenn smaken, teksturen, lukten. Ingen skjerm, ingen samtale. Du kommer til å bli sjokkert over hvor mye av maten din du vanligvis svelger uten å merke.</p>
+      <p><strong>Spis ett måltid i full stillhet.</strong> Bare kjenn smaken, teksturen, lukten. Ikke skru på TV-en, ikke dra frem mobilen. Du kommer til å bli sjokkert over hvor mye av maten din du vanligvis svelger uten å merke.</p>
 
-      <p><strong>Fravær av ytre stimuli.</strong> Sett deg ned og gjør ingenting. Ingen podkast, ingen musikk, ingen telefon. Bare se utover. Hjernen din trenger den pausen langt mer enn den trenger enda en episode.</p>
+      <p><strong>Fravær av ytre stimuli.</strong> Sett deg ned og gjør ingenting. Du trenger ikke fylle stillheten med en podkast eller en spilleliste. Bare se utover. Hjernen din trenger den pausen langt mer enn den trenger enda en episode.</p>
 
       <h2>Et retreat er ferien som faktisk hviler deg</h2>
 
@@ -670,7 +703,7 @@
         <figcaption>På retreat med gode folk. Her er hele rammen bygd for å være til stede.</figcaption>
       </figure>
 
-      <p>Et meditasjonsretreat er noen dager der alt er lagt til rette for at nervesystemet ditt skal roe seg helt ned. Stillhet, enkel rutine, guidet meditasjon, og null skjermer som river deg ut av øyeblikket. <strong>Allerede tre dager kan dempe stressmønstre i hjernen, og en uke gir målbare endringer i både hjerne og immunforsvar.</strong></p>
+      <p>Et meditasjonsretreat er noen dager der alt er lagt til rette for at nervesystemet ditt skal roe seg helt ned. Stillhet, enkel rutine, guidet meditasjon, og null skjermer som river deg ut av øyeblikket. <strong>Allerede tre dager kan dempe stressmønstre i hjernen, og en uke gir målbare endringer i både hjerne og immunforsvar.</strong><a href="#kilde-5" class="ref">5</a></p>
 
       <p>Det er den mest intense formen for det jeg har skrevet om her. En ferie som hviler deg dypere enn den vanlige, rett og slett fordi den trener selve evnen til å være til stede.</p>
 
@@ -688,11 +721,11 @@
     <section class="article-sources">
       <h3>Kilder</h3>
       <ol>
-        <li>Blasche G, et al. (2021). Comparison of rest-break interventions and meditation on recovery. <em>PLOS One</em>.</li>
-        <li>Killingsworth MA, Gilbert DT (2010). A Wandering Mind Is an Unhappy Mind. <em>Science</em>, 330(6006). Aktivitet forklarte 4,6 % av variasjonen i øyeblikkelig lykke, tankevandring 10,8 %.</li>
-        <li>Taren AA, et al. (2015). Mindfulness meditation training alters stress-related amygdala connectivity. <em>SCAN</em>.</li>
-        <li>Percival G, et al. (2025). 7-day intensive meditation retreat impacts on brain and body. <em>Communications Biology</em>.</li>
-        <li>Park BJ, et al. (2010). The physiological effects of Shinrin-yoku (forest bathing). <em>Environ Health Prev Med</em>.</li>
+        <li id="kilde-1">Killingsworth MA, Gilbert DT (2010). A Wandering Mind Is an Unhappy Mind. <em>Science</em>, 330(6006). Aktivitet forklarte 4,6 % av variasjonen i øyeblikkelig lykke, tankevandring 10,8 %.</li>
+        <li id="kilde-2">Blasche G, et al. (2021). Comparison of rest-break interventions and meditation on recovery. <em>PLOS One</em>.</li>
+        <li id="kilde-3">Taren AA, et al. (2015). Mindfulness meditation training alters stress-related amygdala connectivity. <em>SCAN</em>.</li>
+        <li id="kilde-4">Park BJ, et al. (2010). The physiological effects of Shinrin-yoku (forest bathing). <em>Environ Health Prev Med</em>.</li>
+        <li id="kilde-5">Percival G, et al. (2025). 7-day intensive meditation retreat impacts on brain and body. <em>Communications Biology</em>.</li>
       </ol>
     </section>
   </article>
