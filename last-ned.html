@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="nb" data-theme="natt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boka er din · Ferieparadokset · Klarlinje</title>
+  <meta name="description" content="Last ned Ferieparadokset av Jens Asp. Takk for at du melder deg på." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H027E3MZYE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H027E3MZYE');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg:#0f1311; --bg-soft:#151a17; --paper:#1b211d;
+      --ink:#ece3d2; --ink-soft:#c8c0ad; --ink-mute:#847d6e;
+      --line:rgba(236,227,210,0.10); --line-strong:rgba(236,227,210,0.22);
+      --accent:#c89149; --accent-2:#d9a86a; --accent-ink:#0f1311; --accent-soft:rgba(200,145,73,0.14);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin:0; padding:0; background:var(--bg); color:var(--ink);
+      font-family:"Outfit", system-ui, sans-serif; font-size:16.5px; line-height:1.55;
+      font-weight:300; -webkit-font-smoothing:antialiased; min-height:100dvh;
+      display:flex; flex-direction:column;
+    }
+    em.editorial { font-family:"Newsreader", serif; font-style:italic; font-weight:300; }
+    p { margin:0; } a { color:inherit; text-decoration:none; }
+    .label {
+      font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:0.22em;
+      text-transform:uppercase; color:var(--accent); font-weight:400;
+    }
+
+    .nav {
+      padding:22px 44px; display:flex; align-items:center; justify-content:space-between;
+      border-bottom:1px solid var(--line);
+    }
+    .nav-brand {
+      display:flex; align-items:center; gap:12px;
+      font-family:"Newsreader", serif; font-style:italic; font-size:21px;
+    }
+    .nav-brand-mark { width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; }
+
+    main {
+      flex:1; display:flex; align-items:center; justify-content:center;
+      padding:90px 24px; opacity:0; animation:fade 1s ease-out 0.15s forwards;
+    }
+    @keyframes fade { to { opacity:1; } }
+
+    .wrap {
+      max-width:920px; width:100%;
+      display:grid; grid-template-columns:0.8fr 1fr; gap:64px; align-items:center;
+    }
+
+    .cover {
+      width:100%; max-width:280px; margin:0 auto; display:block;
+      border-radius:2px 5px 5px 2px; border:1px solid var(--line);
+      box-shadow:-14px 26px 60px rgba(0,0,0,0.55), inset 1px 0 0 rgba(236,227,210,0.05);
+      transform:rotate(-2deg);
+    }
+
+    .label-row { display:block; margin-bottom:24px; }
+
+    h1 {
+      font-family:"Newsreader", serif; font-weight:300; font-style:italic;
+      font-size:clamp(44px, 6vw, 78px); line-height:0.98; letter-spacing:-0.03em;
+      font-variation-settings:"opsz" 96; color:var(--ink); margin:0 0 24px;
+    }
+
+    .lead { color:var(--ink-soft); font-size:16.5px; line-height:1.7; max-width:42ch; margin:0 0 36px; }
+
+    .dl-row { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px; }
+
+    .btn {
+      display:inline-flex; align-items:center; gap:12px; padding:16px 26px;
+      border:1px solid var(--accent); color:var(--accent);
+      font-family:"JetBrains Mono", monospace; font-size:11.5px; letter-spacing:0.16em;
+      text-transform:uppercase; font-weight:500; border-radius:4px;
+      transition:background 0.2s, color 0.2s, border-color 0.2s; cursor:pointer;
+    }
+    .btn:hover { background:var(--accent); color:var(--accent-ink); }
+    .btn-fill { background:var(--accent); color:var(--accent-ink); }
+    .btn-fill:hover { background:var(--accent-2); border-color:var(--accent-2); }
+
+    .dl-note { font-family:"Newsreader", serif; font-style:italic; font-size:14px; color:var(--ink-mute); margin-bottom:40px; }
+
+    .onward {
+      padding-top:30px; border-top:1px solid var(--line);
+    }
+    .onward-label { font-family:"JetBrains Mono", monospace; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:16px; display:block; }
+    .onward-links { display:flex; flex-direction:column; gap:10px; }
+    .onward-links a {
+      font-family:"Newsreader", serif; font-size:18px; color:var(--ink);
+      transition:color 0.2s; display:inline-flex; align-items:center; gap:10px;
+    }
+    .onward-links a:hover { color:var(--accent); }
+    .onward-links a .arr { color:var(--accent); font-family:"Outfit",sans-serif; }
+
+    footer {
+      padding:32px 44px; border-top:1px solid var(--line);
+      font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--ink-mute);
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    }
+    footer a:hover { color:var(--accent); }
+
+    @media (max-width:760px) {
+      .wrap { grid-template-columns:1fr; gap:40px; text-align:center; }
+      .cover { max-width:200px; order:-1; }
+      .lead { margin-left:auto; margin-right:auto; }
+      .dl-row { justify-content:center; }
+      .onward-links { align-items:center; }
+      .nav { padding:18px 20px; } .nav-brand { font-size:18px; }
+      footer { padding:28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-mark"></span>
+      <span><em>Klarlinje</em></span>
+    </a>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <img class="cover" src="images/ferieparadokset-cover.png" alt="Bokomslag: Ferieparadokset av Jens Asp" />
+
+      <div>
+        <span class="label label-row">Takk · Boka er din</span>
+        <h1>Ferieparadokset er klar.</h1>
+        <p class="lead">
+          Nedlastingen skal starte av seg selv. Hvis ikke, velg formatet du vil ha under. PDF kan leses overalt, epub passer best i e-boklesere.
+        </p>
+
+        <div class="dl-row">
+          <a class="btn btn-fill" id="dl-pdf" href="filer/ferieparadokset.pdf" download>
+            Last ned PDF <span>↓</span>
+          </a>
+          <a class="btn" id="dl-epub" href="filer/ferieparadokset.epub" download>
+            Last ned epub <span>↓</span>
+          </a>
+        </div>
+        <p class="dl-note">God lesning. Og husk: det viktigste er ikke hvor du er, men at du er der.</p>
+
+        <div class="onward">
+          <span class="onward-label">Mens du er her</span>
+          <div class="onward-links">
+            <a href="index.html">Utforsk retreatene på Klarlinje <span class="arr">→</span></a>
+            <a href="kunnskap/">Les flere tekster om meditasjon <span class="arr">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>© 2026 Klarlinje · Oslo / Son</div>
+    <div><a href="index.html">← Tilbake til Klarlinje</a></div>
+  </footer>
+
+  <script>
+    // Start nedlastingen automatisk (PDF) når sida åpnes.
+    (function () {
+      try {
+        var a = document.createElement('a');
+        a.href = 'filer/ferieparadokset.pdf';
+        a.download = 'Ferieparadokset.pdf';
+        document.body.appendChild(a);
+        setTimeout(function () { a.click(); a.remove(); }, 600);
+      } catch (e) { /* bruker kan trykke manuelt */ }
+    })();
+  </script>
+
+</body>
+</html>
