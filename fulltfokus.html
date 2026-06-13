@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fullt fokus · Retreat på The Well · 13.–15. november · Klarlinje</title>
   <meta name="description" content="To netter på The Well, Nordens største spa. Fullt fokus på deg selv, meditasjon og restitusjon. Med Anja Hammerseng-Edin, Rikke Gudim og Jens Asp. 13.–15. november. Meld deg på ventelisten." />
-  <link rel="canonical" href="https://klarlinje.no/fulltfokus.html" />
+  <link rel="canonical" href="https://klarlinje.no/fulltfokus" />
   <meta name="robots" content="noindex, nofollow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://klarlinje.no/fulltfokus.html" />
+  <meta property="og:url" content="https://klarlinje.no/fulltfokus" />
   <meta property="og:title" content="Fullt fokus · Retreat på The Well · 13.–15. november" />
   <meta property="og:description" content="To netter på Nordens største spa. Fullt fokus på deg selv, meditasjon og restitusjon. Klar for å bli helt uthvilt?" />
   <meta property="og:locale" content="nb_NO" />
@@ -60,10 +60,10 @@
       "price": "19500",
       "priceCurrency": "NOK",
       "availability": "https://schema.org/PreOrder",
-      "url": "https://klarlinje.no/fulltfokus.html"
+      "url": "https://klarlinje.no/fulltfokus"
     },
     "image": "https://klarlinje.no/images/well-onsen.jpg",
-    "url": "https://klarlinje.no/fulltfokus.html",
+    "url": "https://klarlinje.no/fulltfokus",
     "inLanguage": "nb-NO"
   }
   </script>
@@ -961,6 +961,302 @@
       .faq-a-text { grid-column: 1; }
     }
 
+    /* ─── Forskning ─── */
+    .research-section {
+      background: var(--bg);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .research-head { margin-bottom: 56px; }
+    .research-head h2 {
+      font-size: clamp(36px, 5.5vw, 68px);
+      font-variation-settings: "opsz" 72;
+      letter-spacing: -0.025em;
+    }
+    .research-head h2 em { font-style: italic; color: var(--accent); }
+
+    .research-lead {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.2vw, 26px);
+      line-height: 1.4;
+      color: var(--ink);
+      max-width: 36ch;
+      margin: 0 0 64px;
+      font-weight: 300;
+    }
+    .research-lead em { color: var(--accent); }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 820px) { .research-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+    .research-chart-wrap {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 28px 22px;
+    }
+
+    .research-chart-svg { width: 100%; height: auto; display: block; }
+    .chart-grid { stroke: var(--line); stroke-width: 0.8; }
+    .chart-axis { stroke: var(--line-strong); stroke-width: 1; }
+    .chart-axis-label, .chart-title {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      fill: var(--ink-mute);
+      stroke: none;
+    }
+    .chart-title-muted { fill: var(--ink-faint); }
+    .chart-line {
+      fill: none;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: drawLine 1.6s ease-out 0.2s forwards;
+    }
+    .chart-line.line-il6 { animation-delay: 0.6s; }
+    .chart-line.line-stress { animation-delay: 1s; }
+    @keyframes drawLine { to { stroke-dashoffset: 0; } }
+    .chart-dot {
+      opacity: 0;
+      animation: fadeDot 0.4s ease-out forwards;
+    }
+    .dot-il10 { animation-delay: 1.6s; }
+    .dot-il6 { animation-delay: 2s; }
+    .dot-stress { animation-delay: 2.4s; }
+    @keyframes fadeDot { to { opacity: 1; } }
+    .chart-line-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      fill: var(--ink-mute);
+      stroke: none;
+    }
+    .chart-line-label-accent { fill: var(--accent); }
+    .chart-line-label-muted { fill: var(--ink-faint); }
+
+    .research-legend {
+      display: grid;
+      gap: 22px;
+    }
+    .research-leg {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 16px;
+      align-items: baseline;
+    }
+    .research-leg-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    .swatch-il10 { background: var(--accent); }
+    .swatch-il6 { background: var(--accent-2); }
+    .swatch-stress { background: var(--ink-soft); }
+    .research-leg-key {
+      font-family: "Newsreader", serif;
+      font-size: 18px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .research-leg-key em { font-style: italic; }
+    .research-leg-trend { color: var(--accent); margin-left: 6px; }
+    .research-leg-val {
+      font-size: 14.5px;
+      color: var(--ink-mute);
+      line-height: 1.5;
+    }
+
+    .research-prose {
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 0.6fr;
+      gap: 48px;
+    }
+    @media (max-width: 820px) { .research-prose { grid-template-columns: 1fr; gap: 32px; } }
+    .research-prose p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      max-width: 56ch;
+    }
+    .research-prose em { font-style: italic; color: var(--ink); }
+    .research-cite-title {
+      font-family: "Newsreader", serif;
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .research-cite-title em { font-style: italic; }
+    .research-cite-link {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      transition: color 0.2s;
+    }
+    .research-cite-link:hover { color: var(--accent-2); }
+
+    /* ─── Bevis ─── */
+    .quotes-section {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .quotes-head { margin-bottom: 56px; }
+    .quotes-head h2 {
+      font-size: clamp(36px, 5.5vw, 68px);
+      font-variation-settings: "opsz" 72;
+      letter-spacing: -0.025em;
+    }
+    .quotes-head h2 em { font-style: italic; color: var(--accent); }
+    .quotes-context {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--ink-mute);
+      max-width: 50ch;
+      margin: 16px 0 0;
+    }
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 720px) { .quotes-grid { grid-template-columns: 1fr; } }
+
+    .quote {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 36px 32px 28px;
+      position: relative;
+    }
+    .quote-mark {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: 56px;
+      line-height: 0.5;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .quote-body {
+      font-family: "Newsreader", serif;
+      font-size: 19px;
+      line-height: 1.45;
+      color: var(--ink);
+      margin: 0 0 22px;
+      font-weight: 300;
+    }
+    .quote-body em { font-style: italic; }
+    .quote-attr {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+
+    /* ─── Passer dette for deg ─── */
+    .passer-head { margin-bottom: 56px; }
+    .passer-head h2 {
+      font-size: clamp(36px, 5.5vw, 68px);
+      font-variation-settings: "opsz" 72;
+      letter-spacing: -0.025em;
+    }
+    .passer-head h2 em { font-style: italic; color: var(--accent); }
+
+    .passer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 720px) { .passer-grid { grid-template-columns: 1fr; } }
+
+    .passer-col {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 36px 32px;
+    }
+    .passer-col-ja { border-top: 2px solid var(--accent); }
+    .passer-col-nei { border-top: 2px solid var(--ink-faint); }
+
+    .passer-col-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 26px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .passer-col-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Newsreader", serif;
+      font-size: 17px;
+    }
+    .passer-col-ja .passer-col-mark {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .passer-col-nei .passer-col-mark {
+      color: var(--ink-mute);
+      border: 1px solid var(--line-strong);
+    }
+
+    .passer-col-title {
+      font-family: "Newsreader", serif;
+      font-size: 22px;
+      color: var(--ink);
+    }
+    .passer-col-title em { font-style: italic; }
+
+    .passer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .passer-list li {
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      padding: 14px 0 14px 22px;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .passer-list li:last-child { border-bottom: none; }
+    .passer-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 22px;
+      width: 8px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+    .passer-col-nei .passer-list li::before { background: var(--ink-faint); }
+
     /* ─── Passordlås ─── */
     body.locked { overflow: hidden; }
 
@@ -1221,7 +1517,7 @@
         <div class="tema-card">
           <div class="tema-card-num">2</div>
           <h3>Meditasjon</h3>
-          <p>Guidede økter gjennom hele helgen, ledet av Anja, Rikke og Jens. Evidensbasert og sekulært, uten mystikk. Ingen forkunnskaper kreves.</p>
+          <p>Guidede økter gjennom hele helgen, ledet av Anja og Jens. Evidensbasert og sekulært, uten mystikk. Ingen forkunnskaper kreves.</p>
         </div>
         <div class="tema-card">
           <div class="tema-card-num">3</div>
@@ -1462,6 +1758,183 @@
     </div>
   </section>
 
+  <!-- Forskning -->
+  <section class="research-section" id="forskning">
+    <div class="shell">
+      <div class="research-head">
+        <div class="intro-grid">
+          <span class="label">05 / Forskning</span>
+          <h2><em>Tre dager</em><br/>er nok.</h2>
+        </div>
+      </div>
+
+      <p class="research-lead">
+        En randomisert studie viser at <em>tre dager</em> med meditasjon gir målbare biologiske endringer i immunsystemet, ikke bare psykologiske effekter.
+      </p>
+
+      <div class="research-grid">
+        <div class="research-legend">
+          <div class="research-leg">
+            <span class="research-leg-swatch swatch-il10"></span>
+            <div>
+              <div class="research-leg-key"><em>IL-10</em> <span class="research-leg-trend">↑</span></div>
+              <div class="research-leg-val">Anti-inflammatorisk cytokin økt.</div>
+            </div>
+          </div>
+          <div class="research-leg">
+            <span class="research-leg-swatch swatch-il6"></span>
+            <div>
+              <div class="research-leg-key"><em>IL-6 &amp; IL-8</em> <span class="research-leg-trend">↓</span></div>
+              <div class="research-leg-val">Pro-inflammatoriske cytokiner signifikant redusert.</div>
+            </div>
+          </div>
+          <div class="research-leg">
+            <span class="research-leg-swatch swatch-stress"></span>
+            <div>
+              <div class="research-leg-key"><em>Stress &amp; angst</em> <span class="research-leg-trend">↓</span></div>
+              <div class="research-leg-val">Redusert opplevd stress og økt mindfulness.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-chart-wrap">
+          <svg viewBox="0 0 600 340" class="research-chart-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="60" y1="50"  x2="480" y2="50"  class="chart-grid" />
+            <line x1="60" y1="120" x2="480" y2="120" class="chart-grid" />
+            <line x1="60" y1="190" x2="480" y2="190" class="chart-grid" />
+            <line x1="60" y1="260" x2="480" y2="260" class="chart-grid" />
+            <line x1="60" y1="40" x2="60" y2="260" class="chart-axis" />
+            <line x1="60" y1="260" x2="480" y2="260" class="chart-axis" />
+            <text x="50" y="54" text-anchor="end" class="chart-axis-label">Høy</text>
+            <text x="50" y="264" text-anchor="end" class="chart-axis-label">Lav</text>
+            <text x="60"  y="284" text-anchor="middle" class="chart-axis-label">Dag 1</text>
+            <text x="270" y="284" text-anchor="middle" class="chart-axis-label">Dag 2</text>
+            <text x="480" y="284" text-anchor="middle" class="chart-axis-label">Dag 3</text>
+            <text x="60" y="22" text-anchor="start" class="chart-title">Endring over 3 dager</text>
+            <text x="480" y="22" text-anchor="end" class="chart-title chart-title-muted">Rosenkranz et al. (2021)</text>
+            <path class="chart-line line-il10" d="M60,225 L270,140 L480,55" stroke="var(--accent)" stroke-width="2" pathLength="1" />
+            <circle cx="60"  cy="225" r="4" fill="var(--accent)" class="chart-dot dot-il10" />
+            <circle cx="270" cy="140" r="3" fill="var(--accent)" class="chart-dot dot-il10" />
+            <circle cx="480" cy="55"  r="5" fill="var(--accent)" class="chart-dot dot-il10" />
+            <text x="490" y="59" class="chart-line-label chart-line-label-accent">IL-10</text>
+            <path class="chart-line line-il6" d="M60,70 L270,135 L480,210" stroke="var(--accent-2)" stroke-width="1.6" pathLength="1" />
+            <circle cx="60"  cy="70"  r="3.5" fill="var(--accent-2)" class="chart-dot dot-il6" />
+            <circle cx="270" cy="135" r="3"   fill="var(--accent-2)" class="chart-dot dot-il6" />
+            <circle cx="480" cy="210" r="3.5" fill="var(--accent-2)" class="chart-dot dot-il6" />
+            <text x="490" y="214" class="chart-line-label">IL-6 &amp; IL-8</text>
+            <path class="chart-line line-stress" d="M60,95 L270,160 L480,235" stroke="var(--ink-soft)" stroke-width="1.3" stroke-dasharray="4 4" pathLength="1" />
+            <circle cx="60"  cy="95"  r="3"   fill="var(--ink-soft)" class="chart-dot dot-stress" />
+            <circle cx="270" cy="160" r="2.5" fill="var(--ink-soft)" class="chart-dot dot-stress" />
+            <circle cx="480" cy="235" r="3"   fill="var(--ink-soft)" class="chart-dot dot-stress" />
+            <text x="490" y="239" class="chart-line-label chart-line-label-muted">Stress</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="research-prose">
+        <div>
+          <p>
+            Studien randomiserte 95 friske deltakere i alderen 18 til 67 år til enten et tre-dagers mindfulness-retreat eller en aktiv kontrollgruppe i lignende sosial setting. Blodprøver og selvrapportering før og etter.
+          </p>
+          <p>
+            Kronisk betennelse er koblet til depresjon, hjertesykdom og aldring. <em>En storbyferie med venner er én ting. En helg med aktiv meditasjon er noe helt annet.</em>
+          </p>
+        </div>
+        <div>
+          <span class="label" style="display: block; margin-bottom: 12px;">Kilde</span>
+          <div class="research-cite-title">
+            Rosenkranz et al. (2021)<br/>
+            <em>Psychoneuroendocrinology</em>
+          </div>
+          <a class="research-cite-link" href="https://pubmed.ncbi.nlm.nih.gov/34775250/" target="_blank" rel="noopener">
+            pubmed.ncbi.nlm.nih.gov/34775250 ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bevis -->
+  <section class="quotes-section" id="bevis">
+    <div class="shell">
+      <div class="quotes-head">
+        <div class="intro-grid">
+          <span class="label">08 / Bevis</span>
+          <div>
+            <h2><em>Det andre</em><br/>har sagt.</h2>
+            <p class="quotes-context">
+              Sitater fra deltakere på en helg med breathwork Jens arrangerte våren 2025.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quotes-grid">
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p class="quote-body"><em>Fantastisk opplegg, mange takk til alle som arrangerte og bidro.</em></p>
+          <div class="quote-attr">Deltaker · 2025</div>
+        </div>
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p class="quote-body"><em>Bra lagt opp mht henting, program A til Å, fasiliteter og variasjon av happenings.</em></p>
+          <div class="quote-attr">Deltaker · 2025</div>
+        </div>
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p class="quote-body"><em>Den beste helga jeg har hatt så langt i år. Fantastisk atmosfære og hyggelige folk all over the place.</em></p>
+          <div class="quote-attr">Deltaker · 2025</div>
+        </div>
+        <div class="quote">
+          <div class="quote-mark">"</div>
+          <p class="quote-body"><em>Tusen hjertelig takk.</em></p>
+          <div class="quote-attr">Deltaker · 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Passer dette for deg? -->
+  <section id="passer">
+    <div class="shell">
+      <div class="passer-head">
+        <div class="intro-grid">
+          <span class="label">11 / Passer dette for deg?</span>
+          <h2><em>Ærlig sortering,</em><br/>før du melder deg på.</h2>
+        </div>
+      </div>
+
+      <div class="passer-grid">
+        <div class="passer-col passer-col-ja">
+          <div class="passer-col-head">
+            <span class="passer-col-mark">✓</span>
+            <span class="passer-col-title"><em>Ja, dette er for deg</em></span>
+          </div>
+          <ul class="passer-list">
+            <li>Du lever et hektisk liv og trenger en pause.</li>
+            <li>Du er nysgjerrig på hva meditasjon kan gjøre.</li>
+            <li>Du vil ha to dager helt for deg selv, uten å måtte ta beslutninger.</li>
+            <li>Du foretrekker et sekulært og evidensbasert format framfor det åndelige.</li>
+            <li>Du er åpen for korte perioder med stillhet.</li>
+          </ul>
+        </div>
+        <div class="passer-col passer-col-nei">
+          <div class="passer-col-head">
+            <span class="passer-col-mark">×</span>
+            <span class="passer-col-title"><em>Nei, ikke denne gangen</em></span>
+          </div>
+          <ul class="passer-list">
+            <li>Du er ute etter en partyhelg eller sosial getaway.</li>
+            <li>Du leter etter et åndelig eller religiøst retreat.</li>
+            <li>Du forventer guruopplevelser, energiarbeid eller healing.</li>
+            <li>Du er midt i en akutt livskrise som krever profesjonell oppfølging.</li>
+            <li>Du må være tilgjengelig 24/7.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Venteliste -->
   <section class="signup-section" id="venteliste">
     <div class="shell">
@@ -1478,7 +1951,7 @@
 
           <form
             id="signup-form"
-            action="https://app.kit.com/forms/9450253/subscriptions"
+            action="https://app.kit.com/forms/9557016/subscriptions"
             method="post"
           >
             <div class="form-fields">
@@ -1534,19 +2007,20 @@
   <script>
     // FAQ
     const FAQ_DATA = [
-      { q: "Må jeg ha meditert før?", a: "Nei. De fleste deltakerne har prøvd via app eller kurs, men det er ikke et krav. Du får alt du trenger på plass." },
+      { q: "Må jeg ha meditert før?", a: "Nei. Programmet er bygget slik at det fungerer enten du aldri har sittet i stillhet før, eller har en daglig praksis fra før. Vi møter deg der du er." },
+      { q: "Hvilken sittestilling skal jeg ha?", a: "Den som passer best for deg. Sittende på stol, knelende, stående eller i lotusstilling på gulvet. Hensikten er ikke positur, men å finne en stilling der kroppen er rolig og våken samtidig. Vi gir veiledning hvis du ønsker det." },
       { q: "Hva slags meditasjon er dette?", a: "Mindfulness, evidensbasert. Inspirert av MBSR (Mindfulness-Based Stress Reduction), utviklet av Jon Kabat-Zinn ved University of Massachusetts i 1979. Det er det mest studerte mindfulness-programmet i verden." },
       { q: "Hva koster det, og hva er inkludert?", a: "19 500 kr inkl. eget rom i to netter, alle måltider, full tilgang til spaet og hele programmet. Ikke inkludert: reise, alkohol og spabehandlinger." },
+      { q: "Kan man dele rom med noen?", a: "Ja. Vil dere dele rom, får dere 20 % avslag i prisen per person." },
       { q: "Er behandlinger inkludert?", a: "Nei. Massasje og andre spabehandlinger er ikke en del av pakken, men kan bestilles direkte hos The Well. Gjør det gjerne i god tid, behandlingene blir fort fullbooket." },
       { q: "Er dette religiøst eller alternativt?", a: "Nei. Klarlinje er sekulært og evidensbasert." },
       { q: "Hva skjer i løpet av helgen?", a: "Meditasjon, samtaler, måltider, badstuer og god tid i spaet. Se programmet lenger opp på siden. Detaljert timeplan sendes ut til påmeldte i god tid." },
       { q: "Hvem deltar?", a: "Voksne som lever hektiske liv og vil ha mer ro. Det er 25 plasser. De fleste kommer alene, noen kommer sammen med en venn eller partner." },
       { q: "Kan jeg komme alene?", a: "De fleste kommer alene. Du får eget rom og bestemmer selv hvor mye du vil snakke med andre." },
-      { q: "Hva er anbefalingen for mobilbruk?", a: "Du får mest ut av helgen om mobilen blir liggende på rommet. I spaet på The Well er mobil uansett ikke tillatt. Du bestemmer selv." },
-      { q: "Hva er anbefalingen for alkohol?", a: "Du får mest ut av helgen om du holder deg unna alkohol disse dagene. The Well er ikke alkoholfritt, men vi anbefaler å la det ligge. Du bestemmer selv." },
+      { q: "Hva med mobil og alkohol?", a: "Både når det kommer til alkohol og mobil anbefaler vi å holde det til et minimum. Det er gjerne det som gjør at helgen faktisk hviler deg. The Well er ikke alkoholfritt, og i spaet er mobil uansett ikke tillatt." },
       { q: "Hva er avbestillingsvilkårene?", a: "Fri avbestilling fram til 30 dager før. Mellom 30 og 14 dager før refunderes 50 %. Etter 14 dager før refunderes ingenting." },
       { q: "Er The Well stengt for andre gjester?", a: "Nei. The Well er åpent som vanlig. Våre egne økter foregår i egne lokaler, og du vil møte andre gjester i spaet og restauranten. Programmet vårt er uforstyrret." },
-      { q: "Hva bør jeg pakke?", a: "Badetøy, behagelige klær og noe varmt til kveldene. Badekåpe, håndklær og tøfler får du på The Well. Mer praktisk info kommer i påmeldingen." },
+      { q: "Hva bør jeg pakke?", a: "Badetøy, behagelige klær og noe varmt til kveldene. Badekåpe, håndklær og tøfler får du på The Well. Har du en yogamatte, meditasjonspute eller meditasjonsbenk fra før, er du velkommen til å ta den med. Hvis ikke, har vi til låns. Mer praktisk info kommer i påmeldingen." },
       { q: "Hva hvis jeg ikke kan disse datoene?", a: "Klarlinje arrangerer også helgeretreat på Son Spa og dagsretreat i Oslo. Se klarlinje.no for mer.", link: { href: "index.html", text: "Se alle retreatene →" } },
     ];
 

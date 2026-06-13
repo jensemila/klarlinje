@@ -84,7 +84,7 @@ function Bekreftelse() {
           maxWidth: "38ch",
           margin: "0 auto 40px",
         }}>
-          Du får én e-post når datoene for våren 2027 er satt, og én til når påmeldingen åpner. Ingen støy i mellomtiden.
+          Du får én e-post når datoene for november 2026 er satt, og én til når påmeldingen åpner. Ingen støy i mellomtiden.
         </p>
 
       </div>
