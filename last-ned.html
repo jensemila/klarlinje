@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boka er din · Ferieparadokset · Klarlinje</title>
-  <meta name="description" content="Last ned Ferieparadokset av Jens Asp. Takk for at du melder deg på." />
+  <title>Last ned Ferieparadokset · Klarlinje</title>
+  <meta name="description" content="Last ned Ferieparadokset av Jens Asp som PDF eller epub. Gratis." />
   <meta name="robots" content="noindex, nofollow" />
 
   <!-- Google Analytics -->
@@ -82,18 +82,42 @@
 
     .lead { color:var(--ink-soft); font-size:16.5px; line-height:1.7; max-width:42ch; margin:0 0 36px; }
 
-    .dl-row { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px; }
+    .format-cards { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:18px; }
 
-    .btn {
-      display:inline-flex; align-items:center; gap:12px; padding:16px 26px;
-      border:1px solid var(--accent); color:var(--accent);
-      font-family:"JetBrains Mono", monospace; font-size:11.5px; letter-spacing:0.16em;
-      text-transform:uppercase; font-weight:500; border-radius:4px;
-      transition:background 0.2s, color 0.2s, border-color 0.2s; cursor:pointer;
+    .format-card {
+      flex:1; min-width:200px; padding:28px 24px;
+      border:1px solid var(--line-strong); border-radius:8px;
+      background:var(--bg-soft);
+      transition:border-color 0.2s, background 0.2s;
+      display:flex; flex-direction:column; gap:14px;
     }
-    .btn:hover { background:var(--accent); color:var(--accent-ink); }
-    .btn-fill { background:var(--accent); color:var(--accent-ink); }
-    .btn-fill:hover { background:var(--accent-2); border-color:var(--accent-2); }
+    .format-card:hover { border-color:var(--accent); background:var(--paper); }
+
+    .format-icon {
+      font-family:"JetBrains Mono", monospace; font-size:13px; font-weight:500;
+      color:var(--accent); letter-spacing:0.08em; text-transform:uppercase;
+    }
+
+    .format-title {
+      font-family:"Newsreader", serif; font-size:22px; font-weight:400;
+      color:var(--ink); margin:0;
+    }
+
+    .format-desc {
+      font-size:14.5px; line-height:1.6; color:var(--ink-mute); margin:0; flex:1;
+    }
+
+    .format-btn {
+      display:inline-flex; align-items:center; gap:10px; padding:14px 22px;
+      border:1px solid var(--accent); color:var(--accent);
+      font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:0.16em;
+      text-transform:uppercase; font-weight:500; border-radius:4px;
+      transition:background 0.2s, color 0.2s; cursor:pointer;
+      text-align:center; justify-content:center;
+    }
+    .format-btn:hover { background:var(--accent); color:var(--accent-ink); }
+    .format-btn-fill { background:var(--accent); color:var(--accent-ink); }
+    .format-btn-fill:hover { background:var(--accent-2); border-color:var(--accent-2); }
 
     .dl-note { font-family:"Newsreader", serif; font-style:italic; font-size:14px; color:var(--ink-mute); margin-bottom:40px; }
 
@@ -121,7 +145,7 @@
       .wrap { grid-template-columns:1fr; gap:40px; text-align:center; }
       .cover { max-width:200px; order:-1; }
       .lead { margin-left:auto; margin-right:auto; }
-      .dl-row { justify-content:center; }
+      .format-cards { flex-direction:column; }
       .onward-links { align-items:center; }
       .nav { padding:18px 20px; } .nav-brand { font-size:18px; }
       footer { padding:28px 20px; }
@@ -142,21 +166,27 @@
       <img class="cover" src="images/ferieparadokset-cover.png" alt="Bokomslag: Ferieparadokset av Jens Asp" />
 
       <div>
-        <span class="label label-row">Takk · Boka er din</span>
-        <h1>Ferieparadokset er klar.</h1>
+        <span class="label label-row">Gratis bok · Velg format</span>
+        <h1>Last ned boka.</h1>
         <p class="lead">
-          Nedlastingen skal starte av seg selv. Hvis ikke, velg formatet du vil ha under. PDF kan leses overalt, epub passer best i e-boklesere.
+          Velg formatet som passer deg best.
         </p>
 
-        <div class="dl-row">
-          <a class="btn btn-fill" id="dl-pdf" href="filer/ferieparadokset.pdf" download>
-            Last ned PDF <span>↓</span>
-          </a>
-          <a class="btn" id="dl-epub" href="filer/ferieparadokset.epub" download>
-            Last ned epub <span>↓</span>
-          </a>
+        <div class="format-cards">
+          <div class="format-card">
+            <span class="format-icon">PDF</span>
+            <p class="format-title">PDF</p>
+            <p class="format-desc">Fungerer overalt. Åpnes direkte på mobil, nettbrett og PC. Ser lik ut uansett enhet.</p>
+            <a class="format-btn format-btn-fill" href="filer/ferieparadokset.pdf" download>Last ned PDF <span>↓</span></a>
+          </div>
+          <div class="format-card">
+            <span class="format-icon">EPUB</span>
+            <p class="format-title">Epub</p>
+            <p class="format-desc">For e-boklesere som Kindle, Kobo og Apples Bøker-app. Teksten tilpasser seg skjermstørrelsen.</p>
+            <a class="format-btn" href="filer/ferieparadokset.epub" download>Last ned epub <span>↓</span></a>
+          </div>
         </div>
-        <p class="dl-note">God lesning. Og husk: det viktigste er ikke hvor du er, men at du er der.</p>
+        <p class="dl-note">Usikker? Velg PDF.</p>
 
         <div class="onward">
           <span class="onward-label">Mens du er her</span>
@@ -173,19 +203,6 @@
     <div>© 2026 Klarlinje · Oslo / Son</div>
     <div><a href="index.html">← Tilbake til Klarlinje</a></div>
   </footer>
-
-  <script>
-    // Start nedlastingen automatisk (PDF) når sida åpnes.
-    (function () {
-      try {
-        var a = document.createElement('a');
-        a.href = 'filer/ferieparadokset.pdf';
-        a.download = 'Ferieparadokset.pdf';
-        document.body.appendChild(a);
-        setTimeout(function () { a.click(); a.remove(); }, 600);
-      } catch (e) { /* bruker kan trykke manuelt */ }
-    })();
-  </script>
 
 </body>
 </html>
