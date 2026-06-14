@@ -52,7 +52,28 @@ Be KI eksplisitt om å droppe disse:
 
 **Hedging.** Kutt «kanskje» og «ofte» når du mener noe bestemt.
 
-# 5. Forklar som til en åttenåring
+# 5. Skriv ekte norsk, ikke oversatt engelsk
+
+KI tenker på engelsk og oversetter. Resultatet er anglisismer som lukter maskin. Be den bytte dem ut.
+
+| Unngå | Bruk heller |
+|---|---|
+| på toppen av feltet sitt | blant de fremste, en av de dyktigste |
+| ta det til neste nivå | ta det ett skritt videre |
+| på slutten av dagen | når alt kommer til alt, til syvende og sist |
+| gjøre en forskjell | bety noe, monne |
+| adressere et problem | ta tak i, gjøre noe med |
+| game changer | noe som snur alt |
+| på en daglig basis | hver dag, til daglig |
+| mindset | tankesett, innstilling |
+| boost | løft, påfyll |
+| performe | prestere, fungere |
+
+Behold engelske fagord bare når de faktisk er det innarbeidede begrepet, og forklar dem på norsk.
+
+**Tonen du er ute etter:** skriv som du snakker til et klokt menneske du er glad i. Varmt, ærlig, uten å være høytidelig.
+
+# 6. Forklar som til en åttenåring
 
 Be KI gi hvert fagord en hverdagslig analogi:
 
@@ -62,7 +83,7 @@ Be KI gi hvert fagord en hverdagslig analogi:
 
 Behold tallene og fakta. Det er språket som skal være enkelt, ikke innholdet.
 
-# 6. Skriv for de som skummer
+# 7. Skriv for de som skummer
 
 Folk leser ikke hvert ord.
 
@@ -70,7 +91,7 @@ Folk leser ikke hvert ord.
 
 Ikke uthev mer enn én ting per seksjon, ellers forsvinner effekten.
 
-# 7. Før og etter
+# 8. Før og etter
 
 Salg:
 
@@ -96,7 +117,7 @@ Før: «Jeg ville bare følge opp angående vårt tidligere møte.»
 
 Etter: «Vi sa vi skulle ta en avgjørelse denne uka. Er du klar?»
 
-# 8. Slik tar du det i bruk
+# 9. Slik tar du det i bruk
 
 Lim hele listen inn i starten av en chat, før oppgaven. Eller lagre den som «Custom Instruction» i ChatGPT eller et system prompt i Claude.
 
