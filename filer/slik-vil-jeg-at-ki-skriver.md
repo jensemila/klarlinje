@@ -1,14 +1,13 @@
 # Slik vil jeg at KI skriver
 
-## En kort guide til å få ChatGPT, Claude og andre til å skrive som et menneske.
+## En kort guide til å få Claude 4.8 (eller andre KI-modeller) til å skrive litt mer som et menneske. 
 
 ---
 
-Be KI om en tekst, og du får som regel noe glatt, korrekt og helt uten liv. Det trenger ikke være sånn. Her er grepene som gjør størst forskjell. Lim dem inn før du gir KI en oppgave.
 
 # 1. Gi KI en stemme
 
-Uten instrukser velger KI den tryggeste varianten. Den er sjelden best.
+Uten instrukser velger KI den tryggeste varianten. Det er sjeldent best.
 
 **Vær trygg, ikke vag.** «Det funker ikke» slår «det stemmer sjelden».
 
@@ -26,13 +25,13 @@ KI skriver avsnitt som er like lange og like tunge. Bryt det opp.
 
 **Tre på rad gir rytme.** «Billig, raskt og enkelt.» «Han kom, så, og dro igjen.»
 
-**Lette overskrifter.** Korte og navnaktige. Aldri spørsmål, aldri kolon.
+**Lette overskrifter.** Korte og navnaktige. Aldri kolon.
 
 # 3. Gjør det konkret
 
 KI elsker det generelle. Dra det ned på bakken.
 
-**Egennavn.** «Excel» foran «et regneark». «Torggata» foran «en gate». «en Volvo fra 2012» foran «en eldre bil».
+**Egennavn.** «Excel» foran «et regneark». «Torggata» foran «en gate». «en Volvo 240 fra 2012» foran «en eldre bil».
 
 **Vis en scene** i stedet for å forklare et prinsipp abstrakt.
 
@@ -54,13 +53,13 @@ Be KI eksplisitt om å droppe disse:
 
 # 5. Skriv ekte norsk, ikke oversatt engelsk
 
-KI tenker på engelsk og oversetter. Resultatet er anglisismer som lukter maskin. Be den bytte dem ut.
+KI tenker på engelsk og oversetter. Resultatet er anglisismer som lukter vondt.
 
 | Unngå | Bruk heller |
 |---|---|
 | på toppen av feltet sitt | blant de fremste, en av de dyktigste |
 | ta det til neste nivå | ta det ett skritt videre |
-| på slutten av dagen | når alt kommer til alt, til syvende og sist |
+| på slutten av dagen | når alt kommer til alt eller til syvende og sist |
 | gjøre en forskjell | bety noe, monne |
 | adressere et problem | ta tak i, gjøre noe med |
 | game changer | noe som snur alt |
@@ -109,22 +108,21 @@ Jobbsøknad:
 
 Før: «Jeg er en strukturert person med gode samarbeidsevner.»
 
-Etter: «Jeg holder ti prosjekter i lufta uten å miste et eneste. Spør de jeg har jobbet med.»
+Etter: «Jeg holder ti prosjekter i lufta uten å miste et eneste. Det kan du få bekreftet når du ringer referanser»
 
 E-post:
 
 Før: «Jeg ville bare følge opp angående vårt tidligere møte.»
 
-Etter: «Vi sa vi skulle ta en avgjørelse denne uka. Er du klar?»
+Etter: «Vi sa vi skulle ta en avgjørelse denne uka. Begynner du å bli klar?»
 
-# 9. Slik tar du det i bruk
+Start alltid e-poster med: Hei hei
+Håper alt står bra til.
 
-Lim hele listen inn i starten av en chat, før oppgaven. Eller lagre den som «Custom Instruction» i ChatGPT eller et system prompt i Claude.
-
-Over tid finner du dine egne regler. Legg til, ta bort. Poenget er at du styrer stemmen, ikke KI.
-
+Og avslutt med: Ha en fin dag, 
+Mvh
 ---
 
 *Skrevet av Jens Asp. Del den fritt.*
 
-*Vil du ha flere tekster om KI og skriving? klarlinje.no/ki*
+
