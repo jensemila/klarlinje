@@ -1,115 +1,109 @@
 # Slik vil jeg at KI skriver
 
-## En kort guide til å få ChatGPT, Claude og andre til å skrive tekst som faktisk høres ut som deg.
+## En kort guide til å få ChatGPT, Claude og andre til å skrive som et menneske.
 
 ---
 
-De fleste har prøvd å få KI til å skrive noe, og de fleste har fått tilbake noe som høres ut som et presseklipp fra et konsulentfirma. Glatt, korrekt og helt uten liv.
-
-Det trenger ikke være sånn. Denne guiden viser deg hvordan du instruerer KI til å skrive med personlighet, rytme og temperatur. Den er kort, praktisk og gratis.
+Be KI om en tekst, og du får som regel noe glatt, korrekt og helt uten liv. Det trenger ikke være sånn. Her er grepene som gjør størst forskjell. Lim dem inn før du gir KI en oppgave.
 
 # 1. Gi KI en stemme
 
-Det første du må gjøre er å fortelle KI *hvordan* du vil at teksten skal høres ut. Uten instrukser får du den tryggeste, mest nøytrale versjonen. Det er sjelden den beste.
+Uten instrukser velger KI den tryggeste varianten. Den er sjelden best.
 
-Her er fem grep som gjør stor forskjell:
+**Vær trygg, ikke vag.** «Det funker ikke» slår «det stemmer sjelden».
 
-**Navngi menneskelige tendenser.** Ikke bare «vi tror X», men «mennesker har en lei tendens til å tro X». Det gir teksten varme og gjenkjennelse.
+**Navngi tendenser.** Ikke «folk tror X», men «folk har en lei tendens til å tro X».
 
-**Bruk litt overdrivelse for effekt.** Ord som «automatisk den ultimate», «verdens viktigste», «null verdt». Brukt med måte gir det energi.
+**Avslutt med en kort spiker.** Etter en lang setning kommer en kort sannhet: «Det er feil.» «Ingen leser det.»
 
-**Avslutt med en kort, bastant sannhet.** Etter en lengre setning kommer gjerne en kort spiker: «Det er ikke sant.» «Halve livet ditt skjer uten deg.»
+**Skriv «du», ikke «man».** Snakk til én leser, ikke et publikum.
 
-**Vær trygg, ikke vag.** Velg den bastante varianten foran den forsiktige. «Det er ikke sant» er bedre enn «det stemmer sjelden».
+# 2. La teksten puste
 
-**Snakk til leseren som et menneske,** ikke som et publikum. «Du» foran «man».
+KI skriver avsnitt som er like lange og like tunge. Bryt det opp.
 
-# 2. Rytme og pust
+**Korte linjer som egne avsnitt.** En setning kan være et helt avsnitt. La den få luft.
 
-God tekst puster. KI har en tendens til å skrive avsnitt som alle er like lange og like tunge. Det blir monotont. Her er motgiften:
+**Tre på rad gir rytme.** «Billig, raskt og enkelt.» «Han kom, så, og dro igjen.»
 
-**Bruk korte, frittstående linjer som egne avsnitt.** En setning på én linje kan være et helt avsnitt. «Hele tiden.» «Det er gratis.» «Kroppen vet.» Disse skal stå alene og få luft over og under seg.
+**Lette overskrifter.** Korte og navnaktige. Aldri spørsmål, aldri kolon.
 
-**Bryt opp lange oppramsinger.** I stedet for å pakke alt inn i én lang setning, bryt den opp så de viktige delene står som egne små avsnitt. Det gir rytme og lar leseren puste.
+# 3. Gjør det konkret
 
-**Triader gir musikk.** Tre korte ord eller fraser etter hverandre, gjerne med komma og «og» til slutt: «sterk, frisk og motivert», «trøtt, stresset og overveldet». Varianten kan også være tre korte setninger på rad.
+KI elsker det generelle. Dra det ned på bakken.
 
-**Overskrifter skal være lette.** Korte og navnaktige. «Morgenrutinen». «Fra A til B». Aldri spørsmål, aldri kolon.
+**Egennavn.** «Excel» foran «et regneark». «Torggata» foran «en gate». «en Volvo fra 2012» foran «en eldre bil».
 
-# 3. Gjør teksten konkret
+**Vis en scene** i stedet for å forklare et prinsipp abstrakt.
 
-KI elsker det generelle. Du må dra den ned på bakken.
+**Tall som bevis.** «Spart 40 minutter» foran «spart mye tid».
 
-**Navngi ting med egennavn.** «Bialettien» foran «kaffetrakteren». «Ullevålsveien» foran «en gate». Spesifikke navn gjør teksten levende og delbar.
+# 4. Det KI gjør som røper den
 
-**Vis en scene.** I stedet for å beskrive et prinsipp abstrakt, vis det med en konkret morgen, et konkret måltid, en konkret tur.
+Be KI eksplisitt om å droppe disse:
 
-**Vær åpen om uro.** Si rett ut at du selv kjenner motstanden. «Men mange morgener starter også med følelsen av at jeg ikke har tid.» Det gjør deg troverdig.
+**Tankestrek** (— eller –). Bruk punktum eller komma.
 
-**Bak fagbegrep inn i opplevelser.** Et ord som «oppmerksomhetsfragmentering» introduseres med et hverdagslig eksempel, aldri som definisjon.
+**Kolon i overskrifter.** Ikke «Resultatet: økt salg». Skriv «Salget økte».
 
-# 4. Ting KI gjør som irriterer alle
+**Generiske avslutninger** som «Oppsummert» og «Til slutt».
 
-Disse mønstrene er de mest gjenkjennelige KI-tellene. Fortell KI eksplisitt at den ikke skal gjøre dem.
+**«Ikke X, men Y»-kontrasten.** KI lener seg tungt på den. Skriv det rett fram.
 
-**Ingen tankestrek** (— eller –). Bruk punktum eller komma.
+**Hedging.** Kutt «kanskje» og «ofte» når du mener noe bestemt.
 
-**Ingen kolon i overskrifter.** Ikke «Problemet: en ferie er ikke en pause». Skriv overskriften som en naturlig setning.
+# 5. Forklar som til en åttenåring
 
-**Ingen generiske avslutninger** som «Avsluttende ord», «Oppsummering», «Til slutt». Bruk en innholdsspesifikk overskrift.
+Be KI gi hvert fagord en hverdagslig analogi:
 
-**Unngå «Ikke X, men Y»-kontrasten.** KI er avhengig av denne strukturen. Skriv det rett fram i stedet.
+- API = «en kelner som henter det du bestiller fra kjøkkenet»
+- inflasjon = «pengene i lomma krymper mens du sover»
+- renters rente = «en snøball som ruller nedover»
 
-**Ingen hedging.** Kutt «kanskje», «kan tenkes», «ofte» når du egentlig mener noe bestemt.
+Behold tallene og fakta. Det er språket som skal være enkelt, ikke innholdet.
 
-# 5. Forklar som om leseren er åtte år
+# 6. Skriv for de som skummer
 
-KI har en tendens til å bruke fagspråk uten å forklare det. Instruer den til å bruke hverdagslige analogier:
+Folk leser ikke hvert ord.
 
-- telomerer = «plastbiten ytterst på en skolisse»
-- amygdala = «hjernens fryktalarm»
-- sympatikus/parasympatikus = «gasspedal og brems»
+**Uthev den viktigste setningen i hvert avsnitt.** Den som bare ser de fete linjene, skal få med seg poenget.
 
-Behold forskningen og tallene. Det er språket som skal være enkelt, ikke innholdet tynnere.
-
-# 6. Formater for de som skummer
-
-De fleste leser ikke hvert ord. De skummer. Derfor:
-
-**Uthev den viktigste setningen i hvert avsnitt.** Én person som bare ser de fete linjene, skal få med seg hovedpoengene.
-
-Ikke uthev mer enn én ting per seksjon. Da forsvinner effekten.
+Ikke uthev mer enn én ting per seksjon, ellers forsvinner effekten.
 
 # 7. Før og etter
 
-Eksempel 1:
+Salg:
 
-Før: «Vi tror at en pause fra arbeid er en pause for hodet. Det stemmer sjelden.»
+Før: «Vårt produkt kan bidra til å effektivisere arbeidsflyten din.»
 
-Etter: «Mennesker har en lei tendens til å tro at en pause fra jobben er automatisk den ultimate pausen for hjernen. Det er ikke sant.»
+Etter: «Du sparer en time hver dag. Det er seks uker i året.»
 
-Eksempel 2:
+Reise:
 
-Før: «Mange opplever at meditasjon kan redusere stress over tid.»
+Før: «Lisboa er en destinasjon med mye å by på.»
 
-Etter: «Folk tror stress er noe man bare må leve med. Det er feil. Hjernen kan trenes ut av det, og forskningen er knusende tydelig.»
+Etter: «Lisboa er bratt, billig og full av fisk. Ta med gode sko.»
 
-Eksempel 3:
+Jobbsøknad:
 
-Før: «Det kan være lurt å legge bort telefonen.»
+Før: «Jeg er en strukturert person med gode samarbeidsevner.»
 
-Etter: «Mobilen er den fremste tyven av tilstedeværelse vi har. Legg den vekk. Hele poenget forsvinner hvis den ligger i hånda.»
+Etter: «Jeg holder ti prosjekter i lufta uten å miste et eneste. Spør de jeg har jobbet med.»
 
-# 8. Slik bruker du dette i praksis
+E-post:
 
-Kopier hele listen under inn i starten av en chat med ChatGPT, Claude eller lignende. Lim den inn før du gir den en oppgave. Da har KI-en en skrivestil å jobbe etter.
+Før: «Jeg ville bare følge opp angående vårt tidligere møte.»
 
-Du kan også lagre den som en «Custom Instruction» i ChatGPT, eller som et system prompt i Claude.
+Etter: «Vi sa vi skulle ta en avgjørelse denne uka. Er du klar?»
 
-Over tid vil du finne dine egne regler. Legg dem til. Ta bort det som ikke passer. Det viktigste er at du tar kontroll over stemmen, i stedet for å la KI velge den for deg.
+# 8. Slik tar du det i bruk
+
+Lim hele listen inn i starten av en chat, før oppgaven. Eller lagre den som «Custom Instruction» i ChatGPT eller et system prompt i Claude.
+
+Over tid finner du dine egne regler. Legg til, ta bort. Poenget er at du styrer stemmen, ikke KI.
 
 ---
 
-*Denne guiden er skrevet av Jens Asp. Du kan dele den fritt.*
+*Skrevet av Jens Asp. Del den fritt.*
 
-*Vil du ha flere tekster om KI og skriving? Meld deg på nyhetsbrevet på klarlinje.no/ki*
+*Vil du ha flere tekster om KI og skriving? klarlinje.no/ki*
