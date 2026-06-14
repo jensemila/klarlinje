@@ -122,6 +122,21 @@
       color:#d45; font-size:14px; margin:8px 0 0; display:none;
     }
 
+    .cross {
+      max-width:420px; margin:44px auto 0; padding-top:28px;
+      border-top:1px solid var(--line); text-align:left;
+    }
+    .cross-label {
+      font-family:"JetBrains Mono", monospace; font-size:10px; letter-spacing:0.2em;
+      text-transform:uppercase; color:var(--ink-mute); display:block; margin-bottom:14px;
+    }
+    .cross-link {
+      font-family:"Newsreader", serif; font-size:16px; line-height:1.5; color:var(--ink-soft);
+      display:inline-flex; gap:8px; transition:color 0.2s;
+    }
+    .cross-link:hover { color:var(--accent); }
+    .cross-link .arr { color:var(--accent); font-family:"Outfit", sans-serif; }
+
     footer {
       padding:32px 44px; border-top:1px solid var(--line);
       font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:0.12em;
@@ -173,6 +188,14 @@
         <p class="form-note">Ingen spam. Ujevne mellomrom. Avmeld når som helst.</p>
         <p class="form-error" id="ki-error">Noe gikk galt. Prøv igjen.</p>
       </form>
+
+      <div class="cross">
+        <span class="cross-label">Mens du er her</span>
+        <a class="cross-link" href="ferieparadokset.html">
+          Last ned <em class="editorial">Ferieparadokset</em> — en gratis bok om å være til stede på ferie
+          <span class="arr">→</span>
+        </a>
+      </div>
     </div>
   </main>
 
