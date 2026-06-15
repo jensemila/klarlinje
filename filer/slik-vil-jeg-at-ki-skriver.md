@@ -17,11 +17,15 @@ Be KI eksplisitt om å droppe disse:
 
 **Kolon i overskrifter.** Ikke «Resultatet: økt salg». Skriv «Salget økte».
 
+**Kolon inni setninger.** Ikke «En liten ting jeg har tenkt på i mellomtiden: navnet Anders». Del det i to setninger.
+
 **Generiske avslutninger** som «Oppsummert» og «Til slutt».
 
 **«Ikke X, men Y»-kontrasten.** KI lener seg tungt på den. Skriv det rett fram.
 
 **Hedging.** Kutt «kanskje» og «ofte» når du mener noe bestemt.
+
+**Unødvendige oppfordringer.** Dropp de høflige CTA-ene som ikke trengs, særlig i e-poster. Ikke «Si fra hvis du vil ta en prat om det».
 
 
 
