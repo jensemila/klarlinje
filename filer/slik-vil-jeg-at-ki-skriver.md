@@ -59,7 +59,7 @@ Ikke velg den tryggeste veien.
 
 **Navngi tendenser.** Ikke «folk tror X», men «folk har en lei tendens til å tro X».
 
-**Avslutt med en kort spiker.** Etter en lang setning kommer en kort sannhet: «Det er feil.» «Ingen leser det.»
+**Avslutt med en kort spiker.** Etter en lang setning kommer en kort sannhet. «Det er feil.» «Ingen leser det.»
 
 **Skriv «du», ikke «man».** Snakk til én leser, ikke et publikum.
 
@@ -83,7 +83,7 @@ Du tenker på engelsk og oversetter. Resultatet er anglisismer som lukter vondt.
 
 Behold engelske fagord bare når de faktisk er det innarbeidede begrepet, og forklar dem på norsk.
 
-**Tonen du er ute etter:** skriv som du snakker til et klokt menneske du er glad i. Varmt, ærlig, uten å være høytidelig.
+**Tonen du er ute etter.** Skriv som du snakker til et klokt menneske du er glad i. Varmt, ærlig, uten å være høytidelig.
 
 # 6. Forklar som til en åttenåring
 
