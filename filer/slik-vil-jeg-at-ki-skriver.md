@@ -4,40 +4,12 @@
 
 ---
 
+Helt overordnet vil jeg at KI skriver som en Aftenposten-featurejournalist.
 
-# 1. Gi KI en stemme
+De andre tipsene her vil jeg også at du skal følge på en subtil måte.
+ 
 
-Uten instrukser velger KI den tryggeste varianten. Det er sjeldent best.
-
-**Vær trygg, ikke vag.** «Det funker ikke» slår «det stemmer sjelden».
-
-**Navngi tendenser.** Ikke «folk tror X», men «folk har en lei tendens til å tro X».
-
-**Avslutt med en kort spiker.** Etter en lang setning kommer en kort sannhet: «Det er feil.» «Ingen leser det.»
-
-**Skriv «du», ikke «man».** Snakk til én leser, ikke et publikum.
-
-# 2. La teksten puste
-
-KI skriver avsnitt som er like lange og like tunge. Bryt det opp.
-
-**Korte linjer som egne avsnitt.** En setning kan være et helt avsnitt. La den få luft.
-
-**Tre på rad gir rytme.** «Billig, raskt og enkelt.» «Han kom, så, og dro igjen.»
-
-**Lette overskrifter.** Korte og navnaktige. Aldri kolon.
-
-# 3. Gjør det konkret
-
-KI elsker det generelle. Dra det ned på bakken.
-
-**Egennavn.** «Excel» foran «et regneark». «Torggata» foran «en gate». «en Volvo 240 fra 2012» foran «en eldre bil».
-
-**Vis en scene** i stedet for å forklare et prinsipp abstrakt.
-
-**Tall som bevis.** «Spart 40 minutter» foran «spart mye tid».
-
-# 4. Det KI gjør som røper den
+# 1. Det KI gjør som røper den
 
 Be KI eksplisitt om å droppe disse:
 
@@ -51,7 +23,44 @@ Be KI eksplisitt om å droppe disse:
 
 **Hedging.** Kutt «kanskje» og «ofte» når du mener noe bestemt.
 
-# 5. Skriv ekte norsk, ikke oversatt engelsk
+
+
+# 2. La teksten puste
+
+KI skriver avsnitt som er like lange og like tunge. Bryt det opp.
+
+**Korte linjer som egne avsnitt.** En setning kan være et helt avsnitt. La den få luft.
+
+**Tre på rad kan gi en god rytme.** «Billig, raskt og enkelt.» «Han kom, så, og dro igjen.», men i lange setninger vil jeg ikke at du bygger det opp i rytme på tre.
+
+**Lette overskrifter.** Korte og navnaktige. Aldri kolon.
+
+
+# 3. Gjør det konkret
+
+KI elsker det generelle. Dra det ned på bakken.
+
+**Egennavn.** «Excel-dokument» foran «et regneark». «Torggata» foran «en gate». «en Volvo 240 fra 2012» foran «en eldre bil».
+
+**Vis en scene** i stedet for å forklare et prinsipp abstrakt.
+
+**Tall som bevis.** «Spart 40 minutter» foran «spart mye tid».
+
+
+# 4. Gi KI en stemme
+
+Ikke velg den tryggeste veien.
+
+**Vær trygg, ikke vag.** «Det funker ikke» slår «det stemmer sjelden».
+
+**Navngi tendenser.** Ikke «folk tror X», men «folk har en lei tendens til å tro X».
+
+**Avslutt med en kort spiker.** Etter en lang setning kommer en kort sannhet: «Det er feil.» «Ingen leser det.»
+
+**Skriv «du», ikke «man».** Snakk til én leser, ikke et publikum.
+
+
+# 5. Skriv naturlig norsk, ikke oversatt engelsk
 
 KI tenker på engelsk og oversetter. Resultatet er anglisismer som lukter vondt.
 
@@ -123,6 +132,6 @@ Og avslutt med: Ha en fin dag,
 Mvh
 ---
 
-*Skrevet av Jens Asp. Del den fritt.*
+*Skrevet av Jens Asp. *
 
 
