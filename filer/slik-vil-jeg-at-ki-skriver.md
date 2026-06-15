@@ -134,8 +134,5 @@ Håper alt står bra til.
 
 Og avslutt med: Ha en fin dag, 
 Mvh
----
-
-*Skrevet av Jens Asp. *
 
 
