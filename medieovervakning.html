@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="nb" data-theme="natt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medieovervåking · Klarlinje</title>
+  <meta name="description" content="Interesseliste for tilnærmet gratis medieovervåking. Et automatisk system, 10–100x billigere enn konkurrentene." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H027E3MZYE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H027E3MZYE');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg:#0f1311; --bg-soft:#151a17; --paper:#1b211d;
+      --ink:#ece3d2; --ink-soft:#c8c0ad; --ink-mute:#847d6e;
+      --line:rgba(236,227,210,0.10); --line-strong:rgba(236,227,210,0.22);
+      --accent:#c89149; --accent-2:#d9a86a; --accent-ink:#0f1311;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin:0; padding:0; background:var(--bg); color:var(--ink);
+      font-family:"Outfit", system-ui, sans-serif; font-size:16.5px; line-height:1.55;
+      font-weight:300; -webkit-font-smoothing:antialiased; min-height:100dvh;
+      display:flex; flex-direction:column;
+    }
+    em.editorial { font-family:"Newsreader", serif; font-style:italic; font-weight:300; }
+    a { color:inherit; text-decoration:none; }
+
+    .nav {
+      padding:22px 44px; display:flex; align-items:center;
+      border-bottom:1px solid var(--line);
+    }
+    .nav-brand {
+      display:flex; align-items:center; gap:12px;
+      font-family:"Newsreader", serif; font-style:italic; font-size:21px;
+    }
+    .nav-brand-mark { width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; }
+
+    main {
+      flex:1; display:flex; align-items:center; justify-content:center;
+      padding:80px 24px;
+    }
+
+    .wrap {
+      max-width:580px; width:100%;
+      opacity:0; animation:fade 1s ease-out 0.15s forwards;
+    }
+    @keyframes fade { to { opacity:1; } }
+
+    .label {
+      font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:0.22em;
+      text-transform:uppercase; color:var(--accent); font-weight:400;
+      display:block; margin-bottom:28px;
+    }
+
+    h1 {
+      font-family:"Newsreader", serif; font-weight:300; font-style:italic;
+      font-size:clamp(40px, 7vw, 66px); line-height:1.0; letter-spacing:-0.03em;
+      font-variation-settings:"opsz" 96; color:var(--ink); margin:0 0 28px;
+    }
+
+    .lead {
+      color:var(--ink-soft); font-size:17px; line-height:1.7;
+      margin:0 0 40px;
+    }
+
+    .facts {
+      list-style:none; margin:0 0 40px; padding:0;
+      display:flex; flex-direction:column; gap:0;
+    }
+    .facts li {
+      display:flex; gap:16px; padding:18px 0;
+      border-top:1px solid var(--line);
+    }
+    .facts li:last-child { border-bottom:1px solid var(--line); }
+    .facts .n {
+      font-family:"JetBrains Mono", monospace; font-size:12px; color:var(--accent);
+      flex-shrink:0; padding-top:3px; width:24px;
+    }
+    .facts .t { color:var(--ink-soft); font-size:15.5px; line-height:1.65; }
+    .facts .t b { color:var(--ink); font-weight:500; }
+
+    .form-wrap { max-width:420px; }
+    .form-row { display:flex; gap:10px; margin-bottom:12px; }
+
+    .form-input {
+      flex:1; padding:14px 16px; border:1px solid var(--line-strong); border-radius:4px;
+      background:var(--paper); color:var(--ink); font-family:"Outfit", sans-serif;
+      font-size:15px; font-weight:300; outline:none; transition:border-color 0.2s;
+    }
+    .form-input::placeholder { color:var(--ink-mute); }
+    .form-input:focus { border-color:var(--accent); }
+
+    .form-btn {
+      padding:14px 24px; border:none; border-radius:4px;
+      background:var(--accent); color:var(--accent-ink);
+      font-family:"JetBrains Mono", monospace; font-size:11.5px; letter-spacing:0.14em;
+      text-transform:uppercase; font-weight:500; cursor:pointer;
+      transition:background 0.2s; white-space:nowrap;
+    }
+    .form-btn:hover { background:var(--accent-2); }
+    .form-btn-full { width:100%; margin-bottom:14px; }
+
+    .form-note {
+      font-family:"Newsreader", serif; font-style:italic;
+      font-size:13.5px; color:var(--ink-mute); margin:0;
+    }
+    .form-error { color:#d45; font-size:14px; margin:8px 0 0; display:none; }
+
+    .cross {
+      margin:44px 0 0; padding-top:28px;
+      border-top:1px solid var(--line);
+    }
+    .cross-label {
+      font-family:"JetBrains Mono", monospace; font-size:10px; letter-spacing:0.2em;
+      text-transform:uppercase; color:var(--ink-mute); display:block; margin-bottom:14px;
+    }
+    .cross-link {
+      font-family:"Newsreader", serif; font-size:17px; line-height:1.5; color:var(--ink-soft);
+      display:inline-flex; gap:8px; transition:color 0.2s; max-width:46ch;
+    }
+    .cross-link:hover { color:var(--accent); }
+    .cross-link .arr { color:var(--accent); font-family:"Outfit", sans-serif; }
+
+    footer {
+      padding:32px 44px; border-top:1px solid var(--line);
+      font-family:"JetBrains Mono", monospace; font-size:11px; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--ink-mute);
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    }
+    footer a:hover { color:var(--accent); }
+
+    @media (max-width:600px) {
+      .nav { padding:18px 20px; }
+      .nav-brand { font-size:18px; }
+      main { padding:60px 20px; }
+      .form-row { flex-direction:column; }
+      footer { padding:28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-mark"></span>
+      <span><em>Klarlinje</em></span>
+    </a>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <span class="label">Interesseliste · Medieovervåking</span>
+      <h1>Medieovervåking til <em class="editorial">nesten ingenting.</em></h1>
+      <p class="lead">
+        Jeg vil bygge et automatisk system som varsler deg når navnet ditt, organisasjonen din eller et tema du følger dukker opp i norske medier.
+      </p>
+
+      <ul class="facts">
+        <li>
+          <span class="n">01</span>
+          <span class="t"><b>10–100x billigere</b> enn konkurrentene. Tanken er at det skal være tilnærmet gratis.</span>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <span class="t"><b>Ikke et premium-opplegg.</b> Enkelte saker bak betalingsmur kan glippe. Du får bredden, ikke alt.</span>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <span class="t"><b>Jeg bygger det hvis nok vil ha det.</b> Derfor denne lista. Meld interesse, så hører du fra meg når det er klart.</span>
+        </li>
+      </ul>
+
+      <form id="mo-form" class="form-wrap" action="https://app.kit.com/forms/9576293/subscriptions" method="post">
+        <div class="form-row">
+          <input class="form-input" type="text" name="fields[first_name]" placeholder="Fornavn" />
+        </div>
+        <div class="form-row">
+          <input class="form-input" type="email" name="email_address" placeholder="E-post" required />
+        </div>
+        <div class="form-row">
+          <input class="form-input" type="text" name="fields[organisasjon]" placeholder="Organisasjon eller bedrift" />
+        </div>
+        <div class="form-row">
+          <input class="form-input" type="text" name="fields[rolle]" placeholder="Din rolle" />
+        </div>
+        <button class="form-btn form-btn-full" type="submit">Meld interesse</button>
+        <p class="form-note">Helt uforpliktende. Ingen mas. Du hører fra meg bare hvis det blir noe av.</p>
+        <p class="form-error" id="mo-error">Noe gikk galt. Prøv igjen.</p>
+      </form>
+
+      <div class="cross">
+        <span class="cross-label">Mens du er her</span>
+        <a class="cross-link" href="ki.html">
+          Last ned <em class="editorial">Markdown-fila</em> for bedre KI-utgangspunkt, og få nyhetsbrevet mitt om KI
+          <span class="arr">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>© 2026 Klarlinje · Oslo / Son</div>
+    <div><a href="index.html">← Tilbake til Klarlinje</a></div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('mo-form');
+      var errorEl = document.getElementById('mo-error');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorEl.style.display = 'none';
+
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' },
+        })
+          .then(function (r) {
+            if (r.ok || r.status === 200 || r.status === 302) {
+              window.location.href = 'medieovervakning-takk.html';
+            } else {
+              form.submit();
+            }
+          })
+          .catch(function () {
+            form.submit();
+          });
+      });
+    })();
+  </script>
+
+</body>
+</html>
