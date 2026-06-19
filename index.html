@@ -85,5 +85,170 @@
 
   <script type="text/babel" src="tweaks-panel.jsx"></script>
   <script type="text/babel" src="app-v2.jsx"></script>
+
+  <!-- Gratis bok-popup -->
+  <style>
+    .kl-pop-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+      background: color-mix(in srgb, #0a0d0b 72%, transparent);
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    .kl-pop-overlay.is-open { opacity: 1; pointer-events: auto; }
+
+    .kl-pop {
+      position: relative;
+      display: grid; grid-template-columns: 0.85fr 1fr;
+      width: 100%; max-width: 720px;
+      max-height: calc(100dvh - 48px); overflow-y: auto;
+      background: var(--paper, #1b211d);
+      border: 1px solid var(--line-strong, rgba(236,227,210,0.22));
+      border-radius: 14px;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.55);
+      transform: translateY(18px) scale(0.985);
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .kl-pop-overlay.is-open .kl-pop { transform: translateY(0) scale(1); }
+
+    .kl-pop-art {
+      background:
+        radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--accent, #c89149) 22%, transparent), transparent 60%),
+        var(--bg-soft, #151a17);
+      display: flex; align-items: center; justify-content: center;
+      padding: 36px 28px;
+      border-right: 1px solid var(--line, rgba(236,227,210,0.10));
+    }
+    .kl-pop-art img {
+      width: 100%; max-width: 190px; height: auto;
+      border-radius: 4px;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.45);
+      transform: rotate(-2.5deg);
+    }
+
+    .kl-pop-body { padding: 40px 38px; display: flex; flex-direction: column; }
+    .kl-pop-kicker {
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent, #c89149); margin-bottom: 18px;
+    }
+    .kl-pop-title {
+      font-family: "Newsreader", serif; font-weight: 300;
+      font-size: clamp(28px, 4vw, 36px); line-height: 1.05;
+      letter-spacing: -0.02em; color: var(--ink, #ece3d2); margin: 0 0 16px;
+    }
+    .kl-pop-title em { font-style: italic; }
+    .kl-pop-text {
+      font-family: "Outfit", sans-serif; font-weight: 300;
+      font-size: 15px; line-height: 1.65;
+      color: var(--ink-soft, #c8c0ad); margin: 0 0 28px;
+    }
+    .kl-pop-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      align-self: flex-start;
+      padding: 14px 26px; border-radius: 5px;
+      background: var(--accent, #c89149); color: var(--accent-ink, #0f1311);
+      font-family: "JetBrains Mono", monospace; font-size: 12px;
+      letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500;
+      text-decoration: none; transition: background 0.2s, transform 0.2s;
+    }
+    .kl-pop-cta:hover { background: var(--accent-2, #d9a86a); transform: translateX(2px); }
+    .kl-pop-cta .arr { font-family: "Outfit", sans-serif; }
+    .kl-pop-fine {
+      margin: 16px 0 0; font-family: "Newsreader", serif; font-style: italic;
+      font-size: 13px; color: var(--ink-mute, #847d6e);
+    }
+
+    .kl-pop-close {
+      position: absolute; top: 14px; right: 16px;
+      width: 32px; height: 32px; border-radius: 50%;
+      border: 1px solid var(--line, rgba(236,227,210,0.10));
+      background: color-mix(in srgb, var(--paper, #1b211d) 70%, transparent);
+      color: var(--ink-soft, #c8c0ad); font-size: 18px; line-height: 1;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: color 0.2s, border-color 0.2s; z-index: 2;
+    }
+    .kl-pop-close:hover { color: var(--ink, #ece3d2); border-color: var(--line-strong, rgba(236,227,210,0.22)); }
+
+    @media (max-width: 600px) {
+      .kl-pop { grid-template-columns: 1fr; max-width: 380px; }
+      .kl-pop-art { padding: 30px 28px 6px; border-right: none; border-bottom: 1px solid var(--line, rgba(236,227,210,0.10)); }
+      .kl-pop-art img { max-width: 140px; }
+      .kl-pop-body { padding: 28px 26px 32px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .kl-pop-overlay, .kl-pop { transition: opacity 0.2s ease; }
+      .kl-pop { transform: none; }
+    }
+  </style>
+
+  <div class="kl-pop-overlay" id="kl-pop" role="dialog" aria-modal="true" aria-labelledby="kl-pop-title" hidden>
+    <div class="kl-pop">
+      <button class="kl-pop-close" id="kl-pop-close" aria-label="Lukk">×</button>
+      <div class="kl-pop-art">
+        <img src="images/ferieparadokset-cover.png" alt="Bokomslag: Ferieparadokset av Jens Asp" />
+      </div>
+      <div class="kl-pop-body">
+        <span class="kl-pop-kicker">Gratis bok</span>
+        <h2 class="kl-pop-title" id="kl-pop-title">Roen du tar med deg <em>hjem fra ferien.</em></h2>
+        <p class="kl-pop-text">
+          <em>Ferieparadokset</em> er en kort bok om hvordan du mediterer på ferie, slik at pausen faktisk blir med deg tilbake til hverdagen. Skriv inn e-posten din, så ligger den i innboksen med en gang.
+        </p>
+        <a class="kl-pop-cta" href="ferieparadokset.html" id="kl-pop-cta">
+          Hent boka gratis <span class="arr">→</span>
+        </a>
+        <p class="kl-pop-fine">Ingen støy. Meld deg av når du vil.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var KEY = "kl_book_popup_seen";
+      var el = document.getElementById("kl-pop");
+      if (!el) return;
+      try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+
+      var closeBtn = document.getElementById("kl-pop-close");
+      var cta = document.getElementById("kl-pop-cta");
+      var opened = false, timer;
+
+      function remember() { try { localStorage.setItem(KEY, "1"); } catch (e) {} }
+
+      function open() {
+        if (opened) return;
+        opened = true;
+        clearTimeout(timer);
+        document.removeEventListener("mouseout", onExit);
+        el.hidden = false;
+        // force reflow so the transition runs
+        void el.offsetWidth;
+        el.classList.add("is-open");
+        remember();
+      }
+
+      function close() {
+        el.classList.remove("is-open");
+        setTimeout(function () { el.hidden = true; }, 500);
+      }
+
+      function onExit(e) {
+        if (e.clientY <= 0 && !e.relatedTarget) open();
+      }
+
+      closeBtn.addEventListener("click", close);
+      cta.addEventListener("click", close);
+      el.addEventListener("click", function (e) { if (e.target === el) close(); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && opened && !el.hidden) close();
+      });
+
+      // Vis etter en stund, eller når musa forlater toppen (exit-intent).
+      timer = setTimeout(open, 12000);
+      document.addEventListener("mouseout", onExit);
+    })();
+  </script>
 </body>
 </html>
