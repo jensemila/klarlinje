@@ -206,7 +206,7 @@
 
   <script>
     (function () {
-      var KEY = "kl_book_popup_seen";
+      var KEY = "kl_book_popup_seen_v2";
       var el = document.getElementById("kl-pop");
       if (!el) return;
       try { if (localStorage.getItem(KEY)) return; } catch (e) {}
@@ -246,7 +246,7 @@
       });
 
       // Vis etter en stund, eller når musa forlater toppen (exit-intent).
-      timer = setTimeout(open, 12000);
+      timer = setTimeout(open, 6000);
       document.addEventListener("mouseout", onExit);
     })();
   </script>
