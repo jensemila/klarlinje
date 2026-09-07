@@ -19,8 +19,14 @@ rsync -az --delete -e "$SSH" \
   "$HOST:$REMOTE/"
 
 echo "==> 3/4  nginx"
-rsync -az -e "$SSH" deploy/nginx/parpraten.conf "$HOST:/etc/nginx/sites-available/parpraten.conf"
-$SSH "$HOST" 'ln -sf /etc/nginx/sites-available/parpraten.conf /etc/nginx/sites-enabled/parpraten.conf && nginx -t && systemctl reload nginx'
+HAS_TLS=$($SSH "$HOST" 'grep -q ssl_certificate /etc/nginx/sites-available/parpraten.conf 2>/dev/null && echo ja || echo nei')
+if [ "$HAS_TLS" = "ja" ]; then
+  echo "    nginx-konfig har TLS, rører den ikke (certbot sin blokk bevares)"
+else
+  rsync -az -e "$SSH" deploy/nginx/parpraten.conf "$HOST:/etc/nginx/sites-available/parpraten.conf"
+  $SSH "$HOST" 'ln -sf /etc/nginx/sites-available/parpraten.conf /etc/nginx/sites-enabled/parpraten.conf'
+fi
+$SSH "$HOST" 'nginx -t && systemctl reload nginx'
 
 echo "==> 4/4  systemd"
 rsync -az -e "$SSH" deploy/parpraten.service "$HOST:/etc/systemd/system/parpraten.service"
