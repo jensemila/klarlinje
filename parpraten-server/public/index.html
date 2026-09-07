@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parpraten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,200;1,6..72,300&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #f4ede0; --bg-soft: #ece3d2; --paper: #f9f4e8; --paper-2: #f1ead9;
+    --ink: #1a201c; --ink-soft: #3e4540; --ink-mute: #7d7a6e; --ink-faint: #b0ab9d;
+    --line: #e0d7c4; --accent: #a87236; --accent-2: #8d5d2a; --on-accent: #f9f4e8;
+    --font-serif: "Newsreader", Georgia, serif;
+    --font-body: "Outfit", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1311; --bg-soft: #151a17; --paper: #1b211d; --paper-2: #232a25;
+      --ink: #ece3d2; --ink-soft: #c8c0ad; --ink-mute: #847d6e; --ink-faint: #4a4639;
+      --line: #232a25; --accent: #c89149; --accent-2: #d9a86a; --on-accent: #0f1311;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1311; --bg-soft: #151a17; --paper: #1b211d; --paper-2: #232a25;
+    --ink: #ece3d2; --ink-soft: #c8c0ad; --ink-mute: #847d6e; --ink-faint: #4a4639;
+    --line: #232a25; --accent: #c89149; --accent-2: #d9a86a; --on-accent: #0f1311;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--font-body); font-weight: 300;
+    display: flex; justify-content: center; align-items: stretch;
+  }
+  img { max-width: 100%; }
+  .phone { width: 100%; max-width: 440px; min-height: 100dvh; background: var(--bg); display: flex; flex-direction: column; position: relative; }
+  .serif { font-family: var(--font-serif); }
+  .mono { font-family: var(--font-mono); }
+  .screen { flex-grow: 1; display: flex; flex-direction: column; animation: fade 420ms ease both; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  [hidden] { display: none !important; }
+  .eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
+  h1.big { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 46px; line-height: 1.05; margin: 28px 0 0; }
+  h2.mid { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 34px; line-height: 1.1; margin: 0 0 8px; text-wrap: balance; }
+  p.lead { font-size: 17px; line-height: 1.6; color: var(--ink-soft); margin: 22px 0 0; max-width: 320px; }
+  .btn-primary { width: 100%; height: 56px; border: none; border-radius: 14px; background: var(--accent); color: var(--on-accent); font-family: var(--font-body); font-size: 17px; font-weight: 500; cursor: pointer; }
+  .btn-primary:hover { background: var(--accent-2); }
+  .btn-ghost { width: 100%; height: 44px; border: none; background: none; color: var(--ink-mute); font-size: 14px; cursor: pointer; font-family: var(--font-body); }
+  .btn-line { height: 50px; padding: 0 28px; border: 1px solid var(--line); border-radius: 14px; background: none; color: var(--ink); font-size: 15px; cursor: pointer; font-family: var(--font-body); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .field { width: 100%; height: 52px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); font-size: 16px; outline: none; font-family: var(--font-body); }
+  .field::placeholder { color: var(--ink-mute); }
+  label.tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  .card-choice { text-align: left; padding: 24px; border-radius: 16px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); cursor: pointer; font-family: var(--font-body); }
+  .card-choice:hover { border-color: var(--accent); }
+  .opt { width: 100%; text-align: left; padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); font-size: 16px; font-weight: 300; cursor: pointer; font-family: var(--font-body); }
+  .opt:hover { border-color: var(--accent); }
+  .chat-head { padding: 20px 24px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
+  .icon-btn { width: 38px; height: 38px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-soft); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
+  .meter { width: 72px; height: 4px; border-radius: 2px; background: var(--paper-2); margin-top: 6px; overflow: hidden; }
+  .meter > i { display: block; height: 100%; background: var(--accent); transition: width 300ms ease; }
+  .stream { flex-grow: 1; padding: 22px 20px 12px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; }
+  .row { display: flex; }
+  .row.you { justify-content: flex-end; }
+  .row.ai { justify-content: flex-start; }
+  .bubble { font-size: 15px; line-height: 1.5; white-space: pre-wrap; }
+  .row.you .bubble { max-width: 80%; padding: 12px 16px; border-radius: 18px 18px 4px 18px; background: var(--accent); color: var(--on-accent); font-weight: 400; }
+  .row.ai .bubble { max-width: 86%; padding: 14px 16px; border-radius: 18px 18px 18px 4px; background: var(--paper); color: var(--ink); font-weight: 300; }
+  .row.ai .bubble.note { border: 1px solid var(--accent); background: transparent; }
+  .composer { padding: 12px 16px 20px; border-top: 1px solid var(--line); display: flex; gap: 10px; align-items: center; }
+  .send { height: 50px; width: 50px; flex-shrink: 0; border: none; border-radius: 25px; background: var(--accent); cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .send:disabled { opacity: 0.4; cursor: default; }
+  .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-mute); display: inline-block; animation: blink 1.3s infinite ease-in-out; }
+  .typing span:nth-child(2) { animation-delay: 0.2s; }
+  .typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes blink { 0%, 60%, 100% { opacity: 0.25; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
+  @media (prefers-reduced-motion: reduce) { .screen, .typing span { animation: none; } }
+  /* Desktop: appen blir et sentrert kort i stedet for en mobilstripe */
+  @media (min-width: 900px) {
+    body { padding: 32px; align-items: center; }
+    .phone {
+      max-width: 780px; min-height: 0;
+      height: min(900px, calc(100dvh - 64px));
+      border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.16);
+    }
+    #s-chat { min-height: 0 !important; }
+    h1.big { font-size: 54px; }
+    .row.you .bubble { max-width: 62%; }
+    .row.ai .bubble { max-width: 70%; }
+    .stream { padding: 28px 32px 14px; }
+    .chat-head, .composer { padding-left: 32px; padding-right: 32px; }
+    .codebar { padding-left: 32px; padding-right: 32px; }
+  }
+
+  .codebar {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 10px 20px; border-bottom: 1px solid var(--line); background: var(--bg-soft);
+  }
+  .codebar .code {
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: 1px;
+    color: var(--ink); background: var(--paper); border: 1px solid var(--line);
+    border-radius: 8px; padding: 5px 10px; user-select: all;
+  }
+  .mini {
+    border: 1px solid var(--line); background: none; color: var(--ink-soft);
+    font-family: var(--font-body); font-size: 12px; border-radius: 8px;
+    padding: 6px 10px; cursor: pointer;
+  }
+  .mini:hover { border-color: var(--accent); color: var(--ink); }
+  .codebar .hint { font-size: 12px; color: var(--ink-mute); }
+
+  .pad { padding: 40px 32px; }
+  .pad-top { padding: 64px 32px 40px; }
+  .between { display: flex; flex-direction: column; justify-content: space-between; }
+  .center { justify-content: center; }
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <section class="screen between" id="s-welcome" style="padding:72px 32px 40px;">
+    <div>
+      <div class="eyebrow">Parpraten</div>
+      <h1 class="big">Chat om det<br>som er vanskelig.</h1>
+      <p class="lead">En chat for forholdet ditt. Den blir kjent med deg, og gir råd som passer akkurat din situasjon.</p>
+    </div>
+    <div>
+      <button class="btn-primary" id="b-start">Kom i gang gratis</button>
+      <button class="btn-ghost" id="b-haskode" style="margin-top:10px;">Jeg har en kode fra før</button>
+      <p class="mono" style="font-size:11px;color:var(--ink-mute);text-align:center;margin:8px 0 0;">De første chattene koster ingenting.</p>
+      <p style="font-size:12px;color:var(--ink-mute);text-align:center;margin:12px 0 0;"><a href="/personvern.html" style="color:var(--ink-mute);">Personvern</a> · <a href="/vilkar.html" style="color:var(--ink-mute);">Vilkår</a></p>
+    </div>
+  </section>
+
+  <section class="screen center pad" id="s-mode" hidden>
+    <h2 class="mid">Hvordan vil du chatte i dag?</h2>
+    <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Du kan bytte når som helst.</p>
+    <button class="card-choice" id="b-par" style="margin-bottom:14px;">
+      <span style="display:flex;align-items:center;gap:14px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span class="serif" style="font-style:italic;font-size:22px;">Sammen som par</span>
+      </span>
+      <p style="font-size:14px;line-height:1.5;color:var(--ink-soft);margin:12px 0 0;">Dere sitter sammen og svarer begge to. Rådene ser begges side.</p>
+    </button>
+    <button class="card-choice" id="b-alene">
+      <span style="display:flex;align-items:center;gap:14px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="serif" style="font-style:italic;font-size:22px;">Alene</span>
+      </span>
+      <p style="font-size:14px;line-height:1.5;color:var(--ink-soft);margin:12px 0 0;">Bare deg. Ventiler, tenk høyt, og få råd du kan ta med deg videre.</p>
+    </button>
+  </section>
+
+  <section class="screen center pad" id="s-resume" hidden>
+    <h2 class="mid">Fortsett der du slapp</h2>
+    <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Skriv inn koden du fikk sist.</p>
+    <label class="tag" for="in-kode">Kode</label>
+    <input class="field" id="in-kode" placeholder="ABCD-EFGH-JKLM" autocapitalize="characters" spellcheck="false"
+           style="margin:8px 0 12px;font-family:var(--font-mono);letter-spacing:1px;">
+    <div id="kode-feil" style="font-size:14px;color:var(--accent);margin:0 0 12px;" hidden></div>
+    <button class="btn-primary" id="b-hent" style="margin-top:8px;">Hent chatten</button>
+    <button class="btn-ghost" id="b-tilbake" style="margin-top:8px;">Tilbake</button>
+  </section>
+
+  <section class="screen center pad" id="s-intro" hidden>
+    <h2 class="mid" id="intro-title">Først, hvem er dere?</h2>
+    <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Fornavn holder. Ingenting lagres uten at du sier fra.</p>
+    <label class="tag" for="in-you">Deg</label>
+    <input class="field" id="in-you" placeholder="Ditt fornavn" style="margin:8px 0 22px;">
+    <div id="partner-wrap">
+      <label class="tag" for="in-partner">Partneren din</label>
+      <input class="field" id="in-partner" placeholder="Deres fornavn" style="margin:8px 0 12px;">
+    </div>
+    <button class="btn-primary" id="b-names" style="margin-top:20px;">Fortsett</button>
+  </section>
+
+  <section class="screen pad-top" id="s-questions" hidden>
+    <div style="display:flex;gap:6px;margin-bottom:40px;" id="dots"></div>
+    <div class="mono" id="q-count" style="font-size:11px;letter-spacing:2px;color:var(--ink-mute);"></div>
+    <h2 class="mid" id="q-text" style="font-size:32px;margin:12px 0 36px;"></h2>
+    <div style="display:flex;flex-direction:column;gap:12px;" id="q-opts"></div>
+  </section>
+
+  <section class="screen" id="s-chat" hidden style="min-height:100dvh;">
+    <div class="chat-head">
+      <div>
+        <div class="serif" style="font-style:italic;font-size:20px;">Parpraten</div>
+        <div class="mono" id="pair-label" style="font-size:10px;letter-spacing:1px;color:var(--ink-mute);margin-top:2px;"></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <button class="icon-btn" id="b-mute" aria-label="Skru lyd av eller på"></button>
+        <div style="text-align:right;">
+          <div class="mono" id="free-label" style="font-size:10px;color:var(--accent);"></div>
+          <div class="meter"><i id="free-bar" style="width:100%;"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="codebar" id="codebar" hidden>
+      <span class="hint">Koden din</span>
+      <span class="code" id="kode-vis">—</span>
+      <button class="mini" id="b-kopier">Kopier</button>
+      <button class="mini" id="b-sendmail">Send på e-post</button>
+      <button class="mini" id="b-portal" hidden>Administrer abonnement</button>
+      <button class="mini" id="b-slett" style="color:var(--ink-mute);">Slett mine data</button>
+      <span class="hint" id="kode-status"></span>
+    </div>
+    <div class="epostrad" id="epostrad" hidden style="display:none;gap:10px;align-items:center;padding:10px 20px;border-bottom:1px solid var(--line);">
+      <input class="field" id="in-epost" type="email" placeholder="din@epost.no" style="flex-grow:1;height:42px;font-size:14px;">
+      <button class="mini" id="b-sendna">Send</button>
+      <button class="mini" id="b-avbrytmail">Avbryt</button>
+    </div>
+    <div class="stream" id="stream"></div>
+    <div class="composer">
+      <input class="field" id="msg" placeholder="Skriv til oss..." style="flex-grow:1;height:50px;border-radius:25px;padding:0 18px;">
+      <button class="send" id="b-send" aria-label="Send">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--on-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="screen center pad" id="s-paywall" hidden>
+    <div class="eyebrow">Prøveperioden er ferdig</div>
+    <h2 class="mid" id="paywall-title" style="font-size:36px;margin:18px 0 12px;">Du var akkurat i gang.</h2>
+    <p style="font-size:16px;line-height:1.6;color:var(--ink-soft);margin:0 0 32px;">De vanskelige samtalene tar tid. Fortsett der du slapp, så husker vi alt du har fortalt.</p>
+    <div style="border:1px solid var(--accent);border-radius:18px;padding:26px 24px;background:var(--bg-soft);">
+      <div style="display:flex;align-items:baseline;gap:8px;">
+        <span class="serif" style="font-size:42px;font-weight:300;">99 kr</span>
+        <span style="font-size:15px;color:var(--ink-mute);">/ mnd</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px;" id="perks"></div>
+    </div>
+    <div id="paywall-feil" style="font-size:14px;color:var(--accent);margin:16px 0 0;" hidden></div>
+    <button class="btn-primary" id="b-upgrade" style="margin-top:24px;">Fortsett samtalen</button>
+    <button class="btn-ghost" id="b-later" style="margin-top:8px;">Kanskje senere</button>
+  </section>
+
+  <section class="screen center" id="s-thanks" hidden style="align-items:center;text-align:center;padding:48px 40px;">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <h2 class="mid" style="font-size:32px;margin:24px 0 10px;">Fint at du fortsetter.</h2>
+    <p style="font-size:16px;color:var(--ink-soft);margin:0 0 32px;max-width:260px;">Alt du har fortalt er her når du kommer tilbake. Ta det i ditt eget tempo.</p>
+    <button class="btn-line" id="b-restart">Start på nytt</button>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var FREE = 5;
+  var state = { mode: "par", you: "", partner: "", qIndex: 0, answers: [], free: FREE, muted: false, busy: false, code: null, paid: false };
+  var abortCtl = null;
+  var $ = function (id) { return document.getElementById(id); };
+  var screens = ["welcome", "mode", "resume", "intro", "questions", "chat", "paywall", "thanks"];
+  function show(name) { screens.forEach(function (s) { $("s-" + s).hidden = (s !== name); }); }
+
+  var DECK = {
+    par: [
+      { text: "Hvor lenge har dere vært sammen?", opts: ["Under et år", "1 til 5 år", "5 til 15 år", "Mer enn 15 år"] },
+      { text: "Hva plager dere mest om dagen?", opts: ["Penger", "Husarbeid og ansvar", "Nærhet og sex", "Måten vi snakker på"] },
+      { text: "Hvordan kjennes det mellom dere denne uka?", opts: ["Godt, vi finner tonen", "Litt stille", "Anspent", "Vi snakker nesten ikke"] }
+    ],
+    alene: [
+      { text: "Hva fyller deg mest akkurat nå?", opts: ["Sinne", "Sårhet", "Tomhet", "Forvirring", "Annet, fortell selv"] },
+      { text: "Har du sagt dette høyt til noen?", opts: ["Nei, det er første gang", "Bare til meg selv", "Til en venn", "Til partneren min"] },
+      { text: "Hva trenger du mest i kveld?", opts: ["Bare få det ut", "Forstå hva jeg føler", "Et konkret råd", "Vite at det er greit"] }
+    ]
+  };
+
+  // lyd
+  var audio = null;
+  function chime() {
+    if (state.muted) return;
+    try {
+      if (!audio) { var AC = window.AudioContext || window.webkitAudioContext; audio = new AC(); }
+      if (audio.state === "suspended") audio.resume();
+      var now = audio.currentTime;
+      [[659.25, 0], [987.77, 0.11]].forEach(function (n) {
+        var o = audio.createOscillator(), g = audio.createGain();
+        o.type = "sine"; o.frequency.value = n[0];
+        o.connect(g); g.connect(audio.destination);
+        var s = now + n[1];
+        g.gain.setValueAtTime(0.0001, s);
+        g.gain.linearRampToValueAtTime(0.11, s + 0.03);
+        g.gain.exponentialRampToValueAtTime(0.0001, s + 0.9);
+        o.start(s); o.stop(s + 0.95);
+      });
+    } catch (e) {}
+  }
+  var SPKR_ON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
+  var SPKR_OFF = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-mute)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>';
+  function paintMute() { $("b-mute").innerHTML = state.muted ? SPKR_OFF : SPKR_ON; }
+
+  // flyt
+  $("b-start").onclick = function () { show("mode"); };
+  $("b-par").onclick = function () { state.mode = "par"; startIntro(); };
+  $("b-alene").onclick = function () { state.mode = "alene"; startIntro(); };
+  function startIntro() {
+    $("intro-title").textContent = state.mode === "alene" ? "Først, hva heter du?" : "Først, hvem er dere?";
+    $("partner-wrap").hidden = state.mode === "alene";
+    show("intro");
+  }
+  $("b-names").onclick = function () {
+    state.you = ($("in-you").value || "").trim() || "Du";
+    state.partner = state.mode === "par" ? (($("in-partner").value || "").trim() || "partneren din") : "partneren din";
+    state.qIndex = 0; state.answers = [];
+    renderQuestion(); show("questions");
+  };
+
+  function renderQuestion() {
+    var qs = DECK[state.mode], q = qs[state.qIndex];
+    var dots = $("dots"); dots.innerHTML = "";
+    qs.forEach(function (_, i) {
+      var d = document.createElement("div");
+      d.style.cssText = "height:4px;flex-grow:1;border-radius:2px;background:" + (i <= state.qIndex ? "var(--accent)" : "var(--paper-2)") + ";";
+      dots.appendChild(d);
+    });
+    $("q-count").textContent = "Spørsmål " + (state.qIndex + 1) + " av " + qs.length;
+    $("q-text").textContent = q.text;
+    var box = $("q-opts"); box.innerHTML = "";
+    q.opts.forEach(function (o) {
+      var b = document.createElement("button");
+      b.className = "opt"; b.textContent = o;
+      b.onclick = function () { if (/^annet/i.test(o)) renderFreeText(); else answer(o); };
+      box.appendChild(b);
+    });
+  }
+  function renderFreeText() {
+    var box = $("q-opts"); box.innerHTML = "";
+    var ta = document.createElement("textarea");
+    ta.className = "field";
+    ta.placeholder = "Skriv med dine egne ord...";
+    ta.style.cssText = "height:120px;padding:14px 16px;resize:none;line-height:1.5;";
+    box.appendChild(ta);
+    var b = document.createElement("button");
+    b.className = "btn-primary"; b.textContent = "Fortsett"; b.style.marginTop = "12px";
+    b.onclick = function () { var v = (ta.value || "").trim(); if (v) answer(v); };
+    box.appendChild(b);
+    ta.focus();
+  }
+  function answer(opt) {
+    state.answers.push(opt);
+    if (state.qIndex < DECK[state.mode].length - 1) { state.qIndex++; renderQuestion(); }
+    else enterChat();
+  }
+
+  function openerInstruction() {
+    return state.mode === "alene"
+      ? "Skriv en kort, varm åpningshilsen til " + state.you + ". Ønsk personen velkommen, si at her er det bare mellom dere to, og inviter personen til å fortelle hva som ligger på hjertet. To til tre setninger."
+      : "Skriv en kort, varm åpningshilsen til " + state.you + " og " + state.partner + ". Ønsk dem velkommen og inviter dem til å fortelle om noe som er vanskelig mellom dem akkurat nå. To til tre setninger.";
+  }
+
+  async function enterChat() {
+    $("pair-label").textContent = (state.mode === "alene" ? state.you + " · privat chat" : state.you + " og " + state.partner).toUpperCase();
+    state.paid = false; state.free = FREE;
+    paintMeter(); paintMute();
+    $("stream").innerHTML = "";
+    show("chat");
+    setBusy(true); addTyping();
+    try {
+      var r = await fetch("/api/session/start", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ mode: state.mode, you: state.you, partner: state.partner, answers: state.answers })
+      });
+      if (!r.ok) throw new Error("start feilet");
+      var d = await r.json();
+      state.code = d.code; paintCode();
+      removeTyping();
+      callChat({ opening: true });
+    } catch (e) {
+      removeTyping();
+      addBubble("ai", "Fikk ikke kontakt med serveren. Prøv igjen om litt.", true);
+      setBusy(false);
+    }
+  }
+
+  // chat-visning
+  function addBubble(role, text, isNote) {
+    var row = document.createElement("div");
+    row.className = "row " + (role === "you" ? "you" : "ai");
+    var b = document.createElement("div");
+    b.className = "bubble" + (isNote ? " note" : "");
+    b.textContent = text;
+    row.appendChild(b); $("stream").appendChild(row); scrollDown();
+    return b;
+  }
+  function addTyping() {
+    var row = document.createElement("div");
+    row.className = "row ai"; row.id = "typing-row";
+    var b = document.createElement("div");
+    b.className = "bubble typing";
+    b.style.cssText = "display:flex;gap:5px;align-items:center;padding:16px 18px;";
+    b.innerHTML = "<span></span><span></span><span></span>";
+    row.appendChild(b); $("stream").appendChild(row); scrollDown();
+  }
+  function removeTyping() { var r = $("typing-row"); if (r) r.remove(); }
+  function scrollDown() { var s = $("stream"); s.scrollTop = s.scrollHeight; }
+  function paintMeter() {
+    if (state.paid) {
+      $("free-label").textContent = "Full tilgang";
+      $("free-bar").style.width = "100%";
+      return;
+    }
+    var f = Number.isFinite(state.free) ? state.free : FREE;
+    $("free-label").textContent = f > 0 ? f + " gratis svar igjen" : "Ingen igjen";
+    $("free-bar").style.width = Math.max(0, Math.round((f / FREE) * 100)) + "%";
+  }
+
+  function paintCode() {
+    if (!state.code) return;
+    $("codebar").hidden = false;
+    $("kode-vis").textContent = state.code;
+    $("b-portal").hidden = !state.paid;
+  }
+  function setBusy(b) { state.busy = b; $("b-send").disabled = b; $("msg").disabled = b; }
+
+  async function callChat(opts) {
+    opts = opts || {};
+    setBusy(true); addTyping();
+    abortCtl = new AbortController();
+    var target = null, full = "";
+    try {
+      var res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ code: state.code, opening: !!opts.opening, message: opts.message || "" }),
+        signal: abortCtl.signal
+      });
+
+      if (res.status === 402) { removeTyping(); setBusy(false); openPaywall(); return; }
+      if (!res.ok || !res.body) throw new Error("http " + res.status);
+
+      var left = res.headers.get("X-Free-Left");
+      if (left !== null) {
+        var n = Number(left);
+        if (n < 0) { state.paid = true; state.free = null; } else { state.free = n; }
+        paintMeter();
+      }
+
+      var reader = res.body.getReader(), dec = new TextDecoder();
+      while (true) {
+        var r = await reader.read();
+        if (r.done) break;
+        var chunk = dec.decode(r.value, { stream: true });
+        if (!chunk) continue;
+        if (!target) { removeTyping(); target = addBubble("ai", ""); }
+        full += chunk; target.textContent = full; scrollDown();
+      }
+      if (!full) { removeTyping(); addBubble("ai", "Jeg fikk ikke svart nå. Prøv igjen om litt.", true); }
+      else chime();
+      setBusy(false); $("msg").focus();
+    } catch (e) {
+      removeTyping();
+      addBubble("ai", "Noe stoppet opp mot serveren. Prøv igjen om litt.", true);
+      setBusy(false);
+    }
+  }
+
+  async function hentSession() {
+    var kode = ($("in-kode").value || "").trim().toUpperCase();
+    var feil = $("kode-feil");
+    feil.hidden = true;
+    if (!/^[A-HJ-NP-Z2-9]{4}-[A-HJ-NP-Z2-9]{4}-[A-HJ-NP-Z2-9]{4}$/.test(kode)) {
+      feil.textContent = "Koden ser ikke riktig ut. Den er tolv tegn, som ABCD-EFGH-JKLM.";
+      feil.hidden = false; return;
+    }
+    try {
+      var res = await fetch("/api/session/" + encodeURIComponent(kode));
+      if (res.status === 404) { feil.textContent = "Fant ingen chat med den koden."; feil.hidden = false; return; }
+      if (res.status === 429) { feil.textContent = "For mange forsøk. Vent litt og prøv igjen."; feil.hidden = false; return; }
+      if (!res.ok) { feil.textContent = "Noe stoppet opp. Prøv igjen om litt."; feil.hidden = false; return; }
+      var d = await res.json();
+      state.mode = d.mode === "alene" ? "alene" : "par";
+      state.you = d.you || "Du";
+      state.partner = d.partner || "partneren din";
+      state.answers = Array.isArray(d.answers) ? d.answers : [];
+      state.paid = !!d.paid;
+      state.free = d.paid ? null : d.free;
+      state.code = kode;
+
+      $("pair-label").textContent = (state.mode === "alene" ? state.you + " · privat chat" : state.you + " og " + state.partner).toUpperCase();
+      paintMeter(); paintMute(); paintCode();
+      $("stream").innerHTML = "";
+      (d.turns || []).forEach(function (t) {
+        addBubble(t.role === "assistant" ? "ai" : "you", t.content);
+      });
+      show("chat");
+      scrollDown();
+      $("msg").focus();
+    } catch (e) {
+      feil.textContent = "Fikk ikke kontakt med serveren."; feil.hidden = false;
+    }
+  }
+
+  $("b-haskode").onclick = function () { $("kode-feil").hidden = true; show("resume"); setTimeout(function(){ $("in-kode").focus(); }, 50); };
+  $("b-tilbake").onclick = function () { show("welcome"); };
+  $("b-hent").onclick = hentSession;
+  $("in-kode").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); hentSession(); } });
+
+  $("b-kopier").onclick = function () {
+    if (!state.code) return;
+    navigator.clipboard.writeText(state.code).then(function () {
+      $("kode-status").textContent = "Kopiert.";
+      setTimeout(function () { $("kode-status").textContent = ""; }, 2500);
+    }).catch(function () {});
+  };
+  $("b-sendmail").onclick = function () {
+    var r = $("epostrad"); r.hidden = false; r.style.display = "flex"; $("in-epost").focus();
+  };
+  $("b-avbrytmail").onclick = function () {
+    var r = $("epostrad"); r.hidden = true; r.style.display = "none";
+  };
+  $("b-sendna").onclick = async function () {
+    var e = ($("in-epost").value || "").trim();
+    if (!e || !state.code) return;
+    $("kode-status").textContent = "Sender...";
+    try {
+      var res = await fetch("/api/session/" + state.code + "/email", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email: e })
+      });
+      if (res.ok) {
+        $("kode-status").textContent = "Sendt til " + e;
+        $("epostrad").hidden = true; $("epostrad").style.display = "none";
+      } else if (res.status === 503) {
+        $("kode-status").textContent = "E-post er ikke satt opp ennå. Skriv ned koden.";
+      } else {
+        $("kode-status").textContent = "Fikk ikke sendt. Skriv ned koden.";
+      }
+    } catch (err) {
+      $("kode-status").textContent = "Fikk ikke sendt. Skriv ned koden.";
+    }
+    setTimeout(function () { $("kode-status").textContent = ""; }, 6000);
+  };
+
+  function send() {
+    if (state.busy) return;
+    var raw = ($("msg").value || "").trim();
+    if (!raw) return;
+    $("msg").value = "";
+    addBubble("you", raw);
+    callChat({ message: raw });
+  }
+  $("b-send").onclick = send;
+  $("msg").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); send(); } });
+  $("b-mute").onclick = function () { state.muted = !state.muted; paintMute(); };
+
+  function openPaywall() {
+    $("paywall-title").textContent = state.mode === "alene" ? "Du var akkurat i gang." : "Dere var akkurat i gang.";
+    var perks = state.mode === "alene"
+      ? ["Ventiler så mye du trenger", "Vi husker det du har fortalt", "Øvelser for å finne roen selv"]
+      : ["Fortsett samtalene uten grense", "Vi husker alt dere har fortalt", "Ukentlige øvelser laget for dere to"];
+    var box = $("perks"); box.innerHTML = "";
+    perks.forEach(function (t) {
+      var row = document.createElement("div");
+      row.style.cssText = "display:flex;gap:12px;align-items:flex-start;";
+      row.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font-size:15px;font-weight:300;color:var(--ink);"></span>';
+      row.querySelector("span").textContent = t;
+      box.appendChild(row);
+    });
+    show("paywall");
+  }
+  $("b-upgrade").onclick = async function () {
+    var b = $("b-upgrade");
+    if (!state.code) return;
+    b.disabled = true; b.textContent = "Sender deg til betaling...";
+    try {
+      var r = await fetch("/api/checkout", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ code: state.code })
+      });
+      if (r.status === 503) {
+        b.disabled = false; b.textContent = "Fortsett samtalen";
+        $("paywall-feil").textContent = "Betaling er ikke skrudd på ennå. Prøv igjen senere.";
+        $("paywall-feil").hidden = false;
+        return;
+      }
+      var d = await r.json();
+      if (d.already) { state.paid = true; paintMeter(); show("chat"); return; }
+      if (d.url) { window.location.href = d.url; return; }
+      throw new Error("ingen url");
+    } catch (e) {
+      b.disabled = false; b.textContent = "Fortsett samtalen";
+      $("paywall-feil").textContent = "Fikk ikke startet betalingen. Prøv igjen om litt.";
+      $("paywall-feil").hidden = false;
+    }
+  };
+
+  $("b-later").onclick = function () { show("chat"); };
+  $("b-restart").onclick = function () {
+    if (abortCtl) abortCtl.abort();
+    state = { mode: "par", you: "", partner: "", qIndex: 0, answers: [], free: FREE, muted: state.muted, busy: false, code: null, paid: false };
+    $("codebar").hidden = true; $("epostrad").hidden = true; $("epostrad").style.display = "none";
+    $("in-you").value = ""; $("in-partner").value = "";
+    show("welcome");
+  };
+
+  // Administrer abonnement
+  $("b-portal").onclick = async function () {
+    if (!state.code) return;
+    try {
+      var r = await fetch("/api/portal", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ code: state.code })
+      });
+      var d = await r.json();
+      if (d.url) window.location.href = d.url;
+    } catch (e) {}
+  };
+
+  // Slett mine data
+  $("b-slett").onclick = async function () {
+    if (!state.code) return;
+    if (!confirm("Er du sikker? Hele chattehistorikken slettes permanent. Dette kan ikke angres.")) return;
+    try {
+      var r = await fetch("/api/session/" + state.code, { method: "DELETE" });
+      if (r.ok) {
+        alert("Dataene dine er slettet.");
+        $("b-restart").click();
+      } else {
+        alert("Fikk ikke slettet. Prøv igjen om litt.");
+      }
+    } catch (e) {
+      alert("Fikk ikke kontakt med serveren.");
+    }
+  };
+  paintMute();
+
+  // Kommer brukeren tilbake fra betaling, hentes chatten fram igjen.
+  (function () {
+    var p = new URLSearchParams(location.search);
+    var betalt = (p.get("betalt") || "").toUpperCase();
+    if (/^[A-HJ-NP-Z2-9]{4}-[A-HJ-NP-Z2-9]{4}-[A-HJ-NP-Z2-9]{4}$/.test(betalt)) {
+      history.replaceState(null, "", location.pathname);
+      $("in-kode").value = betalt;
+      hentSession().then(function () {
+        if (state.paid) {
+          addBubble("ai", "Takk. Du har full tilgang nå, og chatten fortsetter der dere slapp.", true);
+        }
+      });
+    } else if (p.get("avbrutt")) {
+      history.replaceState(null, "", location.pathname);
+    }
+  })();
+})();
+</script>
+</body>
+</html>

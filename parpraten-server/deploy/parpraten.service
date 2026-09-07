@@ -1,0 +1,24 @@
+[Unit]
+Description=Parpraten
+After=network.target
+
+[Service]
+Type=simple
+User=parpraten
+WorkingDirectory=/srv/parpraten
+EnvironmentFile=/etc/parpraten/env
+Environment=PORT=3001
+StateDirectory=parpraten
+ExecStart=/usr/bin/node server.js
+Restart=always
+RestartSec=3
+
+# litt herding
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/parpraten /var/lib/parpraten
+
+[Install]
+WantedBy=multi-user.target

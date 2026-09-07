@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personvern – Parpraten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Outfit:wght@300;400;500&display=swap">
+<style>
+  :root {
+    --bg: #f4ede0; --paper: #f9f4e8; --ink: #1a201c; --ink-soft: #3e4540;
+    --ink-mute: #7d7a6e; --line: #e0d7c4; --accent: #a87236;
+    --font-serif: "Newsreader", Georgia, serif;
+    --font-body: "Outfit", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1311; --paper: #1b211d; --ink: #ece3d2; --ink-soft: #c8c0ad;
+      --ink-mute: #847d6e; --line: #232a25; --accent: #c89149;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1311; --paper: #1b211d; --ink: #ece3d2; --ink-soft: #c8c0ad;
+    --ink-mute: #847d6e; --line: #232a25; --accent: #c89149;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--font-body); font-weight: 300;
+    display: flex; justify-content: center; padding: 40px 24px 80px;
+  }
+  article { max-width: 620px; width: 100%; }
+  a { color: var(--accent); }
+  h1 { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 38px; line-height: 1.1; margin: 0 0 12px; }
+  h2 { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 24px; margin: 40px 0 10px; }
+  p, li { font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
+  .date { font-size: 13px; color: var(--ink-mute); margin: 0 0 40px; }
+  .back { font-size: 14px; display: inline-block; margin-bottom: 32px; color: var(--accent); text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+<article>
+  <a href="/" class="back">← Tilbake til Parpraten</a>
+  <h1>Personvernerklæring</h1>
+  <p class="date">Sist oppdatert 7. september 2025</p>
+
+  <p>Parpraten er en chattjeneste for parforhold. Du deler sårbare ting her, og vi tar det på alvor. Denne erklæringen forklarer hva vi lagrer, hvorfor, og hva du kan gjøre med det.</p>
+
+  <h2>Hvem er ansvarlig</h2>
+  <p>Parpraten drives av Jens Emil Asperheim Sund. Spørsmål om personvern kan sendes til <a href="mailto:jensemilasp@gmail.com">jensemilasp@gmail.com</a>.</p>
+
+  <h2>Hva vi lagrer</h2>
+  <p>Når du starter en chat, oppretter serveren en økt med:</p>
+  <ul>
+    <li>Fornavn (det du oppgir, ingen etternavn)</li>
+    <li>Svarene du gir i oppstarten</li>
+    <li>Hele chattehistorikken</li>
+    <li>En tilfeldig kode som knytter deg til chatten</li>
+    <li>E-postadressen din, hvis du velger å sende koden på e-post</li>
+    <li>Stripe-kunde-ID, hvis du betaler for abonnement</li>
+  </ul>
+  <p>Vi lagrer ingen passord, ingen innlogging, ingen cookies, og ingen IP-adresser utover det som er nødvendig for å bremse gjetting av koder.</p>
+
+  <h2>Hvorfor vi lagrer det</h2>
+  <p>Alt vi lagrer er nødvendig for at tjenesten skal fungere. Chattehistorikken trengs for at samtalen skal huske hva du har fortalt. Koden lar deg komme tilbake. E-postadressen brukes bare til å sende deg koden.</p>
+
+  <h2>Hvor lenge vi lagrer det</h2>
+  <p>Chattene slettes automatisk etter 90 dager uten aktivitet. Du kan slette chatten din når som helst ved å trykke «Slett mine data» i chatten.</p>
+
+  <h2>Hvem ser det du skriver</h2>
+  <p>Chattemeldingene dine sendes til Anthropic sin språkmodell Claude for å lage svar. Anthropic lagrer ikke innholdet for trening. Ingen mennesker leser det du skriver, med mindre du selv deler koden din med noen.</p>
+  <p>Vi selger aldri data til tredjeparter. Vi bruker ikke dataene til markedsføring eller analyse.</p>
+
+  <h2>Betaling</h2>
+  <p>Betaling håndteres av Stripe. Kortnummer og betalingsdetaljer går rett til Stripe og berører aldri vår server. Vi lagrer kun Stripe sin kunde-ID for å koble abonnementet til chatten din.</p>
+
+  <h2>Dine rettigheter</h2>
+  <p>Du har rett til å:</p>
+  <ul>
+    <li>Be om innsyn i hva vi har lagret om deg</li>
+    <li>Slette alle data knyttet til koden din (bruk «Slett mine data» i chatten, eller send e-post)</li>
+    <li>Klage til Datatilsynet hvis du mener vi behandler dataene dine feil</li>
+  </ul>
+
+  <h2>Sikkerhet</h2>
+  <p>Chattefilene ligger på en sikret server i Europa (Hetzner, Tyskland). Filene er tilgangsbegrenset. Kommunikasjonen mellom nettleseren din og serveren er kryptert med TLS.</p>
+
+  <h2>Endringer</h2>
+  <p>Vesentlige endringer i denne erklæringen vil bli oppdatert på denne siden med ny dato.</p>
+</article>
+</body>
+</html>

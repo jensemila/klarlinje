@@ -1,0 +1,16 @@
+{
+  "name": "parpraten-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Liten server for Parpraten. Holder Claude-nøkkelen og snakker med modellen.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "express": "^4.19.2",
+    "nodemailer": "^10.0.0",
+    "stripe": "^22.6.1"
+  }
+}

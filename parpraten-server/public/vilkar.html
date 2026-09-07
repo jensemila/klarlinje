@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vilkår – Parpraten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Outfit:wght@300;400;500&display=swap">
+<style>
+  :root {
+    --bg: #f4ede0; --paper: #f9f4e8; --ink: #1a201c; --ink-soft: #3e4540;
+    --ink-mute: #7d7a6e; --line: #e0d7c4; --accent: #a87236;
+    --font-serif: "Newsreader", Georgia, serif;
+    --font-body: "Outfit", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1311; --paper: #1b211d; --ink: #ece3d2; --ink-soft: #c8c0ad;
+      --ink-mute: #847d6e; --line: #232a25; --accent: #c89149;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1311; --paper: #1b211d; --ink: #ece3d2; --ink-soft: #c8c0ad;
+    --ink-mute: #847d6e; --line: #232a25; --accent: #c89149;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--font-body); font-weight: 300;
+    display: flex; justify-content: center; padding: 40px 24px 80px;
+  }
+  article { max-width: 620px; width: 100%; }
+  a { color: var(--accent); }
+  h1 { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 38px; line-height: 1.1; margin: 0 0 12px; }
+  h2 { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 24px; margin: 40px 0 10px; }
+  p, li { font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
+  .date { font-size: 13px; color: var(--ink-mute); margin: 0 0 40px; }
+  .back { font-size: 14px; display: inline-block; margin-bottom: 32px; color: var(--accent); text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+<article>
+  <a href="/" class="back">← Tilbake til Parpraten</a>
+  <h1>Kjøpsvilkår</h1>
+  <p class="date">Sist oppdatert 7. september 2025</p>
+
+  <p>Disse vilkårene gjelder når du bruker Parpraten, enten gratis eller med abonnement.</p>
+
+  <h2>Hva Parpraten er</h2>
+  <p>Parpraten er en KI-drevet chattjeneste for parforhold. Den gir råd og samtalestøtte, men er ikke terapi og erstatter ikke en autorisert terapeut eller psykolog. Ved alvorlige problemer som vold, overgrep eller selvmordstanker vil tjenesten vise til profesjonell hjelp.</p>
+
+  <h2>Pris og betaling</h2>
+  <p>De første fem svarene er gratis. Etter det koster tjenesten 99 kr per måned. Betalingen håndteres av Stripe, og abonnementet fornyes automatisk hver måned til du sier opp.</p>
+
+  <h2>Angrerett</h2>
+  <p>Du har 14 dagers angrerett fra kjøpsdato i tråd med angrerettloven. Hvis du allerede har brukt tjenesten i denne perioden, kan du fortsatt angre, men vi kan trekke fra verdien av det du har brukt. Kontakt oss på <a href="mailto:jensemilasp@gmail.com">jensemilasp@gmail.com</a> for å bruke angreretten.</p>
+
+  <h2>Oppsigelse</h2>
+  <p>Du kan si opp abonnementet når som helst. Gå til «Administrer abonnement» i chatten, eller kontakt oss på e-post. Etter oppsigelse beholder du tilgangen ut perioden du har betalt for.</p>
+
+  <h2>Sletting av data</h2>
+  <p>Du kan slette alle data knyttet til koden din direkte i chatten. Da slettes chattehistorikk, navn og alle andre opplysninger. Har du et aktivt abonnement, må du si det opp i Stripe først.</p>
+
+  <h2>Koden din</h2>
+  <p>Koden du får er den eneste nøkkelen til chatten din. Den som har koden, kan lese hele chattehistorikken. Del den bare med noen du stoler på. Vi kan ikke gjenopprette en tapt kode, og vi kan ikke finne tilbake til en chat uten den.</p>
+
+  <h2>Ansvar</h2>
+  <p>Parpraten er et hjelpemiddel for refleksjon og samtale. Rådene er generert av en KI-modell og kan være feil. Vi tar ikke ansvar for beslutninger du tar basert på det tjenesten sier. Ved akutt krise, kontakt Mental Helse (116 123) eller nødnummer (112).</p>
+
+  <h2>Endringer</h2>
+  <p>Vi kan endre prisen eller vilkårene. Prisendringer varsles minst 30 dager i forveien. Vesentlige endringer i vilkårene oppdateres på denne siden.</p>
+
+  <h2>Kontakt</h2>
+  <p>Jens Emil Asperheim Sund<br><a href="mailto:jensemilasp@gmail.com">jensemilasp@gmail.com</a></p>
+</article>
+</body>
+</html>
