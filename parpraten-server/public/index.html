@@ -29,36 +29,48 @@
     --line: #232a25; --accent: #c89149; --accent-2: #d9a86a; --on-accent: #0f1311;
   }
   * { box-sizing: border-box; }
-  html, body { height: 100%; }
+  html, body { height: 100%; margin: 0; }
   body {
-    margin: 0; background: var(--bg); color: var(--ink);
+    background: var(--bg); color: var(--ink);
     font-family: var(--font-body); font-weight: 300;
-    display: flex; justify-content: center; align-items: stretch;
   }
   img { max-width: 100%; }
-  .phone { width: 100%; max-width: 440px; min-height: 100dvh; background: var(--bg); display: flex; flex-direction: column; position: relative; }
+  [hidden] { display: none !important; }
+
+  .app { width: 100%; min-height: 100dvh; display: flex; flex-direction: column; }
   .serif { font-family: var(--font-serif); }
   .mono { font-family: var(--font-mono); }
   .screen { flex-grow: 1; display: flex; flex-direction: column; animation: fade 420ms ease both; }
   @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-  [hidden] { display: none !important; }
+
   .eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
-  h1.big { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 46px; line-height: 1.05; margin: 28px 0 0; }
-  h2.mid { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 34px; line-height: 1.1; margin: 0 0 8px; text-wrap: balance; }
-  p.lead { font-size: 17px; line-height: 1.6; color: var(--ink-soft); margin: 22px 0 0; max-width: 320px; }
-  .btn-primary { width: 100%; height: 56px; border: none; border-radius: 14px; background: var(--accent); color: var(--on-accent); font-family: var(--font-body); font-size: 17px; font-weight: 500; cursor: pointer; }
+  h1.big { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 42px; line-height: 1.08; margin: 24px 0 0; }
+  h2.mid { font-family: var(--font-serif); font-weight: 300; font-style: italic; font-size: 32px; line-height: 1.1; margin: 0 0 8px; text-wrap: balance; }
+  p.lead { font-size: 17px; line-height: 1.6; color: var(--ink-soft); margin: 20px 0 0; max-width: 400px; }
+
+  .btn-primary { width: 100%; max-width: 360px; height: 56px; border: none; border-radius: 14px; background: var(--accent); color: var(--on-accent); font-family: var(--font-body); font-size: 17px; font-weight: 500; cursor: pointer; transition: background 150ms; }
   .btn-primary:hover { background: var(--accent-2); }
-  .btn-ghost { width: 100%; height: 44px; border: none; background: none; color: var(--ink-mute); font-size: 14px; cursor: pointer; font-family: var(--font-body); }
+  .btn-ghost { width: 100%; max-width: 360px; height: 44px; border: none; background: none; color: var(--ink-mute); font-size: 14px; cursor: pointer; font-family: var(--font-body); }
   .btn-line { height: 50px; padding: 0 28px; border: 1px solid var(--line); border-radius: 14px; background: none; color: var(--ink); font-size: 15px; cursor: pointer; font-family: var(--font-body); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .field { width: 100%; height: 52px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); font-size: 16px; outline: none; font-family: var(--font-body); }
+  .field { width: 100%; max-width: 400px; height: 52px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); font-size: 16px; outline: none; font-family: var(--font-body); }
   .field::placeholder { color: var(--ink-mute); }
   label.tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
-  .card-choice { text-align: left; padding: 24px; border-radius: 16px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); cursor: pointer; font-family: var(--font-body); }
+
+  .card-choice { text-align: left; padding: 24px; border-radius: 16px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); cursor: pointer; font-family: var(--font-body); transition: border-color 150ms; }
   .card-choice:hover { border-color: var(--accent); }
-  .opt { width: 100%; text-align: left; padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); font-size: 16px; font-weight: 300; cursor: pointer; font-family: var(--font-body); }
+  .opt { width: 100%; max-width: 400px; text-align: left; padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink); font-size: 16px; font-weight: 300; cursor: pointer; font-family: var(--font-body); transition: border-color 150ms; }
   .opt:hover { border-color: var(--accent); }
-  .chat-head { padding: 20px 24px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
+
+  /* ---- welcome ---- */
+  .welcome-layout { flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 60px 28px 36px; }
+
+  /* ---- onboarding screens ---- */
+  .onboard-center { flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 40px 28px; }
+  .onboard-inner { width: 100%; max-width: 440px; }
+
+  /* ---- chat ---- */
+  .chat-head { padding: 18px 20px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
   .icon-btn { width: 38px; height: 38px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-soft); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
   .meter { width: 72px; height: 4px; border-radius: 2px; background: var(--paper-2); margin-top: 6px; overflow: hidden; }
   .meter > i { display: block; height: 100%; background: var(--accent); transition: width 300ms ease; }
@@ -66,11 +78,12 @@
   .row { display: flex; }
   .row.you { justify-content: flex-end; }
   .row.ai { justify-content: flex-start; }
-  .bubble { font-size: 15px; line-height: 1.5; white-space: pre-wrap; }
+  .bubble { font-size: 15px; line-height: 1.6; white-space: pre-wrap; }
   .row.you .bubble { max-width: 80%; padding: 12px 16px; border-radius: 18px 18px 4px 18px; background: var(--accent); color: var(--on-accent); font-weight: 400; }
-  .row.ai .bubble { max-width: 86%; padding: 14px 16px; border-radius: 18px 18px 18px 4px; background: var(--paper); color: var(--ink); font-weight: 300; }
+  .row.ai .bubble { max-width: 86%; padding: 14px 18px; border-radius: 18px 18px 18px 4px; background: var(--paper); color: var(--ink); font-weight: 300; }
   .row.ai .bubble.note { border: 1px solid var(--accent); background: transparent; }
   .composer { padding: 12px 16px 20px; border-top: 1px solid var(--line); display: flex; gap: 10px; align-items: center; }
+  .composer .field { max-width: none; }
   .send { height: 50px; width: 50px; flex-shrink: 0; border: none; border-radius: 25px; background: var(--accent); cursor: pointer; display: flex; align-items: center; justify-content: center; }
   .send:disabled { opacity: 0.4; cursor: default; }
   .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-mute); display: inline-block; animation: blink 1.3s infinite ease-in-out; }
@@ -78,23 +91,6 @@
   .typing span:nth-child(3) { animation-delay: 0.4s; }
   @keyframes blink { 0%, 60%, 100% { opacity: 0.25; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
   @media (prefers-reduced-motion: reduce) { .screen, .typing span { animation: none; } }
-  /* Desktop: appen blir et sentrert kort i stedet for en mobilstripe */
-  @media (min-width: 900px) {
-    body { padding: 32px; align-items: center; }
-    .phone {
-      max-width: 780px; min-height: 0;
-      height: min(900px, calc(100dvh - 64px));
-      border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.16);
-    }
-    #s-chat { min-height: 0 !important; }
-    h1.big { font-size: 54px; }
-    .row.you .bubble { max-width: 62%; }
-    .row.ai .bubble { max-width: 70%; }
-    .stream { padding: 28px 32px 14px; }
-    .chat-head, .composer { padding-left: 32px; padding-right: 32px; }
-    .codebar { padding-left: 32px; padding-right: 32px; }
-  }
 
   .codebar {
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
@@ -112,77 +108,127 @@
   }
   .mini:hover { border-color: var(--accent); color: var(--ink); }
   .codebar .hint { font-size: 12px; color: var(--ink-mute); }
+  .footer-links { font-size: 12px; color: var(--ink-mute); text-align: center; margin: 12px 0 0; }
+  .footer-links a { color: var(--ink-mute); text-decoration: none; }
+  .footer-links a:hover { color: var(--accent); }
 
-  .pad { padding: 40px 32px; }
-  .pad-top { padding: 64px 32px 40px; }
-  .between { display: flex; flex-direction: column; justify-content: space-between; }
-  .center { justify-content: center; }
+  /* ---- Desktop ---- */
+  @media (min-width: 900px) {
+    /* Welcome: to-kolonne landingsside */
+    .welcome-layout {
+      flex-direction: row; align-items: center; justify-content: center;
+      gap: 80px; padding: 80px 64px;
+    }
+    .welcome-left { max-width: 480px; }
+    .welcome-right { max-width: 360px; }
+    h1.big { font-size: 56px; }
+    p.lead { font-size: 18px; max-width: 440px; }
+
+    /* Onboarding: sentrert, romslig */
+    .onboard-center { padding: 60px 40px; }
+    .onboard-inner { max-width: 480px; }
+    .card-choice { padding: 28px; }
+
+    /* Chat: sentrert med maks-bredde, avslappet */
+    .app { max-width: 960px; margin: 0 auto; }
+    #s-chat { border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+    .chat-head, .composer, .codebar { padding-left: 32px; padding-right: 32px; }
+    .stream { padding: 28px 40px 14px; }
+    .row.you .bubble { max-width: 55%; font-size: 16px; }
+    .row.ai .bubble { max-width: 65%; font-size: 16px; line-height: 1.7; }
+
+    /* Paywall & thanks: sentrert og romslig */
+    .paywall-center, .thanks-center { padding: 80px 40px; }
+  }
+
+  @media (min-width: 1200px) {
+    h1.big { font-size: 64px; }
+    .welcome-layout { gap: 120px; padding: 100px 80px; }
+  }
 </style>
 </head>
 <body>
-<div class="phone">
+<div class="app">
 
-  <section class="screen between" id="s-welcome" style="padding:72px 32px 40px;">
-    <div>
-      <div class="eyebrow">Parpraten</div>
-      <h1 class="big">Chat om det<br>som er vanskelig.</h1>
-      <p class="lead">En chat for forholdet ditt. Den blir kjent med deg, og gir råd som passer akkurat din situasjon.</p>
+  <section class="screen" id="s-welcome">
+    <div class="welcome-layout">
+      <div class="welcome-left">
+        <div class="eyebrow">Parpraten</div>
+        <h1 class="big">Chat om det<br>som er vanskelig.</h1>
+        <p class="lead">En chat for forholdet ditt. Den blir kjent med deg, og gir råd som passer akkurat din situasjon.</p>
+      </div>
+      <div class="welcome-right">
+        <button class="btn-primary" id="b-start">Kom i gang gratis</button>
+        <button class="btn-ghost" id="b-haskode" style="margin-top:10px;">Jeg har en kode fra før</button>
+        <p class="mono" style="font-size:11px;color:var(--ink-mute);text-align:center;margin:10px 0 0;">De første chattene koster ingenting.</p>
+        <p class="footer-links"><a href="/personvern.html">Personvern</a> · <a href="/vilkar.html">Vilkår</a></p>
+      </div>
     </div>
-    <div>
-      <button class="btn-primary" id="b-start">Kom i gang gratis</button>
-      <button class="btn-ghost" id="b-haskode" style="margin-top:10px;">Jeg har en kode fra før</button>
-      <p class="mono" style="font-size:11px;color:var(--ink-mute);text-align:center;margin:8px 0 0;">De første chattene koster ingenting.</p>
-      <p style="font-size:12px;color:var(--ink-mute);text-align:center;margin:12px 0 0;"><a href="/personvern.html" style="color:var(--ink-mute);">Personvern</a> · <a href="/vilkar.html" style="color:var(--ink-mute);">Vilkår</a></p>
+  </section>
+
+  <section class="screen" id="s-mode" hidden>
+    <div class="onboard-center">
+      <div class="onboard-inner">
+        <h2 class="mid">Hvordan vil du chatte i dag?</h2>
+        <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Du kan bytte når som helst.</p>
+        <button class="card-choice" id="b-par" style="margin-bottom:14px;width:100%;">
+          <span style="display:flex;align-items:center;gap:14px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="serif" style="font-style:italic;font-size:22px;">Sammen som par</span>
+          </span>
+          <p style="font-size:14px;line-height:1.5;color:var(--ink-soft);margin:12px 0 0;">Dere sitter sammen og svarer begge to. Rådene ser begges side.</p>
+        </button>
+        <button class="card-choice" id="b-alene" style="width:100%;">
+          <span style="display:flex;align-items:center;gap:14px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="serif" style="font-style:italic;font-size:22px;">Alene</span>
+          </span>
+          <p style="font-size:14px;line-height:1.5;color:var(--ink-soft);margin:12px 0 0;">Bare deg. Ventiler, tenk høyt, og få råd du kan ta med deg videre.</p>
+        </button>
+      </div>
     </div>
   </section>
 
-  <section class="screen center pad" id="s-mode" hidden>
-    <h2 class="mid">Hvordan vil du chatte i dag?</h2>
-    <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Du kan bytte når som helst.</p>
-    <button class="card-choice" id="b-par" style="margin-bottom:14px;">
-      <span style="display:flex;align-items:center;gap:14px;">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span class="serif" style="font-style:italic;font-size:22px;">Sammen som par</span>
-      </span>
-      <p style="font-size:14px;line-height:1.5;color:var(--ink-soft);margin:12px 0 0;">Dere sitter sammen og svarer begge to. Rådene ser begges side.</p>
-    </button>
-    <button class="card-choice" id="b-alene">
-      <span style="display:flex;align-items:center;gap:14px;">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span class="serif" style="font-style:italic;font-size:22px;">Alene</span>
-      </span>
-      <p style="font-size:14px;line-height:1.5;color:var(--ink-soft);margin:12px 0 0;">Bare deg. Ventiler, tenk høyt, og få råd du kan ta med deg videre.</p>
-    </button>
-  </section>
-
-  <section class="screen center pad" id="s-resume" hidden>
-    <h2 class="mid">Fortsett der du slapp</h2>
-    <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Skriv inn koden du fikk sist.</p>
-    <label class="tag" for="in-kode">Kode</label>
-    <input class="field" id="in-kode" placeholder="ABCD-EFGH-JKLM" autocapitalize="characters" spellcheck="false"
-           style="margin:8px 0 12px;font-family:var(--font-mono);letter-spacing:1px;">
-    <div id="kode-feil" style="font-size:14px;color:var(--accent);margin:0 0 12px;" hidden></div>
-    <button class="btn-primary" id="b-hent" style="margin-top:8px;">Hent chatten</button>
-    <button class="btn-ghost" id="b-tilbake" style="margin-top:8px;">Tilbake</button>
-  </section>
-
-  <section class="screen center pad" id="s-intro" hidden>
-    <h2 class="mid" id="intro-title">Først, hvem er dere?</h2>
-    <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Fornavn holder. Ingenting lagres uten at du sier fra.</p>
-    <label class="tag" for="in-you">Deg</label>
-    <input class="field" id="in-you" placeholder="Ditt fornavn" style="margin:8px 0 22px;">
-    <div id="partner-wrap">
-      <label class="tag" for="in-partner">Partneren din</label>
-      <input class="field" id="in-partner" placeholder="Deres fornavn" style="margin:8px 0 12px;">
+  <section class="screen" id="s-resume" hidden>
+    <div class="onboard-center">
+      <div class="onboard-inner">
+        <h2 class="mid">Fortsett der du slapp</h2>
+        <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Skriv inn koden du fikk sist.</p>
+        <label class="tag" for="in-kode">Kode</label>
+        <input class="field" id="in-kode" placeholder="ABCD-EFGH-JKLM" autocapitalize="characters" spellcheck="false"
+               style="margin:8px 0 12px;font-family:var(--font-mono);letter-spacing:1px;">
+        <div id="kode-feil" style="font-size:14px;color:var(--accent);margin:0 0 12px;" hidden></div>
+        <button class="btn-primary" id="b-hent" style="margin-top:8px;">Hent chatten</button>
+        <button class="btn-ghost" id="b-tilbake" style="margin-top:8px;">Tilbake</button>
+      </div>
     </div>
-    <button class="btn-primary" id="b-names" style="margin-top:20px;">Fortsett</button>
   </section>
 
-  <section class="screen pad-top" id="s-questions" hidden>
-    <div style="display:flex;gap:6px;margin-bottom:40px;" id="dots"></div>
-    <div class="mono" id="q-count" style="font-size:11px;letter-spacing:2px;color:var(--ink-mute);"></div>
-    <h2 class="mid" id="q-text" style="font-size:32px;margin:12px 0 36px;"></h2>
-    <div style="display:flex;flex-direction:column;gap:12px;" id="q-opts"></div>
+  <section class="screen" id="s-intro" hidden>
+    <div class="onboard-center">
+      <div class="onboard-inner">
+        <h2 class="mid" id="intro-title">Først, hvem er dere?</h2>
+        <p style="font-size:15px;color:var(--ink-mute);margin:0 0 32px;">Fornavn holder. Ingenting lagres uten at du sier fra.</p>
+        <label class="tag" for="in-you">Deg</label>
+        <input class="field" id="in-you" placeholder="Ditt fornavn" style="margin:8px 0 22px;">
+        <div id="partner-wrap">
+          <label class="tag" for="in-partner">Partneren din</label>
+          <input class="field" id="in-partner" placeholder="Deres fornavn" style="margin:8px 0 12px;">
+        </div>
+        <button class="btn-primary" id="b-names" style="margin-top:20px;">Fortsett</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="s-questions" hidden>
+    <div class="onboard-center" style="align-items:flex-start;padding-top:64px;">
+      <div class="onboard-inner">
+        <div style="display:flex;gap:6px;margin-bottom:40px;" id="dots"></div>
+        <div class="mono" id="q-count" style="font-size:11px;letter-spacing:2px;color:var(--ink-mute);"></div>
+        <h2 class="mid" id="q-text" style="font-size:30px;margin:12px 0 36px;"></h2>
+        <div style="display:flex;flex-direction:column;gap:12px;" id="q-opts"></div>
+      </div>
+    </div>
   </section>
 
   <section class="screen" id="s-chat" hidden style="min-height:100dvh;">
@@ -209,7 +255,7 @@
       <span class="hint" id="kode-status"></span>
     </div>
     <div class="epostrad" id="epostrad" hidden style="display:none;gap:10px;align-items:center;padding:10px 20px;border-bottom:1px solid var(--line);">
-      <input class="field" id="in-epost" type="email" placeholder="din@epost.no" style="flex-grow:1;height:42px;font-size:14px;">
+      <input class="field" id="in-epost" type="email" placeholder="din@epost.no" style="flex-grow:1;height:42px;font-size:14px;max-width:none;">
       <button class="mini" id="b-sendna">Send</button>
       <button class="mini" id="b-avbrytmail">Avbryt</button>
     </div>
@@ -222,27 +268,35 @@
     </div>
   </section>
 
-  <section class="screen center pad" id="s-paywall" hidden>
-    <div class="eyebrow">Prøveperioden er ferdig</div>
-    <h2 class="mid" id="paywall-title" style="font-size:36px;margin:18px 0 12px;">Du var akkurat i gang.</h2>
-    <p style="font-size:16px;line-height:1.6;color:var(--ink-soft);margin:0 0 32px;">De vanskelige samtalene tar tid. Fortsett der du slapp, så husker vi alt du har fortalt.</p>
-    <div style="border:1px solid var(--accent);border-radius:18px;padding:26px 24px;background:var(--bg-soft);">
-      <div style="display:flex;align-items:baseline;gap:8px;">
-        <span class="serif" style="font-size:42px;font-weight:300;">99 kr</span>
-        <span style="font-size:15px;color:var(--ink-mute);">/ mnd</span>
+  <section class="screen" id="s-paywall" hidden>
+    <div class="onboard-center paywall-center">
+      <div class="onboard-inner" style="text-align:left;">
+        <div class="eyebrow">Prøveperioden er ferdig</div>
+        <h2 class="mid" id="paywall-title" style="font-size:36px;margin:18px 0 12px;">Du var akkurat i gang.</h2>
+        <p style="font-size:16px;line-height:1.6;color:var(--ink-soft);margin:0 0 32px;">De vanskelige samtalene tar tid. Fortsett der du slapp, så husker vi alt du har fortalt.</p>
+        <div style="border:1px solid var(--accent);border-radius:18px;padding:26px 24px;background:var(--bg-soft);">
+          <div style="display:flex;align-items:baseline;gap:8px;">
+            <span class="serif" style="font-size:42px;font-weight:300;">99 kr</span>
+            <span style="font-size:15px;color:var(--ink-mute);">/ mnd</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px;" id="perks"></div>
+        </div>
+        <div id="paywall-feil" style="font-size:14px;color:var(--accent);margin:16px 0 0;" hidden></div>
+        <button class="btn-primary" id="b-upgrade" style="margin-top:24px;">Fortsett samtalen</button>
+        <button class="btn-ghost" id="b-later" style="margin-top:8px;">Kanskje senere</button>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px;" id="perks"></div>
     </div>
-    <div id="paywall-feil" style="font-size:14px;color:var(--accent);margin:16px 0 0;" hidden></div>
-    <button class="btn-primary" id="b-upgrade" style="margin-top:24px;">Fortsett samtalen</button>
-    <button class="btn-ghost" id="b-later" style="margin-top:8px;">Kanskje senere</button>
   </section>
 
-  <section class="screen center" id="s-thanks" hidden style="align-items:center;text-align:center;padding:48px 40px;">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
-    <h2 class="mid" style="font-size:32px;margin:24px 0 10px;">Fint at du fortsetter.</h2>
-    <p style="font-size:16px;color:var(--ink-soft);margin:0 0 32px;max-width:260px;">Alt du har fortalt er her når du kommer tilbake. Ta det i ditt eget tempo.</p>
-    <button class="btn-line" id="b-restart">Start på nytt</button>
+  <section class="screen" id="s-thanks" hidden>
+    <div class="onboard-center thanks-center" style="text-align:center;">
+      <div class="onboard-inner" style="display:flex;flex-direction:column;align-items:center;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <h2 class="mid" style="font-size:32px;margin:24px 0 10px;">Fint at du fortsetter.</h2>
+        <p style="font-size:16px;color:var(--ink-soft);margin:0 0 32px;max-width:260px;">Alt du har fortalt er her når du kommer tilbake. Ta det i ditt eget tempo.</p>
+        <button class="btn-line" id="b-restart">Start på nytt</button>
+      </div>
+    </div>
   </section>
 
 </div>
@@ -270,7 +324,6 @@
     ]
   };
 
-  // lyd
   var audio = null;
   function chime() {
     if (state.muted) return;
@@ -294,7 +347,6 @@
   var SPKR_OFF = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink-mute)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>';
   function paintMute() { $("b-mute").innerHTML = state.muted ? SPKR_OFF : SPKR_ON; }
 
-  // flyt
   $("b-start").onclick = function () { show("mode"); };
   $("b-par").onclick = function () { state.mode = "par"; startIntro(); };
   $("b-alene").onclick = function () { state.mode = "alene"; startIntro(); };
@@ -333,7 +385,7 @@
     var ta = document.createElement("textarea");
     ta.className = "field";
     ta.placeholder = "Skriv med dine egne ord...";
-    ta.style.cssText = "height:120px;padding:14px 16px;resize:none;line-height:1.5;";
+    ta.style.cssText = "height:120px;padding:14px 16px;resize:none;line-height:1.5;max-width:none;";
     box.appendChild(ta);
     var b = document.createElement("button");
     b.className = "btn-primary"; b.textContent = "Fortsett"; b.style.marginTop = "12px";
@@ -345,12 +397,6 @@
     state.answers.push(opt);
     if (state.qIndex < DECK[state.mode].length - 1) { state.qIndex++; renderQuestion(); }
     else enterChat();
-  }
-
-  function openerInstruction() {
-    return state.mode === "alene"
-      ? "Skriv en kort, varm åpningshilsen til " + state.you + ". Ønsk personen velkommen, si at her er det bare mellom dere to, og inviter personen til å fortelle hva som ligger på hjertet. To til tre setninger."
-      : "Skriv en kort, varm åpningshilsen til " + state.you + " og " + state.partner + ". Ønsk dem velkommen og inviter dem til å fortelle om noe som er vanskelig mellom dem akkurat nå. To til tre setninger.";
   }
 
   async function enterChat() {
@@ -377,7 +423,6 @@
     }
   }
 
-  // chat-visning
   function addBubble(role, text, isNote) {
     var row = document.createElement("div");
     row.className = "row " + (role === "you" ? "you" : "ai");
@@ -408,7 +453,6 @@
     $("free-label").textContent = f > 0 ? f + " gratis svar igjen" : "Ingen igjen";
     $("free-bar").style.width = Math.max(0, Math.round((f / FREE) * 100)) + "%";
   }
-
   function paintCode() {
     if (!state.code) return;
     $("codebar").hidden = false;
@@ -429,17 +473,14 @@
         body: JSON.stringify({ code: state.code, opening: !!opts.opening, message: opts.message || "" }),
         signal: abortCtl.signal
       });
-
       if (res.status === 402) { removeTyping(); setBusy(false); openPaywall(); return; }
       if (!res.ok || !res.body) throw new Error("http " + res.status);
-
       var left = res.headers.get("X-Free-Left");
       if (left !== null) {
         var n = Number(left);
         if (n < 0) { state.paid = true; state.free = null; } else { state.free = n; }
         paintMeter();
       }
-
       var reader = res.body.getReader(), dec = new TextDecoder();
       while (true) {
         var r = await reader.read();
@@ -480,7 +521,6 @@
       state.paid = !!d.paid;
       state.free = d.paid ? null : d.free;
       state.code = kode;
-
       $("pair-label").textContent = (state.mode === "alene" ? state.you + " · privat chat" : state.you + " og " + state.partner).toUpperCase();
       paintMeter(); paintMute(); paintCode();
       $("stream").innerHTML = "";
@@ -598,7 +638,6 @@
     show("welcome");
   };
 
-  // Administrer abonnement
   $("b-portal").onclick = async function () {
     if (!state.code) return;
     try {
@@ -611,7 +650,6 @@
     } catch (e) {}
   };
 
-  // Slett mine data
   $("b-slett").onclick = async function () {
     if (!state.code) return;
     if (!confirm("Er du sikker? Hele chattehistorikken slettes permanent. Dette kan ikke angres.")) return;
@@ -627,9 +665,9 @@
       alert("Fikk ikke kontakt med serveren.");
     }
   };
+
   paintMute();
 
-  // Kommer brukeren tilbake fra betaling, hentes chatten fram igjen.
   (function () {
     var p = new URLSearchParams(location.search);
     var betalt = (p.get("betalt") || "").toUpperCase();
